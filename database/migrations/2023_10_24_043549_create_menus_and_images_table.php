@@ -11,15 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('menus', function (Blueprint $table) {
+        $group = ['kuliner-madura','batik-madura','madura-tv','pariwisata','branding-umkm','ojol-madura'];
+
+        Schema::create('menus', function (Blueprint $table) use ($group) {
             $table->id('id_menu');
-            $table->enum('group', ['kuliner-madura','batik-madura','madura-tv']);
+            $table->enum('group', $group);
             $table->string('nama_menu', 255);
             $table->timestamps();
         });
-        Schema::create('images', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) use ($group) {
             $table->id('id_img');
-            $table->enum('group', ['kuliner-madura','batik-madura','madura-tv']);
+            $table->enum('group', $group);
             $table->string('directory', 255);
             $table->string('filename', 255);
             $table->timestamps();

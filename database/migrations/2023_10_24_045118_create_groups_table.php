@@ -17,12 +17,12 @@ return new class extends Migration
             $table->unsignedBigInteger('id_img');
             $table->enum('kategori', ['makanan','snack','minuman']);
             $table->string('nama', 255);
-            $table->string('outline', 50);
+            $table->string('outline', 50)->nullable();
             $table->string('resto', 255);
-            $table->string('link_resto', 255);
-            $table->string('harga', 50);
-            $table->string('rating', 255);
-            $table->text('detail');
+            $table->string('link_resto', 255)->nullable();
+            $table->string('harga', 50)->nullable();
+            $table->string('rating', 255)->nullable();
+            $table->text('detail')->nullable();
             $table->timestamps();
             $table->foreign('id_menu')->references('id_menu')->on('menus')
                 ->onDelete('CASCADE')->onUpdate('CASCADE');
@@ -35,11 +35,11 @@ return new class extends Migration
             $table->unsignedBigInteger('id_menu');
             $table->unsignedBigInteger('id_img');
             $table->string('nama', 255);
-            $table->string('motif', 100);
-            $table->string('corak', 100);
-            $table->string('harga', 50);
-            $table->string('rating', 50);
-            $table->text('detail');
+            $table->string('motif', 100)->nullable();
+            $table->string('corak', 100)->nullable();
+            $table->string('harga', 50)->nullable();
+            $table->string('rating', 50)->nullable();
+            $table->text('detail')->nullable();
             $table->string('whatsapp_umkm', 255);
             $table->timestamps();
             $table->foreign('id_menu')->references('id_menu')->on('menus')
@@ -54,7 +54,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_img');
             $table->enum('kategori', ['budaya madura', 'acara madura', 'podcast', 'profil video umkm']);
             $table->string('nama', 255);
-            $table->text('detail');
+            $table->text('detail')->nullable();
             $table->string('direct_link', 255);
             $table->timestamps();
             $table->foreign('id_menu')->references('id_menu')->on('menus')
@@ -69,9 +69,9 @@ return new class extends Migration
             $table->unsignedBigInteger('id_img');
             $table->string('nama', 255);
             $table->string('lokasi', 255);
-            $table->string('maps', 255);
-            $table->string('rating', 50);
-            $table->text('detail');
+            $table->string('maps', 255)->nullable();
+            $table->string('rating', 50)->nullable();
+            $table->text('detail')->nullable();
             $table->string('whatsapp_to', 255);
             $table->timestamps();
             $table->foreign('id_menu')->references('id_menu')->on('menus')
@@ -86,7 +86,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_img');
             $table->enum('kategori', ['pemasaran online', 'live streaming', 'apps']);
             $table->string('nama', 255);
-            $table->text('detail');
+            $table->text('detail')->nullable();
             $table->timestamps();
             $table->foreign('id_menu')->references('id_menu')->on('menus')
                 ->onDelete('CASCADE')->onUpdate('CASCADE');
@@ -99,7 +99,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_menu');
             $table->unsignedBigInteger('id_img');
             $table->string('nama', 255);
-            $table->text('detail');
+            $table->text('detail')->nullable();
             $table->string('whatsapp_to', 255);
             $table->timestamps();
             $table->foreign('id_menu')->references('id_menu')->on('menus')

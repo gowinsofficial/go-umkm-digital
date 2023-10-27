@@ -1,0 +1,13 @@
+[25-Oct-2023 02:34:23 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'ext\php_excel.dll' - The specified module could not be found.
+ in Unknown on line 0
+[25-Oct-2023 02:34:24 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'ext\php_imagick.dll' - The specified module could not be found.
+ in Unknown on line 0
+[25-Oct-2023 02:34:27 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'ext\php_svn.dll' - The specified module could not be found.
+ in Unknown on line 0
+[25-Oct-2023 04:34:27 Europe/Amsterdam] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.1.33. in D:\Workspace\laragon\www\go-umkm-digital\vendor\composer\platform_check.php on line 24
+[25-Oct-2023 04:34:27 Europe/Amsterdam] PHP Stack trace:
+[25-Oct-2023 04:34:27 Europe/Amsterdam] PHP   1. {main}() D:\Workspace\laragon\www\go-umkm-digital\artisan:0
+[25-Oct-2023 04:34:27 Europe/Amsterdam] PHP   2. require() D:\Workspace\laragon\www\go-umkm-digital\artisan:18
+[25-Oct-2023 04:34:27 Europe/Amsterdam] PHP   3. ComposerAutoloaderInit1855b9d7efd84951324590d8f2a5554f::getLoader() D:\Workspace\laragon\www\go-umkm-digital\vendor\autoload.php:7
+[25-Oct-2023 04:34:27 Europe/Amsterdam] PHP   4. require() D:\Workspace\laragon\www\go-umkm-digital\vendor\composer\autoload_real.php:25
+[25-Oct-2023 04:34:27 Europe/Amsterdam] PHP   5. trigger_error() D:\Workspace\laragon\www\go-umkm-digital\vendor\composer\platform_check.php:24

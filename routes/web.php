@@ -16,6 +16,22 @@ use App\Http\Controllers\{
 |
 */
 
+
 Route::get('/', [AuthController::class, 'loginIndex']);
 Route::get('/data', [PageController::class, 'dataIndex']);
 Route::get('/form', [PageController::class, 'formIndex']);
+
+Route::get('/', function () {
+    return view('home');
+});
+Route::get('/kuliner-madura', function () {
+    return view('kuliner');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

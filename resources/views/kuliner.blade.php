@@ -2,12 +2,12 @@
 
 @section('content')
 <div class="row mt-3 mb-3">
-    <div class="col-md-6">
+    <div class="col-md-4">
       
          <div class="d-flex">
-            <a class="btn btn-primary mx-3" href="#" role="button">Makanan</a>
-            <a class="btn btn-primary mx-3" href="#" role="button">minuman</a>
-            <a class="btn btn-primary mx-3" href="#" role="button">Snack</a>
+            <a class="btn btn-primary " href="#" role="button">Makanan</a>
+            <a class="btn btn-primary " href="#" role="button">minuman</a>
+            <a class="btn btn-primary " href="#" role="button">Snack</a>
             <select class="form-select form-select-sm" aria-label="Small select example">
                 <option selected>Pilih Kota</option>
                 <option value="1">Bangkalan</option>
@@ -42,7 +42,7 @@
           <h5 class="card-title">Bebek Sinjay</h5>
           <p class="card-text">Bebek Sinjay Merupakan Makanan khas yang berada di madura yang terletak Pada Kota Bangkalan, Bebek Ini Banyak Diminati oleh para Wisatawan,Bebek ini Sangat gurih dengan Sambel Mangganya yang Khas.</p>
           <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-          < class="bi bi-whatsapp" style="font-size: 2rem; color: green;">WA</>
+          <i class="bi bi-whatsapp" style="font-size: 2rem; color: green;">WA</i>
                 <!-- Location icon -->
                 <i class="bi bi-geo-alt" style="font-size: 2rem; color: blue;">Lokasi</i>
         </div>

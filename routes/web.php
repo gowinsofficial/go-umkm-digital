@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{
+    AuthController, PageController
+};
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+Route::get('/', [AuthController::class, 'loginIndex']);
+Route::get('/data', [PageController::class, 'dataIndex']);
+Route::get('/form', [PageController::class, 'formIndex']);
 
 Route::get('/', function () {
     return view('home');

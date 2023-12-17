@@ -3,6 +3,11 @@
 use App\Http\Controllers\batikmaduraController;
 use App\Http\Controllers\adminController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{
+    AuthController,
+    PageController,
+    HomeController,
+};
 
 use App\Http\Controllers\{AdminInventaris,
     AdminKeuangan,
@@ -219,3 +224,16 @@ Route::get('/logout', [Auth::class, 'logout'])->name('auth.logout');
 
 Route::resource('batikmadura',batikmaduraController::class);
 Route::resource('admin',adminController::class);
+
+Route::get('/', [AuthController::class, 'loginIndex']);
+Route::get('/data', [PageController::class, 'dataIndex']);
+Route::get('/form', [PageController::class, 'formIndex']);
+
+Route::get('/', function () {
+    return view('home');
+});
+Route::get('/kuliner-madura', function () {
+    return view('kuliner');
+});
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');

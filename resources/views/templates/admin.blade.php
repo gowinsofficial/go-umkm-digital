@@ -318,11 +318,8 @@
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
                                     <div class="avatar avatar-online">
-<<<<<<< HEAD
-                                        <img src="{{ Storage::url(Auth::user()->foto) }}" alt
-=======
+                                        <img src="{{ Storage::url(Auth::user()->foto) }}" alt=
                                         <img src="" alt
->>>>>>> 1f96f19d9d7b849d06a1b1652eddbfed0f171eb1
                                             class="w-px-40 h-auto rounded-circle" />
                                     </div>
                                 </a>
@@ -332,25 +329,19 @@
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 me-3">
                                                     <div class="avatar avatar-online">
-<<<<<<< HEAD
-                                                        <img src="{{ Storage::url(Auth::user()->foto) }}" alt
-=======
+                                                        <img src="{{ Storage::url(Auth::user()->foto) }}" alt=
                                                         <img src="" alt="Foto"
->>>>>>> 1f96f19d9d7b849d06a1b1652eddbfed0f171eb1
                                                             class="w-px-40 h-auto rounded-circle" />
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <span class="fw-semibold d-block">
-<<<<<<< HEAD
                                                         {{ Auth::user()->nama }}
                                                     </span>
                                                     <small class="text-muted">{{ strtoupper(Auth::user()->role) }}</small>
-=======
                                                        Nama
                                                     </span>
                                                     <small class="text-muted">Admin</small>
->>>>>>> 1f96f19d9d7b849d06a1b1652eddbfed0f171eb1
                                                 </div>
                                             </div>
                                         </a>
@@ -359,21 +350,16 @@
                                         <div class="dropdown-divider"></div>
                                     </li>
                                     <li>
-<<<<<<< HEAD
                                         <a class="dropdown-item" href="{{ route('adm.setting.pwd.index') }}">
-=======
                                         <a class="dropdown-item" href="">
->>>>>>> 1f96f19d9d7b849d06a1b1652eddbfed0f171eb1
+
                                             <i class="bx bx-key me-2"></i>
                                             <span class="align-middle">Ubah Password</span>
                                         </a>
                                     </li>
                                     <li>
-<<<<<<< HEAD
                                         <a class="dropdown-item" href="{{ route('adm.setting') }}">
-=======
                                         <a class="dropdown-item" href="">
->>>>>>> 1f96f19d9d7b849d06a1b1652eddbfed0f171eb1
                                             <i class="bx bx-cog me-2"></i>
                                             <span class="align-middle">Pengaturan</span>
                                         </a>

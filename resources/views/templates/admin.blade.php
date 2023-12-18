@@ -8,7 +8,8 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Dashboard | Laboratorium TS Admin</title>
+    <title>Dashboard | GO UMKM DIGITAL Admin</title>
+
 
     <meta name="description" content="" />
 
@@ -111,6 +112,7 @@
 
                     <!-- Dashboard -->
                     <li class="menu-item active">
+                        <a href="{{ route('adm.dashboard') }}" class="menu-link">
                         <a href="" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             Dashboard
@@ -125,16 +127,19 @@
                         </a>
                         <ul class="menu-sub">
                             <li class="menu-item">
+                                <a href="{{ route('adm.master.user') }}" class="menu-link">
                                 <a href="" class="menu-link">
                                     Data Pengguna
                                 </a>
                             </li>
                             <li class="menu-item">
+                                <a href="{{ route('adm.master.dsn') }}" class="menu-link">
                                 <a href="" class="menu-link">
                                     Data Dosen
                                 </a>
                             </li>
                             <li class="menu-item">
+                                <a href="{{ route('adm.master.periode') }}" class="menu-link">
                                 <a href="" class="menu-link">
                                     Data Periode
                                 </a>
@@ -142,7 +147,144 @@
                         </ul>
                     </li>
 
+                    <!-- Praktikum -->
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bxs-user-check"></i>
+                            <div data-i18n="Account Settings">Praktikum</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="{{ route('adm.master.matkum') }}" class="menu-link">
+                                    Kelas Praktikum
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('adm.prak.pendaftar') }}" class="menu-link">
+                                    Pendaftar Menunggu
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('adm.prak.acc') }}" class="menu-link">
+                                    Pendaftar Diterima
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('adm.prak.kel') }}" class="menu-link">
+                                    Kelompok Praktikum
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('adm.prak.hist') }}" class="menu-link">
+                                    History Praktikum
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-dollar"></i>
+                            <div data-i18n="Account Settings">Kas</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="{{ route('adm.keu.kode') }}" class="menu-link">
+                                    Kode Kas
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('adm.keu.kasp') }}" class="menu-link">
+                                    Kas Periode
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('adm.keu.kas') }}" class="menu-link">
+                                    Administrasi Kas
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-adjust"></i>
+                            Penelitian
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="{{ route('adm.plt.pengujian.index') }}" class="menu-link">
+                                    Data Pengujian
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('adm.plt.percobaan.index') }}" class="menu-link">
+                                    Data Percobaan
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('adm.plt.permohonan') }}" class="menu-link">
+                                    Permohonan
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('adm.plt.penelitian') }}" class="menu-link">
+                                    Daftar Ujicoba
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-paint"></i>
+                            Penyewaan
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="{{ route('adm.sewa.alat.i') }}" class="menu-link">
+                                    Daftar Alat
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('adm.sewa.i') }}" class="menu-link">
+                                    Daftar Penyewaan
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-git-pull-request"></i>
+                            Inventaris
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="{{ route('adm.inv.bahan') }}" class="menu-link">
+                                    Alat & Bahan
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('adm.inv.permohon') }}" class="menu-link">
+                                    Permohonan
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="{{ route('adm.setting') }}" class="menu-link">
+                            <i class="bx bx-cog me-2"></i>
+                            Pengaturan
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{{ route('auth.logout') }}" class="menu-link">
+                            <i class="bx bx-power-off me-2"></i>
+                            Logout
+                        </a>
+                    </li>
                 </ul>
             </aside>
             <!-- / Menu -->
@@ -176,7 +318,11 @@
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
                                     <div class="avatar avatar-online">
+<<<<<<< HEAD
+                                        <img src="{{ Storage::url(Auth::user()->foto) }}" alt
+=======
                                         <img src="" alt
+>>>>>>> 1f96f19d9d7b849d06a1b1652eddbfed0f171eb1
                                             class="w-px-40 h-auto rounded-circle" />
                                     </div>
                                 </a>
@@ -186,15 +332,25 @@
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 me-3">
                                                     <div class="avatar avatar-online">
+<<<<<<< HEAD
+                                                        <img src="{{ Storage::url(Auth::user()->foto) }}" alt
+=======
                                                         <img src="" alt="Foto"
+>>>>>>> 1f96f19d9d7b849d06a1b1652eddbfed0f171eb1
                                                             class="w-px-40 h-auto rounded-circle" />
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <span class="fw-semibold d-block">
+<<<<<<< HEAD
+                                                        {{ Auth::user()->nama }}
+                                                    </span>
+                                                    <small class="text-muted">{{ strtoupper(Auth::user()->role) }}</small>
+=======
                                                        Nama
                                                     </span>
                                                     <small class="text-muted">Admin</small>
+>>>>>>> 1f96f19d9d7b849d06a1b1652eddbfed0f171eb1
                                                 </div>
                                             </div>
                                         </a>
@@ -203,13 +359,21 @@
                                         <div class="dropdown-divider"></div>
                                     </li>
                                     <li>
+<<<<<<< HEAD
+                                        <a class="dropdown-item" href="{{ route('adm.setting.pwd.index') }}">
+=======
                                         <a class="dropdown-item" href="">
+>>>>>>> 1f96f19d9d7b849d06a1b1652eddbfed0f171eb1
                                             <i class="bx bx-key me-2"></i>
                                             <span class="align-middle">Ubah Password</span>
                                         </a>
                                     </li>
                                     <li>
+<<<<<<< HEAD
+                                        <a class="dropdown-item" href="{{ route('adm.setting') }}">
+=======
                                         <a class="dropdown-item" href="">
+>>>>>>> 1f96f19d9d7b849d06a1b1652eddbfed0f171eb1
                                             <i class="bx bx-cog me-2"></i>
                                             <span class="align-middle">Pengaturan</span>
                                         </a>
@@ -218,6 +382,7 @@
                                         <div class="dropdown-divider"></div>
                                     </li>
                                     <li>
+                                        <a class="dropdown-item" href="{{ route('auth.logout') }}">
                                         <a class="dropdown-item" href="">
                                             <i class="bx bx-power-off me-2"></i>
                                             <span class="align-middle">Log Out</span>

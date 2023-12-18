@@ -45,7 +45,11 @@
   position: absolute;
   right: 0;
   width: 0.25rem;
+<<<<<<< HEAD
+  height: 2.5rem;
+=======
   height: 2.6845rem;
+>>>>>>> 1f96f19d9d7b849d06a1b1652eddbfed0f171eb1
   border-radius: 0.375rem 0 0 0.375rem;
 }
 .bg-menu-theme .menu-sub > .menu-item > .menu-link:before {

@@ -26,8 +26,8 @@ Route::get('/form', [PageController::class, 'formIndex']);
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/kuliner-madura', function () {
-    return view('kuliner');
+Route::get('/kuliner', function () {
+    return view('makanan');
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');

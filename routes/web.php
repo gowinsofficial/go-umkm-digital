@@ -235,5 +235,23 @@ Route::get('/', function () {
 Route::get('/kuliner', function () {
     return view('makanan');
 });
+Route::get('/kuliner-detail', function () {
+    return view('detailmakanan');
+});
+Route::get('/wisata', function () {
+    return view('wisata');
+});
+Route::get('/wisata-detail', function () {
+    return view('wisatadetail');
+});
+Route::get('/batik', function () {
+    return view('batik');
+});
+Route::get('/batik-detail', function () {
+    return view('wisatadetail');
+});
+Route::get('/about', function () {
+    return view('about');
+});
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');

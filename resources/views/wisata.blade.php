@@ -1,6 +1,6 @@
 @extends('templates.nav')
 @section('csspage')
-
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 @endsection
 @section('content')
 
@@ -10,7 +10,7 @@
       <div class="col-lg-7">
         <div class="intro-wrap">
           <h1 class="mb-5">
-            <span class="d-block">Kuliner Madura</span> 
+            <span class="d-block">Pariwisata Madura</span> 
             <span class="typed-words"></span>
           </h1>
 
@@ -25,9 +25,9 @@
                       class="form-control custom-select"
                     >
                       <option value="">Kategori</option>
-                      <option value="">Makanan</option>
-                      <option value="">Minuman </option>
-                      <option value="">Snack</option>
+                      <option value="">Sampang</option>
+                      <option value="">Pamekasan </option>
+                      <option value="">Sumenep</option>
                      
                     </select>
                   </div>
@@ -42,7 +42,7 @@
                     <input
                       type="text"
                       class="form-control"
-                      placeholder="cari kuliner..."
+                      placeholder="cari wisata..."
                     />
                   </div>
                 </div>
@@ -86,18 +86,12 @@
         <h2 class="section-title text-center mb-3">
           Special Offers &amp; Discounts
         </h2>
-        <p>
-          Far far away, behind the word mountains, far from the countries
-          Vokalia and Consonantia, there live the blind texts. Separated
-          they live in Bookmarksgrove right at the coast of the Semantics, a
-          large language ocean.
-        </p>
       </div>
     </div>
     <div class="row">
       <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
         <div class="media-1">
-          <a href="/kuliner-detail" class="d-block mb-3"
+          <a href="/wisata-detail" class="d-block mb-3"
             ><img
               src="{{ asset('assets/wisata/images/hero-slider-1.jpg')}}"
               alt="Image"
@@ -109,9 +103,9 @@
           </span>
           <div class="d-flex align-items-center">
             <div>
-              <h3><a href="/kuliner-detail">Rialto Mountains</a></h3>
+              <h3><a href="/wisata-detail">Rialto Mountains</a></h3>
               <div class="price ml-auto">
-                <span>$520.00</span>
+                    <span class="fa fa-star checked">4,5</span>
               </div>
             </div>
           </div>
@@ -119,7 +113,7 @@
       </div>
       <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
         <div class="media-1">
-          <a href="/kuliner-detail" class="d-block mb-3"
+          <a href="/wisata-detail" class="d-block mb-3"
             ><img
               src="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}"
               alt="Image"
@@ -131,9 +125,9 @@
           </span>
           <div class="d-flex align-items-center">
             <div>
-              <h3><a href="/kuliner-detail">San Francisco</a></h3>
+              <h3><a href="/wisata-detail">San Francisco</a></h3>
               <div class="price ml-auto">
-                <span>$520.00</span>
+                <span class="fa fa-star checked">4,5</span>
               </div>
             </div>
           </div>
@@ -141,7 +135,7 @@
       </div>
       <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
         <div class="media-1">
-          <a href="/kuliner-detail" class="d-block mb-3"
+          <a href="/wisata-detail" class="d-block mb-3"
             ><img
               src="{{ asset('assets/wisata/images/hero-slider-3.jpg')}}"
               alt="Image"
@@ -153,9 +147,9 @@
           </span>
           <div class="d-flex align-items-center">
             <div>
-              <h3><a href="/kuliner-detail">Perhentian Islands</a></h3>
+              <h3><a href="/wisata-detail">Perhentian Islands</a></h3>
               <div class="price ml-auto">
-                <span>$750.00</span>
+                <span class="fa fa-star checked">4,5</span>
               </div>
             </div>
           </div>
@@ -163,7 +157,7 @@
       </div>
       <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
         <div class="media-1">
-          <a href="/kuliner-detail" class="d-block mb-3"
+          <a href="/wisata-detail" class="d-block mb-3"
             ><img
               src="{{ asset('assets/wisata/images/hero-slider-4.jpg')}}"
               alt="Image"
@@ -177,9 +171,9 @@
 
           <div class="d-flex align-items-center">
             <div>
-              <h3><a href="/kuliner-detail">Lake Thun</a></h3>
+              <h3><a href="/wisata-detail">Lake Thun</a></h3>
               <div class="price ml-auto">
-                <span>$520.00</span>
+                <span class="fa fa-star checked">4,5</span>
               </div>
             </div>
           </div>

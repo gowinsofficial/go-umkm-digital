@@ -10,7 +10,7 @@
       <div class="col-lg-7">
         <div class="intro-wrap">
           <h1 class="mb-5">
-            <span class="d-block">Kuliner Madura</span> 
+            <span class="d-block">Batik Madura</span> 
             <span class="typed-words"></span>
           </h1>
 
@@ -42,7 +42,7 @@
                     <input
                       type="text"
                       class="form-control"
-                      placeholder="cari kuliner..."
+                      placeholder="cari batik..."
                     />
                   </div>
                 </div>
@@ -97,7 +97,7 @@
     <div class="row">
       <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
         <div class="media-1">
-          <a href="/kuliner-detail" class="d-block mb-3"
+          <a href="/batik-detail" class="d-block mb-3"
             ><img
               src="{{ asset('assets/wisata/images/hero-slider-1.jpg')}}"
               alt="Image"
@@ -109,7 +109,7 @@
           </span>
           <div class="d-flex align-items-center">
             <div>
-              <h3><a href="/kuliner-detail">Rialto Mountains</a></h3>
+              <h3><a href="/batik-detail">Rialto Mountains</a></h3>
               <div class="price ml-auto">
                 <span>$520.00</span>
               </div>
@@ -119,7 +119,7 @@
       </div>
       <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
         <div class="media-1">
-          <a href="/kuliner-detail" class="d-block mb-3"
+          <a href="/batik-detail" class="d-block mb-3"
             ><img
               src="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}"
               alt="Image"
@@ -131,7 +131,7 @@
           </span>
           <div class="d-flex align-items-center">
             <div>
-              <h3><a href="/kuliner-detail">San Francisco</a></h3>
+              <h3><a href="/batik-detail">San Francisco</a></h3>
               <div class="price ml-auto">
                 <span>$520.00</span>
               </div>
@@ -141,7 +141,7 @@
       </div>
       <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
         <div class="media-1">
-          <a href="/kuliner-detail" class="d-block mb-3"
+          <a href="/batik-detail" class="d-block mb-3"
             ><img
               src="{{ asset('assets/wisata/images/hero-slider-3.jpg')}}"
               alt="Image"
@@ -153,7 +153,7 @@
           </span>
           <div class="d-flex align-items-center">
             <div>
-              <h3><a href="/kuliner-detail">Perhentian Islands</a></h3>
+              <h3><a href="/batik-detail">Perhentian Islands</a></h3>
               <div class="price ml-auto">
                 <span>$750.00</span>
               </div>
@@ -163,7 +163,7 @@
       </div>
       <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
         <div class="media-1">
-          <a href="/kuliner-detail" class="d-block mb-3"
+          <a href="/batik-detail" class="d-block mb-3"
             ><img
               src="{{ asset('assets/wisata/images/hero-slider-4.jpg')}}"
               alt="Image"
@@ -177,7 +177,7 @@
 
           <div class="d-flex align-items-center">
             <div>
-              <h3><a href="/kuliner-detail">Lake Thun</a></h3>
+              <h3><a href="/batik-detail">Lake Thun</a></h3>
               <div class="price ml-auto">
                 <span>$520.00</span>
               </div>

@@ -3,77 +3,185 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Untree.co">
+	<link rel="shortcut icon" href="favicon.png">
 
-    <title>Harvard Business School Online Courses &amp; Learning Platforms</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap4" />
 
-    <meta content="Harvard Business School Online offers a unique way to learn business concepts, enabling learners to transform their careers, organizations, and their lives." name="description"/>
-    <meta content="ZIjEz6bTgRrYb8w4Q4IZZUWxfLoYMT6Cx_JvlIh0G2k" name="google-site-verification"/>
-    <meta content="rWcCMw2rNuqcNrVxQmfG3G_x4gMHBhdZ4Y4tefZorG0" name="google-site-verification"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
 
-    <link href="https://online.hbs.edu/" rel="canonical"/>
-
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="shortcut icon" href="https://webassets.hbs.edu/sites/home/favicon.ico">
-    <link rel="preload" as="style" href="https://webassets.hbs.edu/libs/framework/1.0/css/framework-async.min.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" type="text/css" href="css/framework-async.min.css">
-    </noscript>
-
-    <link rel="image_src" href="https://www.hbs.edu/images/site/sharelogo.jpg">
-    <meta name="HBSSearchUrl" content="/search">
-    <meta name="PageBuildDateTime" content="Sat, 11 Nov 2023 07:57:50 GMT on ">
-    <link rel="stylesheet" href="{{asset('assets/vendor/libs/datatables/dataTables.bootstrap5.min.css')}}" />
+	<link rel="stylesheet" href="{{ asset("assets/wisata/css/bootstrap.min.css")}}">
+	<link rel="stylesheet" href="{{ asset("assets/wisata/css/owl.carousel.min.css") }}">
+	<link rel="stylesheet" href="{{ asset('assets/wisata/css/owl.theme.default.min.css') }}">
+	<link rel="stylesheet" href="{{asset('assets/wisata/css/jquery.fancybox.min.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/wisata/fonts/icomoon/style.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/wisata/fonts/flaticon/font/flaticon.css')}}">
+	<link rel="stylesheet" href="{{ asset('assets/wisata/css/daterangepicker.css')}}">
+	<link rel="stylesheet" href="{{ asset('assets/wisata/css/aos.css')}}">
+	<link rel="stylesheet" href="{{ asset('assets/wisata/css/style.css')}}">
+  <title>GO UMKM</title>
     
-    <link rel="stylesheet"
-          href="https://webassets.hbs.edu/sites/online/css/newsletter.css?v=1.0"/>
-
-    <link rel="stylesheet" href="{{ asset("assets/css/style.css") }}">
+    @yield('csspage') 
     
 
-</head>
+</head> 
 
-<body class="expanded-grid-framework">
+<body>
+  <div class="site-mobile-menu site-navbar-target">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close">
+				<span class="icofont-close js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
 
-<div id="container" class="type-framework color-framework grid-framework component-framework pattern-framework js-framework responsive-framework">
+	<nav class="site-nav">
+		<div class="container">
+			<div class="site-navigation">
+				<a href="index.html" class="logo m-0">GO UMKM <span class="text-primary">.</span></a>
 
-    <!--WCMAuthoringReact--><div class="
-hbsred-inherit slider-inject
- responsive-type"><div class="inherit-bg sticky-header-container"></div>
-        <header class="online-header site-header noindex white-bg" aria-label="Site Header" style="position: relative" role="banner">
-            <div class="hbsred-bg" style="height: 6px"></div><a href="#skipto-main" class="hideme skipto">Skip to Main Content</a><div class="hbso-logo" style="position: absolute; z-index: 12;">
-                <a href="/"><img   width="50" height="34" src="{{asset('assets/img/logo/HBS-Online-Stacked.svg')}}" alt="HBS Online"></a>
-            </div>
-            <nav class="top-nav" aria-label="Main">
-                <ul style="margin: 0; display: flex; justify-content: center;">
-                    <li class="dropdown-mega">
-                        <div style="display: flex;"><a href="/kuliner" class="black nav-link" style="font-size: 19px; margin: 0px 15px; text-decoration: none;" data-tapped="1" aria-expanded="false" aria-haspopup="true">Kuliner</a><div style="position: relative;"><a href="#" class="accessible-menu" aria-expanded="false" aria-haspopup="true" role="button"><span class="visually-hidden accessible-label">Open Courses Mega Menu</span></a></div>
-                        </div>
-                       
-                    </li>
-                    <li class="dropdown-mega">
-                        <div style="display: flex;"><a href="/organizations/" class="black nav-link" style="font-size: 19px; margin: 0px 15px; text-decoration: none;" data-tapped="2" aria-expanded="false" aria-haspopup="true">Pariwisata</a><div style="position: relative;"><a href="#" class="accessible-menu" aria-expanded="false" aria-haspopup="true" role="button"><span class="visually-hidden accessible-label">Open For Organizations Mega Menu</span></a></div>
-                        </div>
-                       
-                    </li>
-                    <li class="dropdown-mega">
-                        <div style="display: flex;"><a href="/blog/" class="black nav-link" style="font-size: 19px; margin: 0px 15px; text-decoration: none;" data-tapped="3" aria-expanded="false" aria-haspopup="true">Batik</a><div style="position: relative;"><a href="#" class="accessible-menu" aria-expanded="false" aria-haspopup="true" role="button"><span class="visually-hidden accessible-label">Open Insights Mega Menu</span></a></div>
-                        </div>
-                        
-                    </li>
-                    <li class="dropdown-mega">
-                        <div style="display: flex;"><a href="/more-info/" class="black nav-link" style="font-size: 19px; margin: 0px 15px; text-decoration: none;" data-tapped="4" aria-expanded="false" aria-haspopup="true">More Info</a><div style="position: relative;"><a href="#" class="accessible-menu" aria-expanded="false" aria-haspopup="true" role="button"><span class="visually-hidden accessible-label">Open More Info Mega Menu</span></a></div>
-                        </div>
-                       
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        @yield('content')
+				<ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
+					<li class="active"><a href="/">Home</a></li>
+					<li class="has-children">
+						<a href="#">Our Service</a>
+						<ul class="dropdown">
+							<li><a href="/kuliner">Kuliner Madura</a></li>
+							<li><a href="/batik">Batik Madura</a></li>
+							<li><a href="">Madura Tv</a></li>
+							<li><a href="#">Ojol Madura</a></li>
+							<li><a href="#">Madura Tv</a></li>
+							<li><a href="/wisata">Pariwisata</a></li>
+							<li><a href="#">Branding Bisnis</a></li>
+							<li><a href="#">Pembuatan Website</a></li>
+							<li><a href="#">Pembuatan E-commers</a></li>
+						</ul>
+					</li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/contact">Contact Us</a></li>
+				</ul>
+
+				<a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+					<span></span>
+				</a>
+
+			</div>
+		</div>
+	</nav>
+@yield('content')
             
            
-     
+<div class="py-5 cta-section">
+	<div class="container">
+	  <div class="row text-center">
+		<div class="col-md-12">
+		  <h2 class="mb-2 text-white">
+			Lets you Explore the Best. Contact Us Now
+		  </h2>
+		</div>
+	  </div>
+	</div>
+  </div>    
+<div class="site-footer">
+	<div class="inner first">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-lg-4">
+					<div class="widget">
+						<h3 class="heading">About Tour</h3>
+						<p>umkm go di.gital madura merupakan wadah
+							untuk membantu brand pen jualan umkm go digital,
+							Baik pada Umkm skala keal dan menengah
+							yakni denganPromosi bisnis di berbagai
+							e commerce Yakni shopee,tokopedia, instagram,
+							you tube, tiktok dsb</p>
+					</div>
+					<div class="widget">
+						<ul class="list-unstyled social">
+							<li><a href="#"><span class="icon-twitter"></span></a></li>
+							<li><a href="#"><span class="icon-instagram"></span></a></li>
+							<li><a href="#"><span class="icon-facebook"></span></a></li>
+							<li><a href="#"><span class="icon-linkedin"></span></a></li>
+							<li><a href="#"><span class="icon-dribbble"></span></a></li>
+							<li><a href="#"><span class="icon-pinterest"></span></a></li>
+							<li><a href="#"><span class="icon-apple"></span></a></li>
+							<li><a href="#"><span class="icon-google"></span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-2 pl-lg-5">
+					<div class="widget">
+						<h3 class="heading">Pages</h3>
+						<ul class="links list-unstyled">
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-2">
+					<div class="widget">
+						<h3 class="heading">Resources</h3>
+						<ul class="links list-unstyled">
+							<li><a href="#">Blog</a></li>
+							<li><a href="/about">About</a></li>
+							<li><a href="/contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="widget">
+						<h3 class="heading">Contact</h3>
+						<ul class="list-unstyled quick-info links">
+							<li class="email"><a href="#">goumkm@gmail.com</a></li>
+							<li class="phone"><a href="#">+1 222 212 3819</a></li>
+							<li class="address"><a href="#">Bangkalan Madura</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
+
+
+	<div class="inner dark">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-md-8 mb-3 mb-md-0 mx-auto">
+					<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by Go Umkm 
+					</p>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="overlayer"></div>
+<div class="loader">
+	<div class="spinner-border" role="status">
+		<span class="sr-only">Loading...</span>
+	</div>
+</div>
+	<script src="{{ asset('assets/wisata/js/jquery-3.4.1.min.js')}}"></script>
+	<script src="{{ asset('assets/wisata/js/popper.min.js')}}"></script>
+	<script src="{{ asset('assets/wisata/js/bootstrap.min.js')}}"></script>
+	<script src="{{ asset('assets/wisata/js/owl.carousel.min.js')}}"></script>
+	<script src="{{ asset('assets/wisata/js/jquery.animateNumber.min.js')}}"></script>
+	<script src="{{ asset('assets/wisata/js/jquery.waypoints.min.js')}}"></script>
+	<script src="{{ asset('assets/wisata/js/jquery.fancybox.min.js')}}"></script>
+	<script src="{{ asset('assets/wisata/js/aos.js')}}"></script>
+	<script src="{{ asset('assets/wisata/js/moment.min.js')}}"></script>
+	<script src="{{ asset('assets/wisata/js/daterangepicker.js')}}"></script>
+
+	<script src="{{ asset('assets/wisata/js/typed.js')}}"></script>
+	
+	<script src="{{ asset('assets/wisata/js/custom.js')}}"></script>
 </body>
 </html>

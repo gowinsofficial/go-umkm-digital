@@ -22,10 +22,23 @@ return new class extends Migration
         Schema::create('images', function (Blueprint $table) use ($group) {
             $table->id('id_img');
             $table->enum('group', $group);
+            $table->timestamps();
+        });
+        Schema::create('image_detail', function (Blueprint $table) use ($group) {
+            $table->id('id_imgdetail');
+            $table->unsignedBigInteger('id_img');
             $table->string('directory', 255);
             $table->string('filename', 255);
             $table->timestamps();
+            $table->foreign('id_img')->references('id_img')->on('images')
+                ->onDelete('CASCADE')->onUpdate('CASCADE');
         });
+        Schema::create('slides_galery', function (Blueprint $table) {
+            $table->id('id_img');
+            $table->string('img_name', 255);
+            $table->timestamps();
+        });
+
     }
 
     /**
@@ -33,6 +46,8 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::dropIfExists('slides_galery');
+        Schema::dropIfExists('image_detail');
         Schema::dropIfExists('images');
         Schema::dropIfExists('menus');
     }

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h5 class="fw-bold py-3 mb-2"><span class="text-muted fw-light">Master / Dosen /</span> Tambah</h5>
+        <h5 class="fw-bold py-3 mb-2"><span class="text-muted fw-light">Master / User /</span> Tambah</h5>
 
         @include('templates.alert')
 
@@ -11,30 +11,30 @@
             <div class="col-xxl">
                 <div class="card mb-4">
                     <div class="card-header d-flex align-items-center justify-content-between">
-                        <h5 class="mb-0">Tambah Dosen</h5>
+                        <h5 class="mb-0">Tambah User</h5>
                     </div>
                     <div class="card-body">
                         <form action="" method="POST">
                             @csrf
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label" for="nm_dosen">Nama</label>
+                                <label class="col-sm-2 col-form-label" for="nm_User">Nama</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control w-50" id="nm_dosen"
-                                        placeholder="Nama" name="nm_dosen" />
+                                    <input type="text" class="form-control w-50" id="nm_User"
+                                        placeholder="Nama" name="nm_User" />
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label" for="nidn">NIDN</label>
+                                <label class="col-sm-2 col-form-label" for="email">Email</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control w-50" id="nidn"
-                                        placeholder="NIDN" name="nidn" />
+                                    <input type="text" class="form-control w-50" id="email"
+                                        placeholder="Email" name="email" />
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label" for="jabatan">Jabatan</label>
+                                <label class="col-sm-2 col-form-label" for="status">Status</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control w-50" id="jabatan"
-                                    placeholder="Jabatan" name="jabatan" />
+                                    <input type="text" class="form-control w-50" id="status"
+                                    placeholder="Status" name="jabatan" />
                                 </div>
                             </div>
                             <div class="row mb-3">

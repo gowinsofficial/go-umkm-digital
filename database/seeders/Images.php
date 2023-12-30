@@ -14,20 +14,28 @@ class Images extends Seeder
      */
     public function run(): void
     {
-        $users = [
+        $img_group = [
             [
                 'group' => 'kuliner-madura',
+            ],
+            [
+                'group' => 'kuliner-madura',
+            ],
+        ];
+        $img_detail = [
+            [
+                'id_img' => 1,
                 'directory' => 'images/',
                 'filename' => 'bebek-sinjai.jpg',
             ],
             [
-                'group' => 'kuliner-madura',
+                'id_img' => 2,
                 'directory' => 'images/',
                 'filename' => 'bebek-sinjai-front.jpg',
-            ],
-
-
+            ]
         ];
-        DB::table('images')->insert($users);
+
+        DB::table('images')->insert($img_group);
+        DB::table('image_detail')->insert($img_detail);
     }
 }

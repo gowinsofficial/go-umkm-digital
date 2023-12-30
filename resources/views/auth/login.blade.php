@@ -64,46 +64,50 @@
             <div class="card-body">
               <!-- Logo -->
               <div class="app-brand justify-content-center" style="margin-bottom:1.3rem;">
-                <a href="/auth" class="app-brand-link gap-2">
-                  <span class="app-brand-logo demo">
-                    <img src="{{asset('assets/img/logo/logo.png')}}" width="80" alt="..">
-                  </span>
-                  <span class="app-brand-text demo text-body fw-bolder">
+                <a href="/auth" class="app-brand-link gap-1 d-flex flex-column">
+                  <div class="app-brand-logo demo mb-2">
+                    <img src="{{asset('assets/img/logo/logo.jpg')}}" width="80" class="rounded" alt="..">
+                  </div>
+                  <div class="app-brand-text demo text-body fw-bolder">
                     <p class="mb-1 fs-6">UMKM GO DIGITAL</p>
                     <p class="mb-0 fs-5">LOGIN ADMIN</p>
-                </span>
+                </div>
                 </a>
               </div>
               <!-- /Logo -->
 
               @include('templates.alert')
 
-              <form id="formAuthentication" class="mb-3" action="" method="POST">
+              <form id="formAuthentication" class="mb-3" action="{{ route('login.action') }}" method="POST">
                 @csrf
                 <div class="mb-3">
                   <label for="username" class="form-label">Username</label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control @error('username') is-invalid @enderror"
                     id="username"
                     name="username"
                     placeholder="Masukkan Username"
                     autofocus
                   />
+                    <div class="invalid-feedback">
+                        @error('username') {{ $message }} @enderror
+                    </div>
                 </div>
                 <div class="mb-3 form-password-toggle">
                   <div class="d-flex justify-content-between">
                     <label class="form-label" for="password">Password</label>
                   </div>
-                  <div class="input-group input-group-merge">
-                    <input
-                      type="password"
-                      id="password"
-                      class="form-control"
-                      name="password"
-                      placeholder="Masukkan password"
-                      aria-describedby="password"
-                    />
+                <input
+                  type="password"
+                  id="password"
+                  class="form-control @error('password') is-invalid @enderror"
+                  name="password"
+                  placeholder="Masukkan password"
+                  aria-describedby="password"
+                />
+                  <div class="invalid-feedback">
+                      @error('password') {{ $message }} @enderror
                   </div>
                 </div>
 

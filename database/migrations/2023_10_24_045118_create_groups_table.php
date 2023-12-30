@@ -115,6 +115,14 @@ return new class extends Migration
             $table->string('template_wa', 255);
             $table->timestamps();
         });
+
+        Schema::create('eventship', function (Blueprint $table) {
+            $table->id('id_event');
+            $table->string('title', 255);
+            $table->enum('direct_wa', ['Y', 'N']);
+            $table->string('destination_url', 255);
+            $table->timestamps();
+        });
     }
 
     /**
@@ -122,6 +130,7 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::dropIfExists('eventship');
         Schema::dropIfExists('services');
         Schema::dropIfExists('ojol_madura');
         Schema::dropIfExists('branding_umkm');

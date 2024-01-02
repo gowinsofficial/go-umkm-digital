@@ -12,7 +12,7 @@ use App\Http\Controllers\{
     MaduraTvController,
 };
 
-Route::group(["prefix" => "u", "middleware" => "mustlogin"], function() {
+Route::group(["prefix" => "admin", "middleware" => "mustlogin"], function() {
 
     //write admin routes here...
     Route::resource("/kuliner", KulinerMadura::class);

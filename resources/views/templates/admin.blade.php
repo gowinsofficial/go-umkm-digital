@@ -119,21 +119,21 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="" class="menu-link">
+                        <a href="{{ route('kuliner.index') }}" class="menu-link">
                             <i class="bx bx-album me-2"></i>
                             Kuliner Madura
                         </a>
                     </li>
 
                     <li class="menu-item">
-                        <a href="" class="menu-link">
+                        <a href="{{ route('batik.index') }}" class="menu-link">
                             <i class="bx bx-album me-2"></i>
                             Batik Madura
                         </a>
                     </li>
 
                     <li class="menu-item">
-                        <a href="" class="menu-link">
+                        <a href="{{ route('maduratv.index') }}" class="menu-link">
                             <i class="bx bx-album me-2"></i>
                             Madura TV
                         </a>

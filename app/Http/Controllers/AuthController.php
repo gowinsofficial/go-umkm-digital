@@ -23,7 +23,7 @@ class AuthController extends Controller
             'username' => $request->username,
             'password' => $request->password])) {
 
-            return redirect('/data');
+            return redirect()->route('kuliner.index');
         }
         return redirect()->route('login')->with('error', 'Username atau Password anda salah!');
     }

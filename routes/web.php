@@ -11,6 +11,7 @@ use App\Http\Controllers\{
     BatikMadura,
     MaduraTvController,
     PariwisataMadura,
+    OjolMadura,
 };
 
 Route::group(["prefix" => "admin", "middleware" => "mustlogin"], function() {
@@ -20,6 +21,7 @@ Route::group(["prefix" => "admin", "middleware" => "mustlogin"], function() {
     Route::resource("/batik", BatikMadura::class);
     Route::resource("/maduratv", MaduraTvController::class);
     Route::resource("/pariwisata", PariwisataMadura::class);
+    Route::resource("/ojol", OjolMadura::class);
 
 });
 

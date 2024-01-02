@@ -140,14 +140,14 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="{{ route('maduratv.index') }}" class="menu-link">
+                        <a href="{{ route('pariwisata.index') }}" class="menu-link">
                             <i class="bx bx-album me-2"></i>
                             Pariwisata Madura
                         </a>
                     </li>
 
                     <li class="menu-item">
-                        <a href="{{ route('maduratv.index') }}" class="menu-link">
+                        <a href="{{ route('ojol.index') }}" class="menu-link">
                             <i class="bx bx-album me-2"></i>
                             Ojol Madura
                         </a>

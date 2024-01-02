@@ -8,12 +8,14 @@ use App\Http\Controllers\{
     PageController,
     HomeController,
     KulinerMadura,
+    BatikMadura,
 };
 
 Route::group(["prefix" => "u", "middleware" => "mustlogin"], function() {
 
     //write admin routes here...
     Route::resource("/kuliner", KulinerMadura::class);
+    Route::resource("/batik", BatikMadura::class);
 
 });
 

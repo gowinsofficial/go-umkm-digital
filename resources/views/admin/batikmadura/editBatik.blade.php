@@ -11,7 +11,7 @@
             <div class="col-xxl">
                 <div class="card mb-4">
                     <div class="card-header d-flex align-items-center justify-content-between">
-                        <h5 class="mb-0">Edit Batik</h5>
+                        <h5 class="mb-0">Edit {{ $batik->nama }}</h5>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('batik.update', $batik->id_batik) }}" method="POST" enctype="multipart/form-data">

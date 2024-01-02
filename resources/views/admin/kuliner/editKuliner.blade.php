@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h5 class="fw-bold py-3 mb-2"><span class="text-muted fw-light">Data / Kuliner Madura /</span> Tambah</h5>
+        <h5 class="fw-bold py-3 mb-2"><span class="text-muted fw-light">Data / Kuliner Madura /</span> Edit</h5>
 
         @include('templates.alert')
 
@@ -11,7 +11,7 @@
             <div class="col-xxl">
                 <div class="card mb-4">
                     <div class="card-header d-flex align-items-center justify-content-between">
-                        <h5 class="mb-0">Tambah Kuliner</h5>
+                        <h5 class="mb-0">Edit {{ $kuliner->nama }}</h5>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('kuliner.update', $kuliner->id_kuliner) }}" method="POST" enctype="multipart/form-data">

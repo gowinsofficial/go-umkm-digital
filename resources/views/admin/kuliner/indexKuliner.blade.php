@@ -21,6 +21,7 @@
                             <thead>
                                 <tr class="table-primary">
                                     <th width="20">#</th>
+                                    <th>Khas</th>
                                     <th>Kategori</th>
                                     <th>Nama</th>
                                     <th>Outline</th>
@@ -36,6 +37,7 @@
                                 @foreach ($kuliner as $row)
                                     <tr>
                                         <td>{{++$no}}</td>
+                                        <td>{{$row->menu->nama_menu}}</td>
                                         <td>{{$row->kategori}}</td>
                                         <td>{{$row->nama}}</td>
                                         <td>{{$row->outline}}</td>

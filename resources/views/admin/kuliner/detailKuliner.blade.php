@@ -13,7 +13,7 @@
                     <div class="card-header d-flex align-items-center">
                         <a href="{{route('kuliner.index')}}" title="Kembali"><button class="btn btn-sm btn-primary me-2"><i
                                     class='bx bx-caret-left'></i></button></a>
-                        <h5 class="mb-0">Detail Pendaftaran</h5>
+                        <h5 class="mb-0">Detail {{ $kuliner->nama }}</h5>
                     </div>
                     <div class="card-body">
 

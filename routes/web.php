@@ -9,6 +9,7 @@ use App\Http\Controllers\{
     HomeController,
     KulinerMadura,
     BatikMadura,
+    MaduraTvController,
 };
 
 Route::group(["prefix" => "u", "middleware" => "mustlogin"], function() {
@@ -16,6 +17,7 @@ Route::group(["prefix" => "u", "middleware" => "mustlogin"], function() {
     //write admin routes here...
     Route::resource("/kuliner", KulinerMadura::class);
     Route::resource("/batik", BatikMadura::class);
+    Route::resource("/maduratv", MaduraTvController::class);
 
 });
 

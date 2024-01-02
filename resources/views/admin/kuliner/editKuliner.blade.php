@@ -22,7 +22,7 @@
                                 <div class="col-sm-10">
                                     <select class="form-select w-50" id="menu" name="menu">
                                         @foreach($menu as $row)
-                                            <option value="{{$row->id_menu}}" {{ $kuliner->id_menu==$kuliner->id_menu ? 'selected' : '' }}>{{$row->nama_menu}}</option>
+                                            <option value="{{$row->id_menu}}" {{ $row->id_menu==$kuliner->id_menu ? 'selected' : '' }}>{{$row->nama_menu}}</option>
                                         @endforeach
                                     </select>
                                 </div>

@@ -49,7 +49,7 @@ return new class extends Migration
         });
 
         Schema::create('madura_tv', function (Blueprint $table) {
-            $table->id('id_batik');
+            $table->id('id_tv');
             $table->unsignedBigInteger('id_menu');
             $table->unsignedBigInteger('id_img');
             $table->enum('kategori', ['budaya madura', 'acara madura', 'podcast', 'profil video umkm']);

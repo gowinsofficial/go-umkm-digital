@@ -139,6 +139,19 @@
                         </a>
                     </li>
 
+                    <li class="menu-item">
+                        <a href="{{ route('maduratv.index') }}" class="menu-link">
+                            <i class="bx bx-album me-2"></i>
+                            Pariwisata Madura
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="{{ route('maduratv.index') }}" class="menu-link">
+                            <i class="bx bx-album me-2"></i>
+                            Ojol Madura
+                        </a>
+                    </li>
 
                     <li class="menu-item">
                         <a href="{{ route('logout') }}" class="menu-link">

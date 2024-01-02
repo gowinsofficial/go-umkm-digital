@@ -7,31 +7,21 @@ use App\Http\Controllers\{
     AuthController,
     PageController,
     HomeController,
+    KulinerMadura,
 };
 
 Route::group(["prefix" => "u", "middleware" => "mustlogin"], function() {
-    Route::get('/data', [PageController::class, 'dataIndex']);
-    Route::get('/form', [PageController::class, 'formIndex']);
 
     //write admin routes here...
+    Route::resource("/kuliner", KulinerMadura::class);
 
 });
 
-/**
- * AUTH ROUTES
- */
-
+//====== AUTH ROUTES
 Route::get('/login', [AuthController::class, 'loginIndex'])->name('login');
 Route::post('/login', [AuthController::class, 'loginAction'])->name('login.action');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-
-/**
- * ====
- * END AUTH ROUTES
- */
-
-Route::resource('batikmadura',batikmaduraController::class);
-Route::resource('admin',adminController::class);
+//====== END AUTH ROUTES
 
 
 Route::get('/', function () {

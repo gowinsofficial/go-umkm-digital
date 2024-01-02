@@ -113,49 +113,49 @@
                     <!-- Dashboard -->
                     <li class="menu-item active">
                         <a href="" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                            <i class="menu-icon tf-icons bx bxs-home-circle"></i>
                             Dashboard
                         </a>
                     </li>
 
                     <li class="menu-item">
                         <a href="{{ route('kuliner.index') }}" class="menu-link">
-                            <i class="bx bx-album me-2"></i>
+                            <i class="bx bxs-food-menu me-2"></i>
                             Kuliner Madura
                         </a>
                     </li>
 
                     <li class="menu-item">
                         <a href="{{ route('batik.index') }}" class="menu-link">
-                            <i class="bx bx-album me-2"></i>
+                            <i class="bx bxs-t-shirt me-2"></i>
                             Batik Madura
                         </a>
                     </li>
 
                     <li class="menu-item">
                         <a href="{{ route('maduratv.index') }}" class="menu-link">
-                            <i class="bx bx-album me-2"></i>
+                            <i class="bx bxs-tv me-2"></i>
                             Madura TV
                         </a>
                     </li>
 
                     <li class="menu-item">
                         <a href="{{ route('pariwisata.index') }}" class="menu-link">
-                            <i class="bx bx-album me-2"></i>
+                            <i class="bx bxs-map me-2"></i>
                             Pariwisata Madura
                         </a>
                     </li>
 
                     <li class="menu-item">
                         <a href="{{ route('ojol.index') }}" class="menu-link">
-                            <i class="bx bx-album me-2"></i>
+                            <i class="bx bxs-comment me-2"></i>
                             Ojol Madura
                         </a>
                     </li>
 
                     <li class="menu-item">
                         <a href="{{ route('logout') }}" class="menu-link">
-                            <i class="bx bx-power-off me-2"></i>
+                            <i class="bx bxs-log-out me-2"></i>
                             Logout
                         </a>
                     </li>

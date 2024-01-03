@@ -162,7 +162,7 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="{{ route('ojol.index') }}" class="menu-link">
+                        <a href="{{ route('branding.index') }}" class="menu-link">
                             <i class="bx bxs-band-aid me-2"></i>
                             Branding UMKM
                         </a>

@@ -28,6 +28,7 @@
                                     <th>Resto</th>
                                     <th>Harga</th>
                                     <th>Rating</th>
+                                    <th>Whatsapp UMKM</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -44,6 +45,7 @@
                                         <td>{{$row->resto}}</td>
                                         <td>{{$row->harga}}</td>
                                         <td>{{$row->rating ? '★ '. $row->rating : ''}}</td>
+                                        <td>{{$row->whatsapp_umkm}}</td>
                                         <td>
                                             <a href="{{ route('kuliner.show', $row->id_kuliner) }}"><button
                                                     class="btn btn-sm btn-secondary"><i class='bx bxs-show'></i></button></a>

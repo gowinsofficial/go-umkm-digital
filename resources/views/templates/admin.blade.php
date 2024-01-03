@@ -197,6 +197,13 @@
                     </li>
 
                     <li class="menu-item">
+                        <a href="{{ route('ojol.index') }}" class="menu-link">
+                            <i class="bx bxs-slideshow me-2"></i>
+                            Slider Images
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
                         <a href="{{ route('logout') }}" class="menu-link">
                             <i class="bx bxs-log-out me-2"></i>
                             Logout

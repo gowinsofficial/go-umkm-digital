@@ -22,6 +22,7 @@ class Kuliner extends Model
         'harga',
         'rating',
         'detail',
+        'whatsapp_umkm',
     ];
     public function menu()
     {

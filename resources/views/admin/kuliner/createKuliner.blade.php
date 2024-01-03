@@ -97,6 +97,14 @@
                             </div>
 
                             <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label" for="whatsapp">Whatsapp UMKM</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control w-50" id="whatsapp"
+                                           placeholder="Whatsapp UMKM" name="whatsapp" required />
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="images">Gambar Kuliner</label>
                                 <div class="col-sm-10">
                                     <input type="file" class="form-control w-50" id="images" name="images[]" accept="image/*" multiple required />

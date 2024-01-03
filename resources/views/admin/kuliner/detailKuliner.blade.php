@@ -64,6 +64,11 @@
                                 <td>{{ $kuliner->detail }}</td>
                             </tr>
                             <tr>
+                                <th width="130">Whatsapp UMKM </th>
+                                <th width="20">:</th>
+                                <td>{{ $kuliner->whatsapp_umkm }}</td>
+                            </tr>
+                            <tr>
                                 <td colspan="2"></td>
                                 <td>
                                     @foreach($kuliner->image->imgdetail as $image)

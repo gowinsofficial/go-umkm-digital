@@ -56,6 +56,7 @@ class KulinerMadura extends Controller
             'harga' => $request->harga,
             'rating' => $request->rating,
             'detail' => $request->detail,
+            'whatsapp_umkm' => $request->whatsapp,
         ]);
 
         return redirect()->route('kuliner.index')->with('success', 'Berhasil menambahkan kuliner');
@@ -116,6 +117,7 @@ class KulinerMadura extends Controller
             'harga' => $request->harga,
             'rating' => $request->rating,
             'detail' => $request->detail,
+            'whatsapp_umkm' => $request->whatsapp,
         ]);
 
         return redirect()->route('kuliner.index')->with('success', 'Berhasil mengubah kuliner');

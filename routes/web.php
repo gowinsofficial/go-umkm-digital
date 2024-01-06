@@ -9,6 +9,7 @@ use App\Http\Controllers\{
     HomeController,
     KulinerMadura,
     BatikMadura,
+    KulinerPageController,
     MaduraTvController,
 };
 
@@ -31,12 +32,8 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/kuliner', function () {
-    return view('makanan');
-});
-Route::get('/kuliner-detail', function () {
-    return view('detailmakanan');
-});
+Route::get('/kuliner', [KulinerPageController::class, 'index']);
+Route::get('/kuliner-detail/{kuliner}', [KulinerPageController::class, 'show'])->name('kulinerpage.show');
 Route::get('/wisata', function () {
     return view('wisata');
 });

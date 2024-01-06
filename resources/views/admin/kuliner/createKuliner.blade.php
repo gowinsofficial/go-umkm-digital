@@ -10,7 +10,9 @@
             <!-- Basic Layout -->
             <div class="col-xxl">
                 <div class="card mb-4">
-                    <div class="card-header d-flex align-items-center justify-content-between">
+                    <div class="card-header d-flex align-items-center">
+                        <a href="{{route('kuliner.index')}}" title="Kembali"><button class="btn btn-sm btn-primary me-2"><i
+                                    class='bx bx-caret-left'></i></button></a>
                         <h5 class="mb-0">Tambah Kuliner</h5>
                     </div>
                     <div class="card-body">
@@ -91,6 +93,14 @@
                                 <label class="col-sm-2 col-form-label" for="detail">Detail</label>
                                 <div class="col-sm-10">
                                     <textarea class="form-control w-50" id="detail" rows="3" name="detail" placeholder="Detail"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label" for="whatsapp">Whatsapp UMKM</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control w-50" id="whatsapp"
+                                           placeholder="Whatsapp UMKM" name="whatsapp" required />
                                 </div>
                             </div>
 

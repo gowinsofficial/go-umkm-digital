@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h5 class="fw-bold py-3 mb-2"><span class="text-muted fw-light">Data / Kuliner Madura /</span> Edit</h5>
+        <h5 class="fw-bold py-3 mb-2"><span class="text-muted fw-light">Data / Madura TV /</span> Edit</h5>
 
         @include('templates.alert')
 
@@ -10,7 +10,9 @@
             <!-- Basic Layout -->
             <div class="col-xxl">
                 <div class="card mb-4">
-                    <div class="card-header d-flex align-items-center justify-content-between">
+                    <div class="card-header d-flex align-items-center">
+                        <a href="{{route('maduratv.index')}}" title="Kembali"><button class="btn btn-sm btn-primary me-2"><i
+                                    class='bx bx-caret-left'></i></button></a>
                         <h5 class="mb-0">Edit {{ $maduratv->nama }}</h5>
                     </div>
                     <div class="card-body">

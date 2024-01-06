@@ -10,8 +10,10 @@
             <!-- Basic Layout -->
             <div class="col-xxl">
                 <div class="card mb-4">
-                    <div class="card-header d-flex align-items-center justify-content-between">
-                        <h5 class="mb-0">Batik Kuliner</h5>
+                    <div class="card-header d-flex align-items-center">
+                        <a href="{{route('batik.index')}}" title="Kembali"><button class="btn btn-sm btn-primary me-2"><i
+                                    class='bx bx-caret-left'></i></button></a>
+                        <h5 class="mb-0">Batik Madura</h5>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('batik.store') }}" method="POST" enctype="multipart/form-data">

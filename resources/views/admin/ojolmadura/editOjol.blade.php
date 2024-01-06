@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h5 class="fw-bold py-3 mb-2"><span class="text-muted fw-light">Data / Madura TV /</span> Tambah</h5>
+        <h5 class="fw-bold py-3 mb-2"><span class="text-muted fw-light">Data / Ojol Madura /</span> Edit</h5>
 
         @include('templates.alert')
 
@@ -11,63 +11,52 @@
             <div class="col-xxl">
                 <div class="card mb-4">
                     <div class="card-header d-flex align-items-center">
-                        <a href="{{route('maduratv.index')}}" title="Kembali"><button class="btn btn-sm btn-primary me-2"><i
+                        <a href="{{route('ojol.index')}}" title="Kembali"><button class="btn btn-sm btn-primary me-2"><i
                                     class='bx bx-caret-left'></i></button></a>
-                        <h5 class="mb-0">Madura Tv</h5>
+                        <h5 class="mb-0">Edit {{ $ojol->nama }}</h5>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('maduratv.store') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('ojol.update', $ojol->id_ojol) }}" method="POST" enctype="multipart/form-data">
                             @csrf
+                            @method('PUT')
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="menu">Wilayah</label>
                                 <div class="col-sm-10">
                                     <select class="form-select w-50" id="menu" name="menu">
                                         @foreach($menu as $row)
-                                            <option value="{{$row->id_menu}}">{{$row->nama_menu}}</option>
+                                            <option value="{{$row->id_menu}}" {{ $row->id_menu==$ojol->id_ojol ? 'selected' : '' }}>{{$row->nama_menu}}</option>
                                         @endforeach
                                     </select>
                                 </div>
                             </div>
 
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label" for="nama">Nama Tv</label>
+                                <label class="col-sm-2 col-form-label" for="nama">Nama Ojol</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control w-50" id="nama"
-                                        placeholder="Nama Tv" name="nama" required />
-                                </div>
-                            </div>
-
-                            <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label" for="kategori">Kategori</label>
-                                <div class="col-sm-10">
-                                    <select class="form-select w-50" id="kategori" name="kategori">
-                                        <option value="budaya madura">Budaya Madura</option>
-                                        <option value="acara madura">Acara Madura</option>
-                                        <option value="podcast">Podcast</option>
-                                        <option value="profil video umkm">Profil Video UMKM</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label" for="direct_link">Direct Link</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control w-50" id="direct_link"
-                                           placeholder="Direct Link" name="direct_link" />
+                                           placeholder="Nama Ojol" name="nama" required value="{{ $ojol->nama }}" />
                                 </div>
                             </div>
 
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="detail">Detail</label>
                                 <div class="col-sm-10">
-                                    <textarea class="form-control w-50" id="detail" rows="3" name="detail" placeholder="Detail"></textarea>
+                                    <textarea class="form-control w-50" id="detail" rows="3" name="detail" placeholder="Detail">{{ $ojol->detail }}</textarea>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label" for="whatsapp">Whatsapp To</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control w-50" id="whatsapp"
+                                           placeholder="Whatsapp To" name="whatsapp" value="{{ $ojol->whatsapp_to }}" />
                                 </div>
                             </div>
 
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="images">Gambar Batik</label>
                                 <div class="col-sm-10">
-                                    <input type="file" class="form-control w-50" id="images" name="image" accept="image/*" required />
+                                    <input type="file" class="form-control w-50" id="images" name="image" accept="image/*" />
                                 </div>
                             </div>
 

@@ -2,22 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Batik;
 use App\Models\ImageDetail;
 use App\Models\Images;
-use App\Models\Kuliner;
 use App\Models\Menu;
+use App\Models\Pariwisata;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class KulinerMadura extends Controller
+class PariwisataMadura extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $kuliner = Kuliner::with(["menu", "image"])->get();
-        return view('admin.kuliner.indexKuliner', compact('kuliner'));
+        $pariwisata = Pariwisata::with(["menu", "image"])->get();
+        return view('admin.pariwisata.indexPariwisata', compact('pariwisata'));
     }
 
     /**
@@ -25,8 +26,8 @@ class KulinerMadura extends Controller
      */
     public function create()
     {
-        $menu = Menu::where("group", "=", "kuliner-madura")->get();
-        return view('admin.kuliner.createKuliner', compact('menu'));
+        $menu = Menu::where("group", "=", "pariwisata")->get();
+        return view('admin.pariwisata.createPariwisata', compact('menu'));
     }
 
     /**
@@ -34,7 +35,7 @@ class KulinerMadura extends Controller
      */
     public function store(Request $request)
     {
-        $imageGroup = Images::create(['group' => 'kuliner-madura']);
+        $imageGroup = Images::create(['group' => 'pariwisata']);
 
         foreach ($request->file('images') as $image) {
             $path = $image->store('public/uploads');
@@ -45,49 +46,46 @@ class KulinerMadura extends Controller
             ]);
         }
 
-        Kuliner::create([
+        Pariwisata::create([
             'id_menu' => $request->menu,
             'id_img' => $imageGroup->id_img,
-            'kategori' => $request->kategori,
             'nama' => $request->nama,
-            'outline' => $request->outline,
-            'resto' => $request->resto,
-            'link_resto' => $request->resto_link,
-            'harga' => $request->harga,
+            'lokasi' => $request->lokasi,
+            'maps' => $request->maps,
             'rating' => $request->rating,
             'detail' => $request->detail,
-            'whatsapp_umkm' => $request->whatsapp,
+            'whatsapp_to' => $request->whatsapp,
         ]);
 
-        return redirect()->route('kuliner.index')->with('success', 'Berhasil menambahkan kuliner');
+        return redirect()->route('pariwisata.index')->with('success', 'Berhasil menambahkan wisata');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Kuliner $kuliner)
+    public function show(Pariwisata $pariwisatum)
     {
-        return view('admin.kuliner.detailKuliner', compact('kuliner'));
+        return view('admin.pariwisata.detailPariwisata', compact('pariwisatum'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Kuliner $kuliner)
+    public function edit(Pariwisata $pariwisatum)
     {
-        $menu = Menu::where("group", "=", "kuliner-madura")->get();
-        return view('admin.kuliner.editKuliner', compact('kuliner', 'menu'));
+        $menu = Menu::where("group", "=", "batik-madura")->get();
+        return view('admin.pariwisata.editPariwisata', compact('pariwisatum', 'menu'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Kuliner $kuliner)
+    public function update(Request $request, Pariwisata $pariwisatum)
     {
-        $imageGroup = $kuliner->id_img;
+        $imageGroup = $pariwisatum->id_img;
 
         if ($request->file('images')) {
-            $images = Images::find($kuliner->id_img);
+            $images = Images::find($pariwisatum->id_img);
 
             foreach ($images->imgdetail as $img) {
                 Storage::delete($img->directory);
@@ -106,36 +104,33 @@ class KulinerMadura extends Controller
             }
         }
 
-        $kuliner->update([
+        $pariwisatum->update([
             'id_menu' => $request->menu,
             'id_img' => $imageGroup,
-            'kategori' => $request->kategori,
             'nama' => $request->nama,
-            'outline' => $request->outline,
-            'resto' => $request->resto,
-            'link_resto' => $request->resto_link,
-            'harga' => $request->harga,
+            'lokasi' => $request->lokasi,
+            'maps' => $request->maps,
             'rating' => $request->rating,
             'detail' => $request->detail,
-            'whatsapp_umkm' => $request->whatsapp,
+            'whatsapp_to' => $request->whatsapp,
         ]);
 
-        return redirect()->route('kuliner.index')->with('success', 'Berhasil mengubah kuliner');
+        return redirect()->route('pariwisata.index')->with('success', 'Berhasil mengubah wisata');
 
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Kuliner $kuliner)
+    public function destroy(Pariwisata $pariwisatum)
     {
-        $images = Images::find($kuliner->id_img);
+        $images = Images::find($pariwisatum->id_img);
         foreach ($images->imgdetail as $img) {
             Storage::delete($img->directory);
         }
         $images->delete();
-        $kuliner->delete();
+        $pariwisatum->delete();
 
-        return redirect()->route('kuliner.index')->with('success', 'Berhasil menghapus kuliner');
+        return redirect()->route('pariwisata.index')->with('success', 'Berhasil menghapus wisata');
     }
 }

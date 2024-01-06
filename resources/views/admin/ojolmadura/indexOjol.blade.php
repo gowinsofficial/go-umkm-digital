@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h5 class="fw-bold py-3 mb-2"><span class="text-muted fw-light">Data /</span> Kuliner Madura</h5>
+        <h5 class="fw-bold py-3 mb-2"><span class="text-muted fw-light">Data /</span> Ojol Madura</h5>
 
         @include('templates.alert')
 
@@ -11,9 +11,9 @@
             <div class="col-xxl">
                 <div class="card mb-4">
                     <div class="card-header d-flex align-items-center justify-content-between">
-                        <h5 class="mb-0">Kuliner Madura</h5>
-                        <a href="{{route('kuliner.create')}}"><button class="btn btn-sm btn-primary"><i
-                                    class='bx bx-plus'></i> Tambah Kuliner</button></a>
+                        <h5 class="mb-0">Ojol Madura</h5>
+                        <a href="{{route('ojol.create')}}"><button class="btn btn-sm btn-primary"><i
+                                    class='bx bx-plus'></i> Tambah Ojol</button></a>
                     </div>
                     <div class="card-body">
 
@@ -21,37 +21,29 @@
                             <thead>
                                 <tr class="table-primary">
                                     <th width="20">#</th>
-                                    <th>Khas</th>
-                                    <th>Kategori</th>
+                                    <th>Wilayah</th>
+                                    <th>Gambar</th>
                                     <th>Nama</th>
-                                    <th>Outline</th>
-                                    <th>Resto</th>
-                                    <th>Harga</th>
-                                    <th>Rating</th>
-                                    <th>Whatsapp UMKM</th>
+                                    <th>Detail</th>
+                                    <th>Whatsapp To</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
 
                                 @php($no = 0)
-                                @foreach ($kuliner as $row)
+                                @foreach ($ojolmadura as $row)
                                     <tr>
                                         <td>{{++$no}}</td>
                                         <td>{{$row->menu->nama_menu}}</td>
-                                        <td>{{$row->kategori}}</td>
+                                        <td><img src="{{ \Illuminate\Support\Facades\Storage::url($row->image->imgdetail[0]->directory ) }}" alt=".." style="max-height:80px;"> </td>
                                         <td>{{$row->nama}}</td>
-                                        <td>{{$row->outline}}</td>
-                                        <td>{{$row->resto}}</td>
-                                        <td>{{$row->harga}}</td>
-                                        <td>{{$row->rating ? '★ '. $row->rating : ''}}</td>
-                                        <td>{{$row->whatsapp_umkm}}</td>
+                                        <td>{{$row->detail}}</td>
+                                        <td>{{$row->whatsapp_to}}</td>
                                         <td>
-                                            <a href="{{ route('kuliner.show', $row->id_kuliner) }}"><button
-                                                    class="btn btn-sm btn-secondary"><i class='bx bxs-show'></i></button></a>
-                                            <a href="{{ route('kuliner.edit', $row->id_kuliner) }}"><button
+                                            <a href="{{ route('ojol.edit', $row->id_ojol) }}"><button
                                                     class="btn btn-sm btn-info"><i class='bx bxs-edit'></i></button></a>
-                                            <form class="d-inline deleteBtn" action="{{ route('kuliner.destroy', $row->id_kuliner) }}" method="post">
+                                            <form class="d-inline deleteBtn" action="{{ route('ojol.destroy', $row->id_ojol) }}" method="post">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-sm btn-danger"><i

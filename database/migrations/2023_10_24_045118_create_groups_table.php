@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('harga', 50)->nullable();
             $table->string('rating', 255)->nullable();
             $table->text('detail')->nullable();
+            $table->string('whatsapp_umkm', 255);
             $table->timestamps();
             $table->foreign('id_menu')->references('id_menu')->on('menus')
                 ->onDelete('CASCADE')->onUpdate('CASCADE');

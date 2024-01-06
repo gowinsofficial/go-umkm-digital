@@ -8,7 +8,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Dashboard | GO UMKM DIGITAL Admin</title>
+    <title>Admin | UMKM Go Digital - Dashboard</title>
 
 
     <meta name="description" content="" />
@@ -72,6 +72,14 @@
         table.tab-table tr th, table.tab-table tr td {
             text-align: left;
         }
+        .layout-navbar.navbar-detached {
+            margin: 0;
+            min-width: 100%;
+            border-radius: 0;
+        }
+        .layout-navbar.navbar-detached.container-xxl {
+            min-width: 100%;
+        }
     </style>
 
     <!-- Helpers -->
@@ -113,36 +121,91 @@
                     <!-- Dashboard -->
                     <li class="menu-item active">
                         <a href="" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                            <i class="menu-icon tf-icons bx bxs-home-circle"></i>
                             Dashboard
                         </a>
                     </li>
 
                     <li class="menu-item">
                         <a href="{{ route('kuliner.index') }}" class="menu-link">
-                            <i class="bx bx-album me-2"></i>
+                            <i class="bx bxs-food-menu me-2"></i>
                             Kuliner Madura
                         </a>
                     </li>
 
                     <li class="menu-item">
                         <a href="{{ route('batik.index') }}" class="menu-link">
-                            <i class="bx bx-album me-2"></i>
+                            <i class="bx bxs-t-shirt me-2"></i>
                             Batik Madura
                         </a>
                     </li>
 
                     <li class="menu-item">
                         <a href="{{ route('maduratv.index') }}" class="menu-link">
-                            <i class="bx bx-album me-2"></i>
+                            <i class="bx bxs-tv me-2"></i>
                             Madura TV
                         </a>
                     </li>
 
+                    <li class="menu-item">
+                        <a href="{{ route('pariwisata.index') }}" class="menu-link">
+                            <i class="bx bxs-map me-2"></i>
+                            Pariwisata Madura
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="{{ route('ojol.index') }}" class="menu-link">
+                            <i class="bx bxs-comment me-2"></i>
+                            Ojol Madura
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="{{ route('branding.index') }}" class="menu-link">
+                            <i class="bx bxs-band-aid me-2"></i>
+                            Branding UMKM
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="{{ route('ojol.index') }}" class="menu-link">
+                            <i class="bx bxs-phone me-2"></i>
+                            Services
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="{{ route('ojol.index') }}" class="menu-link">
+                            <i class="bx bxs-image me-2"></i>
+                            Eventship
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="{{ route('ojol.index') }}" class="menu-link">
+                            <i class="bx bxs-user me-2"></i>
+                            Manage Akun
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="{{ route('ojol.index') }}" class="menu-link">
+                            <i class="bx bxs-server me-2"></i>
+                            Pengaturan
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="{{ route('ojol.index') }}" class="menu-link">
+                            <i class="bx bxs-slideshow me-2"></i>
+                            Slider Images
+                        </a>
+                    </li>
 
                     <li class="menu-item">
                         <a href="{{ route('logout') }}" class="menu-link">
-                            <i class="bx bx-power-off me-2"></i>
+                            <i class="bx bxs-log-out me-2"></i>
                             Logout
                         </a>
                     </li>

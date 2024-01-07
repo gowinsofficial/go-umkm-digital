@@ -70,10 +70,7 @@
       <div class="col-lg-5">
         <div class="slides">
           <img src="{{ asset('assets/img/logo/logo-umkm.jpg')}}" alt="Image" class="img-fluid active">
-                    <img src="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}" alt="Image" class="img-fluid">
-                    <img src="{{ asset('assets/wisata/images/hero-slider-3.jpg')}}" alt="Image" class="img-fluid">
-                    <img src="{{ asset('assets/wisata/images/hero-slider-4.jpg')}}" alt="Image" class="img-fluid">
-                    <img src="{{ asset('assets/wisata/images/hero-slider-5.jpg')}}" alt="Image" class="img-fluid">
+                   
         </div>
       </div>
     </div>
@@ -99,7 +96,7 @@
       @foreach ($kuliner as $row)
       <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
         <div class="media-1">
-          <a href="/kuliner-detail" class="d-block mb-3"
+          <a href="{{ route('kulinerpage.show', $row->id_kuliner) }}" class="d-block mb-3"
             ><img
               src="{{ \Illuminate\Support\Facades\Storage::url($row->image->imgdetail[0]->directory)}}"
               alt="Image"

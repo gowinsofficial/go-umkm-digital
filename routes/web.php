@@ -14,7 +14,8 @@ use App\Http\Controllers\{
     PariwisataMadura,
     OjolMadura,
     BrandingUmkm,
-    Event
+    Event,
+    WisataPageController,
 };
 
 Route::group(["prefix" => "admin", "middleware" => "mustlogin"], function() {
@@ -42,12 +43,8 @@ Route::get('/', function () {
 });
 Route::get('/kuliner', [KulinerPageController::class, 'index']);
 Route::get('/kuliner-detail/{kuliner}', [KulinerPageController::class, 'show'])->name('kulinerpage.show');
-Route::get('/wisata', function () {
-    return view('wisata');
-});
-Route::get('/wisata-detail', function () {
-    return view('wisatadetail');
-});
+Route::get('/wisata',[WisataPageController::class, 'index']);
+Route::get('/wisata-detail/{pariwisatum}', [WisataPageController::class, 'show'])->name('wisatapage.show');
 Route::get('/batik', function () {
     return view('batik');
 });

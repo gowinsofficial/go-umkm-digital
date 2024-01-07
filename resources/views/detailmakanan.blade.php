@@ -11,7 +11,7 @@
       <div class="col-lg-6 mx-auto text-center">
         <div class="intro-wrap">
           <h1 class="mb-0">Detail Kuliner</h1>
-         
+          
         </div>
       </div>
     </div>
@@ -34,7 +34,7 @@
 
       <div class="col-lg-4">
         <div class="custom-block" data-aos="fade-up">
-          <h2 class="section-title">Bebek Sinjay</h2>
+          <h2 class="section-title">{{ $kuliner->nama }}</h2>
           <div class="stars">
             <span class="fa fa-star checked">4,5</span>
           </div>

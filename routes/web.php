@@ -13,6 +13,7 @@ use App\Http\Controllers\{
     PariwisataMadura,
     OjolMadura,
     BrandingUmkm,
+    Event
 };
 
 Route::group(["prefix" => "admin", "middleware" => "mustlogin"], function() {
@@ -24,6 +25,7 @@ Route::group(["prefix" => "admin", "middleware" => "mustlogin"], function() {
     Route::resource("/pariwisata", PariwisataMadura::class);
     Route::resource("/ojol", OjolMadura::class);
     Route::resource("/branding", BrandingUmkm::class);
+    Route::resource("/eventship", Event::class);
 
 });
 

@@ -9,12 +9,12 @@ class Service extends Model
 {
     use HasFactory;
     protected $table = 'services';
-    protected $primaryKey = 'id_user';
+    protected $primaryKey = 'id_service';
     protected $hidden = ['created_at', 'updated_at'];
     protected $fillable = [
-        'name',
-        'username',
-        'password',
+        'group',
+        'sub_group',
+        'template_wa',
     ];
 
 }

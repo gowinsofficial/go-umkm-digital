@@ -9,15 +9,15 @@ use App\Models\Menu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class KulinerMadura extends Controller
+class Services extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $kuliner = Service::with(["menu", "image"])->get();
-        return view('admin.kuliner.indexKuliner', compact('kuliner'));
+        // $service = Service::with(["menu", "image"])->get();
+        return view('admin.service.indexKuliner');
     }
 
     /**
@@ -25,8 +25,8 @@ class KulinerMadura extends Controller
      */
     public function create()
     {
-        $menu = Menu::where("group", "=", "kuliner-madura")->get();
-        return view('admin.kuliner.createKuliner', compact('menu'));
+        // $menu = Menu::where("group", "=", "kuliner-madura")->get();
+        return view('admin.service.createKuliner');
     }
 
     /**
@@ -34,108 +34,96 @@ class KulinerMadura extends Controller
      */
     public function store(Request $request)
     {
-        $imageGroup = Images::create(['group' => 'kuliner-madura']);
+        // $imageGroup = Images::create(['group' => 'service']);
 
-        foreach ($request->file('images') as $image) {
-            $path = $image->store('public/uploads');
-            ImageDetail::create([
-                'id_img' => $imageGroup->id_img,
-                'directory' => $path,
-                'filename' => $image->getClientOriginalName(),
-            ]);
-        }
+        // foreach ($request->file('images') as $image) {
+        //     $path = $image->store('public/uploads');
+        //     ImageDetail::create([
+        //         'id_img' => $imageGroup->id_img,
+        //         'directory' => $path,
+        //         'filename' => $image->getClientOriginalName(),
+        //     ]);
+        // }
 
         Service::create([
-            'id_menu' => $request->menu,
-            'id_img' => $imageGroup->id_img,
-            'kategori' => $request->kategori,
-            'nama' => $request->nama,
-            'outline' => $request->outline,
-            'resto' => $request->resto,
-            'link_resto' => $request->resto_link,
-            'harga' => $request->harga,
-            'rating' => $request->rating,
-            'detail' => $request->detail,
-            'whatsapp_umkm' => $request->whatsapp,
+            // 'id_img' => $imageGroup->id_img,
+            'group' => $request->group,
+            'sub_group' => $request->sub_group,
+            'template_wa' => $request->template_wa,
+            // 'whatsapp_umkm' => $request->whatsapp,
         ]);
 
-        return redirect()->route('kuliner.index')->with('success', 'Berhasil menambahkan kuliner');
+        return redirect()->route('service.index')->with('success', 'Berhasil menambahkan service');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Service $kuliner)
+    public function show(Service $service)
     {
-        return view('admin.kuliner.detailKuliner', compact('kuliner'));
+        return view('admin.service.detailServices', compact('service'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Service $kuliner)
+    public function edit(Service $service)
     {
-        $menu = Menu::where("group", "=", "kuliner-madura")->get();
-        return view('admin.kuliner.editKuliner', compact('kuliner', 'menu'));
+        // $menu = Menu::where("group", "=", "kuliner-madura")->get();
+        return view('admin.service.editServices', compact('service'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Service $kuliner)
+    public function update(Request $request, Service $service)
     {
-        $imageGroup = $kuliner->id_img;
+        // $imageGroup = $kuliner->id_img;
 
-        if ($request->file('images')) {
-            $images = Images::find($kuliner->id_img);
+        // if ($request->file('images')) {
+        //     $images = Images::find($kuliner->id_img);
 
-            foreach ($images->imgdetail as $img) {
-                Storage::delete($img->directory);
-                $img->delete();
-            }
+        //     foreach ($images->imgdetail as $img) {
+        //         Storage::delete($img->directory);
+        //         $img->delete();
+        //     }
 
-            $imageGroup = $images->id_img;
+        //     $imageGroup = $images->id_img;
 
-            foreach ($request->file('images') as $image) {
-                $path = $image->store('public/uploads');
-                ImageDetail::create([
-                    'id_img' => $imageGroup,
-                    'directory' => $path,
-                    'filename' => $image->getClientOriginalName(),
-                ]);
-            }
-        }
+        //     foreach ($request->file('images') as $image) {
+        //         $path = $image->store('public/uploads');
+        //         ImageDetail::create([
+        //             'id_img' => $imageGroup,
+        //             'directory' => $path,
+        //             'filename' => $image->getClientOriginalName(),
+        //         ]);
+        //     }
+        // }
 
-        $kuliner->update([
-            'id_menu' => $request->menu,
-            'id_img' => $imageGroup,
-            'kategori' => $request->kategori,
-            'nama' => $request->nama,
-            'outline' => $request->outline,
-            'resto' => $request->resto,
-            'link_resto' => $request->resto_link,
-            'harga' => $request->harga,
-            'rating' => $request->rating,
-            'detail' => $request->detail,
-            'whatsapp_umkm' => $request->whatsapp,
+        $service->update([
+            // 'id_img' => $imageGroup->id_img,
+            'group' => $request->group,
+            'sub_group' => $request->sub_group,
+            'template_wa' => $request->template_wa,
+            // 'whatsapp_umkm' => $request->whatsapp,
         ]);
 
-        return redirect()->route('kuliner.index')->with('success', 'Berhasil mengubah kuliner');
+        return redirect()->route('service.index')->with('success', 'Berhasil mengubah Service');
 
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Service $kuliner)
+    public function destroy(Service $service)
     {
-        $images = Images::find($kuliner->id_img);
-        foreach ($images->imgdetail as $img) {
-            Storage::delete($img->directory);
-        }
-        $images->delete();
-        $kuliner->delete();
+        // $images = Images::find($kuliner->id_img);
+        // foreach ($images->imgdetail as $img) {
+        //     Storage::delete($img->directory);
+        // }
+        //$images->delete();
+        $service->delete();
 
-        return redirect()->route('kuliner.index')->with('success', 'Berhasil menghapus kuliner');
+        return redirect()->route('kuliner.index')->with('success', 'Berhasil menghapus service');
     }
 }

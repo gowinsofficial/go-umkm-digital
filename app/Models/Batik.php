@@ -21,6 +21,7 @@ class Batik extends Model
         'rating',
         'detail',
         'whatsapp_umkm',
+        'maps',
     ];
     public function menu()
     {

@@ -54,7 +54,7 @@
 							<li><a href="/kuliner">Kuliner Madura</a></li>
 							<li><a href="/batik">Batik Madura</a></li>
 							<li><a href="/Madura-tv">Madura Tv</a></li>
-							<li><a href="#">Ojol Madura</a></li>
+							<li><a href="/ojol-madura">Ojol Madura</a></li>
 							<li><a href="#">Madura Tv</a></li>
 							<li><a href="/wisata">Pariwisata</a></li>
 							<li><a href="#">Branding Bisnis</a></li>

@@ -18,6 +18,7 @@ use App\Http\Controllers\{
     Event,
     MaduraTvPageController,
     WisataPageController,
+    OjolMaduraPageController,
     Services,
 };
 
@@ -53,6 +54,7 @@ Route::get('/wisata-detail/{pariwisatum}', [WisataPageController::class, 'show']
 Route::get('/batik', [BatikPageController::class, 'index']);
 Route::get('/batik-detail/{batik}',[BatikPageController::class, 'show'])->name('wisatapage.show');
 Route::get('/Madura-tv',[MaduraTvPageController::class, 'index']);
+Route::get('/ojol-madura',[OjolMaduraPageController::class, 'index']);
 Route::get('/about', function () {
     return view('about');
 });

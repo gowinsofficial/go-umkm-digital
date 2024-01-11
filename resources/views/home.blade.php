@@ -135,7 +135,7 @@
                         <span class="fa fa-car  fa-3x display-4 text-primary"></span>
                         <h3>Ojol Madura</h3>
                         <p class="mb-0">Ojek Online Di Seluruh Kabupaten Madura.</p>
-                        <a class="btn btn-info" href="#" role="button">view</a>
+                        <a class="btn btn-info" href="/ojol-madura" role="button">view</a>
                     </div>
                 </div>
             </div>

@@ -5,17 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Eventship extends Model
+class PostArticles extends Model
 {
     use HasFactory;
-    protected $table = 'eventship';
-    protected $primaryKey = 'id_event';
+    protected $table = 'post_articles';
+    protected $primaryKey = 'id_article';
     protected $fillable = [
         'id_img',
-        'title',
-        'tgl_event',
-        'direct_wa',
-        'destination_url',
+        'header',
+        'tgl_post',
+        'writer',
+        'content',
+        'file_upload',
     ];
 
     public function image()

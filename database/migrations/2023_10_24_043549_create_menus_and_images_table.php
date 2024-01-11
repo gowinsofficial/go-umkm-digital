@@ -35,6 +35,7 @@ return new class extends Migration
         });
         Schema::create('slides_galery', function (Blueprint $table) {
             $table->id('id_img');
+            $table->string('title', 255);
             $table->string('img_name', 255);
             $table->timestamps();
         });

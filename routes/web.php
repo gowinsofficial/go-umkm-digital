@@ -9,12 +9,14 @@ use App\Http\Controllers\{
     HomeController,
     KulinerMadura,
     BatikMadura,
+    BatikPageController,
     KulinerPageController,
     MaduraTvController,
     PariwisataMadura,
     OjolMadura,
     BrandingUmkm,
-    Events,
+    Event,
+    MaduraTvPageController,
     WisataPageController,
     Services,
 };
@@ -48,12 +50,9 @@ Route::get('/kuliner', [KulinerPageController::class, 'index']);
 Route::get('/kuliner-detail/{kuliner}', [KulinerPageController::class, 'show'])->name('kulinerpage.show');
 Route::get('/wisata',[WisataPageController::class, 'index']);
 Route::get('/wisata-detail/{pariwisatum}', [WisataPageController::class, 'show'])->name('wisatapage.show');
-Route::get('/batik', function () {
-    return view('batik');
-});
-Route::get('/batik-detail', function () {
-    return view('wisatadetail');
-});
+Route::get('/batik', [BatikPageController::class, 'index']);
+Route::get('/batik-detail/{batik}',[BatikPageController::class, 'show'])->name('wisatapage.show');
+Route::get('/Madura-tv',[MaduraTvPageController::class, 'index']);
 Route::get('/about', function () {
     return view('about');
 });

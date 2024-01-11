@@ -5,16 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Eventship extends Model
+class Bazar extends Model
 {
     use HasFactory;
-    protected $table = 'eventship';
-    protected $primaryKey = 'id_event';
+    protected $table = 'bazar';
+    protected $primaryKey = 'id_bazar';
     protected $fillable = [
         'id_img',
         'title',
-        'tgl_event',
-        'direct_wa',
+        'tgl_acara',
         'destination_url',
     ];
 

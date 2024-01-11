@@ -1,3 +1,4 @@
+@inject('setting', 'App\Http\Controllers\Settings')
 @extends('templates.nav')
 @section('csspage')
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -9,12 +10,7 @@
             <div class="col-lg-7">
                 <div class="intro-wrap">
                     <h1 class="mb-5"><span class="d-block">Go Umkm</h1>
-                    <p class="text-white">umkm go di.gital madura merupakan wadah
-                        untuk membantu brand pen jualan umkm go digital,
-                        Baik pada Umkm skala keal dan menengah
-                        yakni denganPromosi bisnis di berbagai
-                        e commerce Yakni shopee,tokopedia, instagram,
-                        you tube, tiktok dsb.</p>
+                    <p class="text-white">{{ $setting::get("text-side-landing") }}</p>
                 </div>
             </div>
             <div class="col-lg-5">
@@ -45,8 +41,8 @@
                             />
                           </figure>
                         </div>
-              
-                       
+
+
                       </div>
                     </div>
                   </div>
@@ -59,12 +55,12 @@
         <div class="row mb-5 justify-content-center">
             <div class="col-lg-6 text-center">
                 <h2 class="section-title text-center mb-3">Our Services</h2>
-                
+
             </div>
         </div>
         <div class="row justify-content-start">
-           
-          
+
+
             <div class=" col-lg-3 " >
 
                 <div class="feature-1 ">
@@ -77,7 +73,7 @@
                         <a class="btn btn-info" href="/kuliner" role="button">view</a>
                     </div>
                 </div>
-                
+
 
             </div>
 
@@ -88,7 +84,7 @@
                         <span class="fa fa-tags fa-3x  display-4 text-primary"></span>
                         <h3>Batik madura</h3>
                         <p class="mb-0">Batik Khas Maduran Dengan Beragam Motif Dan Corak .</p>
-                        <a class="btn btn-info" href="#" role="button">view</a>
+                        <a class="btn btn-info" href="/batik" role="button">view</a>
                     </div>
                 </div>
 
@@ -111,7 +107,7 @@
                         <span class="fa fa-tv  fa-3x display-4 text-primary"></span>
                         <h3>Madura TV</h3>
                         <p class="mb-0">Chanel Youtube Yang Berisi Semua Tentang Madura.</p>
-                        <a class="btn btn-info" href="#" role="button">view</a>
+                        <a class="btn btn-info" href="/Madura-tv" role="button">view</a>
                     </div>
                 </div>
 
@@ -123,7 +119,7 @@
                         <span class="fa fa-ship fa-3x  display-4 text-primary"></span>
                         <h3>Pariwisata</h3>
                         <p class="mb-0">Wisata Wisata Populer yang ada Di madura.</p>
-                        <a class="btn btn-info" href="#" role="button">view</a>
+                        <a class="btn btn-info" href="/wisata" role="button">view</a>
                     </div>
                 </div>
 
@@ -142,7 +138,7 @@
             <div class="col-lg-3 " >
                 <div class="feature-1 ">
                     <div class="align-self-center">
-                        
+
                         <span class="fa-3x display-4 text-primary">
                             <svg xmlns="http://www.w3.org/2000/svg" height="39" width="56" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
                         </span>
@@ -185,7 +181,7 @@
                         <span class="location">Italy</span>
                     </div>
                     <img src="{{ asset('assets/wisata/images/hero-slider-1.jpg')}}" alt="Image" class="img-fluid">
-                </a> 
+                </a>
             </div>
 
             <div class="item">
@@ -195,7 +191,7 @@
                         <span class="location">Greece</span>
                     </div>
                     <img src="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}" alt="Image" class="img-fluid">
-                </a> 
+                </a>
             </div>
 
             <div class="item">
@@ -205,7 +201,7 @@
                         <span class="location">Malaysia</span>
                     </div>
                     <img src="{{ asset('assets/wisata/images/hero-slider-3.jpg')}}" alt="Image" class="img-fluid">
-                </a> 
+                </a>
             </div>
 
 
@@ -216,7 +212,7 @@
                         <span class="location">Italy</span>
                     </div>
                     <img src="{{ asset('assets/wisata/images/hero-slider-4.jpg')}}" alt="Image" class="img-fluid">
-                </a> 
+                </a>
             </div>
 
             <div class="item">
@@ -226,7 +222,7 @@
                         <span class="location">United States</span>
                     </div>
                     <img src="{{ asset('assets/wisata/images/hero-slider-5.jpg')}}" alt="Image" class="img-fluid">
-                </a> 
+                </a>
             </div>
 
             <div class="item">
@@ -236,7 +232,7 @@
                         <span class="location">Switzerland</span>
                     </div>
                     <img src="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}" alt="Image" class="img-fluid">
-                </a> 
+                </a>
             </div>
 
         </div>
@@ -249,7 +245,7 @@
         <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-6">
                 <h2 class="section-title text-center mb-3">Special Offers &amp; Discounts</h2>
-                
+
             </div>
         </div>
         <div class="row justify-content-center">
@@ -267,9 +263,9 @@
                                 <span>$520.00</span>
                             </div>  --}}
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
@@ -282,11 +278,11 @@
                     <div class="d-flex align-items-center">
                         <div>
                             <h3><a href="#">Pelatihan Marketing dll...</a></h3>
-                           
+
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
@@ -303,9 +299,9 @@
                                 <span>$750.00</span>
                             </div>  --}}
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -324,9 +320,9 @@
                                 <span>$520.00</span>
                             </div>  --}}
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
@@ -343,9 +339,9 @@
                                 <span>$520.00</span>
                             </div>  --}}
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
@@ -362,9 +358,9 @@
                                 <span>$750.00</span>
                             </div>  --}}
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -399,6 +395,6 @@
 
         });
     })
-</script>     
+</script>
 @endsection
 

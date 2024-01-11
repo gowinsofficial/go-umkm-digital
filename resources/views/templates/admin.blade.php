@@ -169,14 +169,14 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="{{ route('ojol.index') }}" class="menu-link">
+                        <a href="{{ route('service.index') }}" class="menu-link">
                             <i class="bx bxs-phone me-2"></i>
                             Services
                         </a>
                     </li>
 
                     <li class="menu-item">
-                        <a href="{{ route('ojol.index') }}" class="menu-link">
+                        <a href="{{ route('eventship.index') }}" class="menu-link">
                             <i class="bx bxs-image me-2"></i>
                             Eventship
                         </a>

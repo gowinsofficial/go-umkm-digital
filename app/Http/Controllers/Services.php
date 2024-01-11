@@ -17,7 +17,7 @@ class Services extends Controller
     public function index()
     {
         // $service = Service::with(["menu", "image"])->get();
-        return view('admin.service.indexKuliner');
+        return view('admin.service.indexServices');
     }
 
     /**
@@ -26,7 +26,7 @@ class Services extends Controller
     public function create()
     {
         // $menu = Menu::where("group", "=", "kuliner-madura")->get();
-        return view('admin.service.createKuliner');
+        return view('admin.service.createServices');
     }
 
     /**
@@ -124,6 +124,6 @@ class Services extends Controller
         //$images->delete();
         $service->delete();
 
-        return redirect()->route('kuliner.index')->with('success', 'Berhasil menghapus service');
+        return redirect()->route('service.index')->with('success', 'Berhasil menghapus service');
     }
 }

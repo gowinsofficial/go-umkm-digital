@@ -26,7 +26,7 @@ class Events extends Controller
     public function create()
     {
         //$menu = Menu::where("group", "=", "branding-umkm")->get();
-        return view('admin.branding.createBranding');
+        return view('admin.branding.createEventship');
     }
 
     /**

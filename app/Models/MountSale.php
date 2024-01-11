@@ -5,17 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Eventship extends Model
+class MountSale extends Model
 {
     use HasFactory;
-    protected $table = 'eventship';
-    protected $primaryKey = 'id_event';
+    protected $table = 'mountly_sale';
+    protected $primaryKey = 'id_sale';
     protected $fillable = [
         'id_img',
-        'title',
-        'tgl_event',
-        'direct_wa',
-        'destination_url',
+        'kategori',
+        'nama_produk',
+        'harga_awal',
+        'diskon',
+        'detail',
     ];
 
     public function image()

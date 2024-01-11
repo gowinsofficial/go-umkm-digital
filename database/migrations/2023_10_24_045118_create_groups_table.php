@@ -117,7 +117,7 @@ return new class extends Migration
         });
 
         Schema::create('bazar', function (Blueprint $table) {
-            $table->id('id_event');
+            $table->id('id_bazar');
             $table->unsignedBigInteger('id_img');
             $table->string('title', 255);
             $table->date('tgl_acara');
@@ -145,7 +145,6 @@ return new class extends Migration
             $table->unsignedBigInteger('id_img');
             $table->enum('kategori', ['kuliner madura', 'batik madura']);
             $table->string('nama_produk', 255);
-            $table->datetime('tgl_post');
             $table->integer('harga_awal');
             $table->integer('diskon');
             $table->text('detail');

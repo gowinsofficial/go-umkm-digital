@@ -88,7 +88,7 @@
                         <span class="fa fa-tags fa-3x  display-4 text-primary"></span>
                         <h3>Batik madura</h3>
                         <p class="mb-0">Batik Khas Maduran Dengan Beragam Motif Dan Corak .</p>
-                        <a class="btn btn-info" href="#" role="button">view</a>
+                        <a class="btn btn-info" href="/batik" role="button">view</a>
                     </div>
                 </div>
 
@@ -111,7 +111,7 @@
                         <span class="fa fa-tv  fa-3x display-4 text-primary"></span>
                         <h3>Madura TV</h3>
                         <p class="mb-0">Chanel Youtube Yang Berisi Semua Tentang Madura.</p>
-                        <a class="btn btn-info" href="#" role="button">view</a>
+                        <a class="btn btn-info" href="/Madura-tv" role="button">view</a>
                     </div>
                 </div>
 
@@ -123,7 +123,7 @@
                         <span class="fa fa-ship fa-3x  display-4 text-primary"></span>
                         <h3>Pariwisata</h3>
                         <p class="mb-0">Wisata Wisata Populer yang ada Di madura.</p>
-                        <a class="btn btn-info" href="#" role="button">view</a>
+                        <a class="btn btn-info" href="/wisata" role="button">view</a>
                     </div>
                 </div>
 

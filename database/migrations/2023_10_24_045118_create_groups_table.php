@@ -42,6 +42,7 @@ return new class extends Migration
             $table->string('rating', 50)->nullable();
             $table->text('detail')->nullable();
             $table->string('whatsapp_umkm', 255);
+            $table->string('maps', 255);
             $table->timestamps();
             $table->foreign('id_menu')->references('id_menu')->on('menus')
                 ->onDelete('CASCADE')->onUpdate('CASCADE');
@@ -81,20 +82,6 @@ return new class extends Migration
                 ->onDelete('CASCADE')->onUpdate('CASCADE');
         });
 
-        Schema::create('branding_umkm', function (Blueprint $table) {
-            $table->id('id_brand');
-            $table->unsignedBigInteger('id_menu');
-            $table->unsignedBigInteger('id_img');
-            $table->enum('kategori', ['pemasaran online', 'live streaming', 'apps']);
-            $table->string('nama', 255);
-            $table->text('detail')->nullable();
-            $table->timestamps();
-            $table->foreign('id_menu')->references('id_menu')->on('menus')
-                ->onDelete('CASCADE')->onUpdate('CASCADE');
-            $table->foreign('id_img')->references('id_img')->on('images')
-                ->onDelete('CASCADE')->onUpdate('CASCADE');
-        });
-
         Schema::create('ojol_madura', function (Blueprint $table) {
             $table->id('id_ojol');
             $table->unsignedBigInteger('id_menu');
@@ -119,10 +106,52 @@ return new class extends Migration
 
         Schema::create('eventship', function (Blueprint $table) {
             $table->id('id_event');
+            $table->unsignedBigInteger('id_img');
             $table->string('title', 255);
+            $table->date('tgl_event');
             $table->enum('direct_wa', ['Y', 'N']);
             $table->string('destination_url', 255);
             $table->timestamps();
+            $table->foreign('id_img')->references('id_img')->on('images')
+                ->onDelete('CASCADE')->onUpdate('CASCADE');
+        });
+
+        Schema::create('bazar', function (Blueprint $table) {
+            $table->id('id_event');
+            $table->unsignedBigInteger('id_img');
+            $table->string('title', 255);
+            $table->date('tgl_acara');
+            $table->string('destination_url', 255);
+            $table->timestamps();
+            $table->foreign('id_img')->references('id_img')->on('images')
+                ->onDelete('CASCADE')->onUpdate('CASCADE');
+        });
+
+        Schema::create('post_articles', function (Blueprint $table) {
+            $table->id('id_article');
+            $table->unsignedBigInteger('id_img');
+            $table->string('header', 255);
+            $table->datetime('tgl_post');
+            $table->string('writer', 255);
+            $table->text('content');
+            $table->string('file_upload', 255);
+            $table->timestamps();
+            $table->foreign('id_img')->references('id_img')->on('images')
+                ->onDelete('CASCADE')->onUpdate('CASCADE');
+        });
+
+        Schema::create('mountly_sale', function (Blueprint $table) {
+            $table->id('id_sale');
+            $table->unsignedBigInteger('id_img');
+            $table->enum('kategori', ['kuliner madura', 'batik madura']);
+            $table->string('nama_produk', 255);
+            $table->datetime('tgl_post');
+            $table->integer('harga_awal');
+            $table->integer('diskon');
+            $table->text('detail');
+            $table->timestamps();
+            $table->foreign('id_img')->references('id_img')->on('images')
+                ->onDelete('CASCADE')->onUpdate('CASCADE');
         });
     }
 
@@ -131,10 +160,12 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::dropIfExists('mountly_sale');
+        Schema::dropIfExists('post_articles');
+        Schema::dropIfExists('bazar');
         Schema::dropIfExists('eventship');
         Schema::dropIfExists('services');
         Schema::dropIfExists('ojol_madura');
-        Schema::dropIfExists('branding_umkm');
         Schema::dropIfExists('pariwisata');
         Schema::dropIfExists('madura_tv');
         Schema::dropIfExists('batik_madura');

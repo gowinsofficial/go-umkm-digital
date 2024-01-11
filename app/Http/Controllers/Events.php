@@ -9,7 +9,7 @@ use App\Models\Menu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class Event extends Controller
+class Events extends Controller
 {
     /**
      * Display a listing of the resource.

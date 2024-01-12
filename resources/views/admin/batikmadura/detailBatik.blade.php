@@ -54,6 +54,11 @@
                                 <th>{{ $batik->whatsapp_umkm }}</th>
                             </tr>
                             <tr>
+                                <th width="130">Whatsapp UMKM </th>
+                                <th width="20">:</th>
+                                <th>{{ $batik->maps }}</th>
+                            </tr>
+                            <tr>
                                 <th width="130">Detail </th>
                                 <th width="20">:</th>
                                 <td>{{ $batik->detail }}</td>

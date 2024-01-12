@@ -78,6 +78,14 @@
                             </div>
 
                             <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label" for="maps">Lokasi Maps</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control w-50" id="maps"
+                                           placeholder="Maps" name="maps" required />
+                                </div>
+                            </div>
+
+                            <div class="row mb-3"> 
                                 <label class="col-sm-2 col-form-label" for="detail">Detail</label>
                                 <div class="col-sm-10">
                                     <textarea class="form-control w-50" id="detail" rows="3" name="detail" placeholder="Detail"></textarea>

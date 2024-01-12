@@ -2,22 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Eventship;
+use App\Models\Bazar;
 use App\Models\ImageDetail;
 use App\Models\Images;
 use App\Models\Menu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class Events extends Controller
+class BazarUmkm extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $eventship = Eventship::all();;
-        return view('admin.eventship.indexEventship', compact('eventship'));
+        $bazar = Bazar::all();;
+        return view('admin.bazar.indexBazar', compact('bazar'));
     }
 
     /**
@@ -26,7 +26,7 @@ class Events extends Controller
     public function create()
     {
         //$menu = Menu::where("group", "=", "branding-umkm")->get();
-        return view('admin.eventship.createEventship');
+        return view('admin.bazar.createBazar');
     }
 
     /**
@@ -34,7 +34,7 @@ class Events extends Controller
      */
     public function store(Request $request)
     {
-        $imageGroup = Images::create(['group' => 'eventship']);
+        $imageGroup = Images::create(['group' => 'bazar']);
 
         $image = $request->file('image');
         $path = $image->store('public/uploads');
@@ -44,21 +44,21 @@ class Events extends Controller
             'filename' => $image->getClientOriginalName(),
         ]);
 
-        Eventship::create([
+        Bazar::create([
             'id_img' => $imageGroup->id_img,
             'title' => $request->title,
-            'direct_wa' => $request->direct_wa,
+            'tgl_acara' => $request->tgl_acara,
             'destination_url' => $request->destination_url,
             //'detail' => $request->detail,
         ]);
 
-        return redirect()->route('eventship.index')->with('success', 'Berhasil menambahkan Event');
+        return redirect()->route('bazar.index')->with('success', 'Berhasil menambahkan Bazar');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Eventship $eventship)
+    public function show(Bazar $bazar)
     {
 
     }
@@ -66,21 +66,21 @@ class Events extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Eventship $eventship)
+    public function edit(Bazar $bazar)
     {
-        //$menu = Menu::where("group", "=", "branding-umkm")->get();
-        return view('admin.eventship.editEventship');
+        $bazar = Bazar::all();
+        return view('admin.bazar.editBazar', compact('bazar'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Eventship $eventship)
+    public function update(Request $request, Bazar $bazar)
     {
-        $imageGroup = $eventship->id_img;
+        $imageGroup = $bazar->id_img;
 
         if ($request->file('image')) {
-            $images = Images::find($eventship->id_img);
+            $images = Images::find($bazar->id_img);
 
             foreach ($images->imgdetail as $img) {
                 Storage::delete($img->directory);
@@ -98,29 +98,29 @@ class Events extends Controller
             ]);
         }
 
-        $eventship->update([
+        $bazar->update([
             'id_img' => $imageGroup->id_img,
             'title' => $request->title,
-            'direct_wa' => $request->nama,
+            'tgl_acara' => $request->tgl_acara,
             'destination_url' => $request->destination_url,
         ]);
 
-        return redirect()->route('eventship.index')->with('success', 'Berhasil mengubah Event');
+        return redirect()->route('bazar.index')->with('success', 'Berhasil mengubah Bazar');
 
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Eventship $eventship)
+    public function destroy(Bazar $bazar)
     {
-        $images = Images::find($eventship->id_img);
+        $images = Images::find($bazar->id_img);
         foreach ($images->imgdetail as $img) {
             Storage::delete($img->directory);
         }
         $images->delete();
-        $eventship->delete();
+        $bazar->delete();
 
-        return redirect()->route('eventship.index')->with('success', 'Berhasil menghapus eventship');
+        return redirect()->route('bazar.index')->with('success', 'Berhasil menghapus Bazar');
     }
 }

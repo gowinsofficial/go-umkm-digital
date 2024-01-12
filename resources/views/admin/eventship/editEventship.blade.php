@@ -47,11 +47,28 @@
                             </div>
 
                             <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label" for="direct_wa">Direct Whatsapp</label>
+                                <div class="col-sm-10">
+                                    <select class="form-select w-50" id="direct_wa" name="direct_wa">
+                                        <option value="website" {{ $eventship->direct_wa=='Y' ? 'selected' : '' }}>Yes</option>
+                                        <option value="ecommerce" {{ $eventship->direct_wa=='N' ? 'selected' : '' }} >No</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="destination_url">URL</label>
                                 <div class="col-sm-10">
 
                                     <input type="text" class="form-control w-50" id="destination_url"
                                            placeholder="URL" name="destination_url" required value="{{ $eventship->destination_url }}" />
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label" for="images">Gambar Eventship</label>
+                                <div class="col-sm-10">
+                                    <input type="file" class="form-control w-50" id="images" name="images[]" accept="image/*" multiple />
                                 </div>
                             </div>
 

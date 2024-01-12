@@ -16,8 +16,9 @@ class Services extends Controller
      */
     public function index()
     {
-        // $service = Service::with(["menu", "image"])->get();
-        return view('admin.service.indexServices');
+        $services = Service::all();
+        return view('admin.service.indexServices', compact('services'));
+
     }
 
     /**
@@ -59,7 +60,7 @@ class Services extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Service $service)
+    public function show(Service $services)
     {
         return view('admin.service.detailServices', compact('service'));
     }
@@ -76,7 +77,7 @@ class Services extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Service $service)
+    public function update(Request $request, Service $services)
     {
         // $imageGroup = $kuliner->id_img;
 
@@ -100,7 +101,7 @@ class Services extends Controller
         //     }
         // }
 
-        $service->update([
+        $services->update([
             // 'id_img' => $imageGroup->id_img,
             'group' => $request->group,
             'sub_group' => $request->sub_group,
@@ -115,14 +116,14 @@ class Services extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Service $service)
+    public function destroy(Service $services)
     {
         // $images = Images::find($kuliner->id_img);
         // foreach ($images->imgdetail as $img) {
         //     Storage::delete($img->directory);
         // }
         //$images->delete();
-        $service->delete();
+        $services->delete();
 
         return redirect()->route('service.index')->with('success', 'Berhasil menghapus service');
     }

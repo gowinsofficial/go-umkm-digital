@@ -10,12 +10,13 @@ use App\Http\Controllers\{
     KulinerMadura,
     BatikMadura,
     BatikPageController,
+    BazarUmkm,
     KulinerPageController,
     MaduraTvController,
     PariwisataMadura,
     OjolMadura,
     BrandingUmkm,
-    Event,
+    Events,
     MaduraTvPageController,
     WisataPageController,
     OjolMaduraPageController,
@@ -33,6 +34,8 @@ Route::group(["prefix" => "admin", "middleware" => "mustlogin"], function() {
     Route::resource("/branding", BrandingUmkm::class);
     Route::resource("/eventship", Events::class);
     Route::resource("/service", Services::class);
+    Route::resource("/bazar", BazarUmkm::class);
+
 
 
 });

@@ -24,7 +24,7 @@
                                     {{-- <th>Platform</th>
                                     <th>Gambar</th> --}}
                                     <th>Nama Eventship</th>
-                                    <th>No. Whatsapp</th>
+                                    <th>Direct Whatsapp</th>
                                     <th>URL</th>
                                     <th>Aksi</th>
                                 </tr>

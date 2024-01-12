@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h5 class="fw-bold py-3 mb-2"><span class="text-muted fw-light">Data /</span> Service</h5>
+        <h5 class="fw-bold py-3 mb-2"><span class="text-muted fw-light">Data /</span> Bazar </h5>
 
         @include('templates.alert')
 
@@ -11,9 +11,9 @@
             <div class="col-xxl">
                 <div class="card mb-4">
                     <div class="card-header d-flex align-items-center justify-content-between">
-                        <h5 class="mb-0">Service</h5>
-                        <a href="{{route('service.create')}}"><button class="btn btn-sm btn-primary"><i
-                                    class='bx bx-plus'></i> Tambah Service</button></a>
+                        <h5 class="mb-0">Bazar</h5>
+                        <a href="{{route('bazar.create')}}"><button class="btn btn-sm btn-primary"><i
+                                    class='bx bx-plus'></i> Tambah Bazar</button></a>
                     </div>
                     <div class="card-body">
 
@@ -21,30 +21,29 @@
                             <thead>
                                 <tr class="table-primary">
                                     <th width="20">#</th>
-                                    <th>Kategori</th>
-                                    <th>Sub Kategori</th>
-                                    <th>Template WA</th>
-                                    {{-- <th>Whatsapp UMKM</th> --}}
+                                    {{-- <th>Platform</th>
+                                    <th>Gambar</th> --}}
+                                    <th>Nama Bazar</th>
+                                    <th>Tanggal Acara Bazar</th>
+                                    <th>URL</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
 
                                 @php($no = 0)
-                                @foreach ($services as $row)
+                                @foreach ($bazar as $row)
                                     <tr>
                                         <td>{{++$no}}</td>
                                         {{-- <td>{{$row->menu->nama_menu}}</td> --}}
-                                        <td>{{$row->group}}</td>
-                                        <td>{{$row->sub_group}}</td>
-                                        <td>{{$row->template_wa}}</td>
-                                        {{-- <td>{{$row->whatsapp_umkm}}</td> --}}
+                                        {{-- <td><img src="{{ \Illuminate\Support\Facades\Storage::url($row->image->imgdetail[0]->directory ) }}" alt=".." style="max-height:80px;"> </td> --}}
+                                        <td>{{$row->title}}</td>
+                                        <td>{{$row->tgl_acara}}</td>
+                                        <td>{{$row->destination_url}}</td>
                                         <td>
-                                            <a href="{{ route('service.show', $row->id_service) }}"><button
-                                                    class="btn btn-sm btn-secondary"><i class='bx bxs-show'></i></button></a>
-                                            <a href="{{ route('service.edit', $row->id_service) }}"><button
+                                            <a href="{{ route('eventship.edit', $row->id_bazar) }}"><button
                                                     class="btn btn-sm btn-info"><i class='bx bxs-edit'></i></button></a>
-                                            <form class="d-inline deleteBtn" action="{{ route('service.destroy', $row->id_service) }}" method="post">
+                                            <form class="d-inline deleteBtn" action="{{ route('bazar.destroy', $row->id_bazar) }}" method="post">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-sm btn-danger"><i

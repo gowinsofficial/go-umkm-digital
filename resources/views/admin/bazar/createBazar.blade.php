@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h5 class="fw-bold py-3 mb-2"><span class="text-muted fw-light">Data / Services /</span> Tambah</h5>
+        <h5 class="fw-bold py-3 mb-2"><span class="text-muted fw-light">Data / Bazar UMKM /</span> Tambah</h5>
 
         @include('templates.alert')
 
@@ -11,15 +11,15 @@
             <div class="col-xxl">
                 <div class="card mb-4">
                     <div class="card-header d-flex align-items-center">
-                        <a href="{{route('service.index')}}" title="Kembali"><button class="btn btn-sm btn-primary me-2"><i
+                        <a href="{{route('bazar.index')}}" title="Kembali"><button class="btn btn-sm btn-primary me-2"><i
                                     class='bx bx-caret-left'></i></button></a>
-                        <h5 class="mb-0">Tambah Services</h5>
+                        <h5 class="mb-0">Bazar UMKM</h5>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('service.store') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('bazar.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             {{-- <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label" for="menu">Khas</label>
+                                <label class="col-sm-2 col-form-label" for="menu">Event</label>
                                 <div class="col-sm-10">
                                     <select class="form-select w-50" id="menu" name="menu">
                                         @foreach($menu as $row)
@@ -29,42 +29,36 @@
                                 </div>
                             </div> --}}
 
-
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label" for="group">Kategori</label>
+                                <label class="col-sm-2 col-form-label" for="title">Nama Bazar</label>
                                 <div class="col-sm-10">
-                                    <select class="form-select w-50" id="group" name="group">
-                                        <option value="website">Website</option>
-                                        <option value="ecommerce">Ecommerce</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label" for="sub_group">Sub Kategori</label>
-                                <div class="col-sm-10">
-                                    <select class="form-select w-50" id="group" name="group">
-                                        <option value="website">Website</option>
-                                        <option value="shoppe">Shoppe</option>
-                                        <option value="tiktok">Tik-Tok</option>
-                                        <option value="tokopedia">Tokopedia</option>
-                                        <option value="lazada">Lazada</option>
-
-                                    </select>
+                                    <input type="text" class="form-control w-50" id="title"
+                                        placeholder="Nama Bazar" name="title" required />
                                 </div>
                             </div>
 
 
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label" for="template_wa">Template WA</label>
+                                <label class="col-sm-2 col-form-label" for="tgl_acara">Tanggal Acara</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control w-50" id="template_wa"
-                                           placeholder="Template WA" name="template_wa" required />
+                                    <input type ="date" class="form-control w-50" id="tgl_acara" rows="3" name="tgl_acara" placeholder="Tanggal Acara Bazar" required />
                                 </div>
                             </div>
 
+                            <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label" for="destination_url">URL</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control w-50" id="destination_url"
+                                        placeholder="Tujuan URL" name="destination_url" required />
+                                </div>
+                            </div>
 
-
+                            <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label" for="images">Gambar Bazar</label>
+                                <div class="col-sm-10">
+                                    <input type="file" class="form-control w-50" id="images" name="images[]" accept="image/*" multiple required />
+                                </div>
+                            </div>
 
                             <div class="row justify-content-end">
                                 <div class="col-sm-10">

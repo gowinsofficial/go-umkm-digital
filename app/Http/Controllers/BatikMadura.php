@@ -53,6 +53,7 @@ class BatikMadura extends Controller
             'corak' => $request->corak,
             'harga' => $request->harga,
             'rating' => $request->rating,
+            'maps' => $request->maps,
             'detail' => $request->detail,
             'whatsapp_umkm' => $request->whatsapp,
         ]);
@@ -113,6 +114,7 @@ class BatikMadura extends Controller
             'harga' => $request->harga,
             'rating' => $request->rating,
             'detail' => $request->detail,
+            'maps' => $request->maps,
             'whatsapp_umkm' => $request->whatsapp,
         ]);
 

@@ -86,105 +86,36 @@
         <h2 class="section-title text-center mb-3">
           Special Offers &amp; Discounts
         </h2>
-        <p>
-          Far far away, behind the word mountains, far from the countries
-          Vokalia and Consonantia, there live the blind texts. Separated
-          they live in Bookmarksgrove right at the coast of the Semantics, a
-          large language ocean.
-        </p>
+        
       </div>
     </div>
+   
     <div class="row">
+      @foreach ($batik as $row)
       <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
         <div class="media-1">
-          <a href="/batik-detail" class="d-block mb-3"
+          <a href="{{ route('batikpage.show', $row->id_batik) }}" class="d-block mb-3"
             ><img
-              src="{{ asset('assets/wisata/images/hero-slider-1.jpg')}}"
+              src="{{ \Illuminate\Support\Facades\Storage::url($row->image->imgdetail[0]->directory)}}"
               alt="Image"
               class="img-fluid"
           /></a>
           <span class="d-flex align-items-center loc mb-2">
             <span class="icon-room mr-3"></span>
-            <span>Italy</span>
+            <span>{{ $row->nama }}</span>
           </span>
           <div class="d-flex align-items-center">
             <div>
-              <h3><a href="/batik-detail">Rialto Mountains</a></h3>
+              <h3><a href="{{ route('kulinerpage.show', $row->id_batik) }}">{{ $row->detail }}</a></h3>
               <div class="price ml-auto">
-                <span>$520.00</span>
+                <span>Rp.{{$row->harga}}</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-        <div class="media-1">
-          <a href="/batik-detail" class="d-block mb-3"
-            ><img
-              src="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}"
-              alt="Image"
-              class="img-fluid"
-          /></a>
-          <span class="d-flex align-items-center loc mb-2">
-            <span class="icon-room mr-3"></span>
-            <span>United States</span>
-          </span>
-          <div class="d-flex align-items-center">
-            <div>
-              <h3><a href="/batik-detail">San Francisco</a></h3>
-              <div class="price ml-auto">
-                <span>$520.00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-        <div class="media-1">
-          <a href="/batik-detail" class="d-block mb-3"
-            ><img
-              src="{{ asset('assets/wisata/images/hero-slider-3.jpg')}}"
-              alt="Image"
-              class="img-fluid"
-          /></a>
-          <span class="d-flex align-items-center loc mb-2">
-            <span class="icon-room mr-3"></span>
-            <span>Malaysia</span>
-          </span>
-          <div class="d-flex align-items-center">
-            <div>
-              <h3><a href="/batik-detail">Perhentian Islands</a></h3>
-              <div class="price ml-auto">
-                <span>$750.00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-        <div class="media-1">
-          <a href="/batik-detail" class="d-block mb-3"
-            ><img
-              src="{{ asset('assets/wisata/images/hero-slider-4.jpg')}}"
-              alt="Image"
-              class="img-fluid"
-          /></a>
-
-          <span class="d-flex align-items-center loc mb-2">
-            <span class="icon-room mr-3"></span>
-            <span>Switzerland</span>
-          </span>
-
-          <div class="d-flex align-items-center">
-            <div>
-              <h3><a href="/batik-detail">Lake Thun</a></h3>
-              <div class="price ml-auto">
-                <span>$520.00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      @endforeach
+     
     </div>
   </div>
 </div>

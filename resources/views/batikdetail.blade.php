@@ -1,188 +1,78 @@
 @extends('templates.nav')
+
 @section('csspage')
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 @endsection
-@section('content')
 
-<div class="hero">
+@section('content')
+<div class="hero hero-inner">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-7">
+      <div class="col-lg-6 mx-auto text-center">
         <div class="intro-wrap">
-          <h1 class="mb-5">
-            <span class="d-block">Pariwisata Madura</span> 
-            <span class="typed-words"></span>
-          </h1>
-
-          <div class="row">
-            <div class="col-12">
-              <form class="form">
-                <div class="row mb-2">
-                  <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
-                    <select
-                      name=""
-                      id=""
-                      class="form-control custom-select"
-                    >
-                      <option value="">Kategori</option>
-                      <option value="">Sampang</option>
-                      <option value="">Pamekasan </option>
-                      <option value="">Sumenep</option>
-                     
-                    </select>
-                  </div>
-                  {{--  <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-5">
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="daterange"
-                    />
-                  </div>  --}}
-                  <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-3">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="cari wisata..."
-                    />
-                  </div>
-                </div>
-                <div class="row align-items-center">
-                  <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
-                    <input
-                      type="submit"
-                      class="btn btn-primary btn-block"
-                      value="Search"
-                    />
-                  </div>
-                  {{--  <div class="col-lg-8">
-                    <label class="control control--checkbox mt-3">
-                      <span class="caption">Save this search</span>
-                      <input type="checkbox" checked="checked" />
-                      <div class="control__indicator"></div>
-                    </label>
-                  </div>  --}}
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-5">
-        <div class="slides">
-          <img src="{{ asset('assets/img/logo/logo-umkm.jpg')}}" alt="Image" class="img-fluid active">
-                    <img src="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}" alt="Image" class="img-fluid">
-                    <img src="{{ asset('assets/wisata/images/hero-slider-3.jpg')}}" alt="Image" class="img-fluid">
-                    <img src="{{ asset('assets/wisata/images/hero-slider-4.jpg')}}" alt="Image" class="img-fluid">
-                    <img src="{{ asset('assets/wisata/images/hero-slider-5.jpg')}}" alt="Image" class="img-fluid">
+          <h1 class="mb-0">Detail Batik</h1>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
 <div class="untree_co-section">
-  <div class="container">
-    <div class="row justify-content-center text-center mb-5">
-      <div class="col-lg-6">
-        <h2 class="section-title text-center mb-3">
-          Special Offers &amp; Discounts
-        </h2>
+  <div class="container my-5">
+    <div class="mb-5">
+      <div class="owl-single dots-absolute owl-carousel">
+        @foreach($batik->image->imgdetail as $image)
+        <img src="{{ \Illuminate\Support\Facades\Storage::url($image->directory) }}" alt=".." class="img-fluid">
+        @endforeach
+       
       </div>
     </div>
-    <div class="row">
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-        <div class="media-1">
-          <a href="/wisata-detail" class="d-block mb-3"
-            ><img
-              src="{{ asset('assets/wisata/images/hero-slider-1.jpg')}}"
-              alt="Image"
-              class="img-fluid"
-          /></a>
-          <span class="d-flex align-items-center loc mb-2">
-            <span class="icon-room mr-3"></span>
-            <span>Italy</span>
-          </span>
-          <div class="d-flex align-items-center">
-            <div>
-              <h3><a href="/wisata-detail">Rialto Mountains</a></h3>
-              <div class="price ml-auto">
-                    <span class="fa fa-star checked">4,5</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-        <div class="media-1">
-          <a href="/wisata-detail" class="d-block mb-3"
-            ><img
-              src="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}"
-              alt="Image"
-              class="img-fluid"
-          /></a>
-          <span class="d-flex align-items-center loc mb-2">
-            <span class="icon-room mr-3"></span>
-            <span>United States</span>
-          </span>
-          <div class="d-flex align-items-center">
-            <div>
-              <h3><a href="/wisata-detail">San Francisco</a></h3>
-              <div class="price ml-auto">
-                <span class="fa fa-star checked">4,5</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-        <div class="media-1">
-          <a href="/wisata-detail" class="d-block mb-3"
-            ><img
-              src="{{ asset('assets/wisata/images/hero-slider-3.jpg')}}"
-              alt="Image"
-              class="img-fluid"
-          /></a>
-          <span class="d-flex align-items-center loc mb-2">
-            <span class="icon-room mr-3"></span>
-            <span>Malaysia</span>
-          </span>
-          <div class="d-flex align-items-center">
-            <div>
-              <h3><a href="/wisata-detail">Perhentian Islands</a></h3>
-              <div class="price ml-auto">
-                <span class="fa fa-star checked">4,5</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-        <div class="media-1">
-          <a href="/wisata-detail" class="d-block mb-3"
-            ><img
-              src="{{ asset('assets/wisata/images/hero-slider-4.jpg')}}"
-              alt="Image"
-              class="img-fluid"
-          /></a>
 
-          <span class="d-flex align-items-center loc mb-2">
-            <span class="icon-room mr-3"></span>
-            <span>Switzerland</span>
-          </span>
-
-          <div class="d-flex align-items-center">
-            <div>
-              <h3><a href="/wisata-detail">Lake Thun</a></h3>
-              <div class="price ml-auto">
-                <span class="fa fa-star checked">4,5</span>
-              </div>
-            </div>
+    <div class="row justify-content-center">
+      
+      <div class="col-lg-4">
+        <div class="custom-block" data-aos="fade-up">
+          <h2 class="section-title">{{ $batik->nama }}</h2>
+         
+          <div class="stars">
+            <span class="fa fa-star checked"> {{ $batik->rating }}</span>
           </div>
-        </div>
-      </div>
+          <div class="custom-accordion" id="accordion_1">
+            <div class="accordion-item">
+              <h2 class="mb-0">
+                <a href="https://Wa.me/{{$batik->whatsapp_umkm}}"><button class="add-to-cart btn btn-default" type="button"><span class="fa fa-whatsapp fa-2x"></span> </button></a>
+                <a href="{{ $batik->maps }}"><button class="like btn btn-default" type="button"><span class="fa fa-map-marker fa-2x"></span></button></a>
+              </h2>
+              <h4 class="mb-0"><span>Rp. {{ $batik->harga }}</span></h4>
+              
+
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion_1">
+                <div class="accordion-body">
+                  {{ $batik->detail }}
+                </div>
+              </div>
+            </div> 
+
+          </div>
+        </div> <!-- END .custom-block -->
+        <div class="custom-block" data-aos="fade-up">
+          <h2 class="section-title">Gallery</h2>
+          <div class="row gutter-v2 gallery">
+            @foreach($batik->image->imgdetail as $image)
+            <div class="col-4">
+              <a src="{{ \Illuminate\Support\Facades\Storage::url($image->directory) }}" class="gal-item" data-fancybox="gal"><img src="{{ \Illuminate\Support\Facades\Storage::url($image->directory) }}" alt="Image" class="img-fluid"></a>
+            </div>
+            @endforeach
+          </div>
+        </div> 
+     
     </div>
   </div>
 </div>
-       
-@endsection   
+  
+  
+@endsection
 
 

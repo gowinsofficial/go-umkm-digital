@@ -258,7 +258,7 @@
                     </span>
                     <div class="d-flex align-items-center">
                         <div>
-                            <h3><a href="#">Festival UMKM Madura</a></h3>
+                            <h3><a href="/festival">Festival UMKM Madura</a></h3>
                             {{--  <div class="price ml-auto">
                                 <span>$520.00</span>
                             </div>  --}}

@@ -122,6 +122,7 @@ return new class extends Migration
             $table->string('title', 255);
             $table->date('tgl_acara');
             $table->string('destination_url', 255);
+            $table->string('whatsapp_member', 15);
             $table->timestamps();
             $table->foreign('id_img')->references('id_img')->on('images')
                 ->onDelete('CASCADE')->onUpdate('CASCADE');

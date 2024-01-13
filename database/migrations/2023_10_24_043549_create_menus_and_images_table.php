@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        $group = ['kuliner-madura','batik-madura','madura-tv','pariwisata','branding-umkm','ojol-madura'];
+        $group = ['kuliner-madura','batik-madura','madura-tv','pariwisata','branding-umkm','ojol-madura','eventship','bazar','sale','article'];
 
         Schema::create('menus', function (Blueprint $table) use ($group) {
             $table->id('id_menu');

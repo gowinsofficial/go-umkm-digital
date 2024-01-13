@@ -17,6 +17,7 @@ use App\Http\Controllers\{
     OjolMadura,
     BrandingUmkm,
     Events,
+    FestivalPageController,
     MaduraTvPageController,
     WisataPageController,
     OjolMaduraPageController,
@@ -56,6 +57,8 @@ Route::get('/wisata',[WisataPageController::class, 'index']);
 Route::get('/wisata-detail/{pariwisatum}', [WisataPageController::class, 'show'])->name('wisatapage.show');
 Route::get('/batik', [BatikPageController::class, 'index']);
 Route::get('/batik-detail/{batik}',[BatikPageController::class, 'show'])->name('batikpage.show');
+Route::get('/festival', [FestivalPageController::class, 'index']);
+Route::get('/festival-detail/{festival}',[FestivalPageController::class, 'show'])->name('festivalpage.show');
 Route::get('/Madura-tv',[MaduraTvPageController::class, 'index']);
 Route::get('/ojol-madura',[OjolMaduraPageController::class, 'index']);
 Route::get('/about', function () {

@@ -70,7 +70,8 @@ class Events extends Controller
     public function edit(Eventship $eventship)
     {
         //$menu = Menu::where("group", "=", "branding-umkm")->get();
-        return view('admin.eventship.editEventship');
+        $eventship = Eventship::all();;
+        return view('admin.eventship.editEventship', compact('eventship'));
     }
 
     /**

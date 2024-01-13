@@ -190,7 +190,7 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="{{ route('ojol.index') }}" class="menu-link">
+                        <a href="{{ route('sale.index') }}" class="menu-link">
                             <i class="bx bxs-calendar-event me-2"></i>
                             Sale 12.12
                         </a>

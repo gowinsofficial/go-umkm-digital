@@ -10,6 +10,7 @@ use App\Http\Controllers\{
     KulinerMadura,
     BatikMadura,
     BatikPageController,
+    BazarPageController,
     BazarUmkm,
     KulinerPageController,
     MaduraTvController,
@@ -59,6 +60,8 @@ Route::get('/batik', [BatikPageController::class, 'index']);
 Route::get('/batik-detail/{batik}',[BatikPageController::class, 'show'])->name('batikpage.show');
 Route::get('/festival', [FestivalPageController::class, 'index']);
 Route::get('/festival-detail/{festival}',[FestivalPageController::class, 'show'])->name('festivalpage.show');
+Route::get('/bazar', [BazarPageController::class, 'index']);
+Route::get('/bazar-detail/{bazar}',[BazarPageController::class, 'show'])->name('bazarpage.show');
 Route::get('/Madura-tv',[MaduraTvPageController::class, 'index']);
 Route::get('/ojol-madura',[OjolMaduraPageController::class, 'index']);
 Route::get('/about', function () {

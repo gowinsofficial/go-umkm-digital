@@ -162,13 +162,6 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="{{ route('branding.index') }}" class="menu-link">
-                            <i class="bx bxs-band-aid me-2"></i>
-                            Branding UMKM
-                        </a>
-                    </li>
-
-                    <li class="menu-item">
                         <a href="{{ route('service.index') }}" class="menu-link">
                             <i class="bx bxs-phone me-2"></i>
                             Services
@@ -198,8 +191,15 @@
 
                     <li class="menu-item">
                         <a href="{{ route('ojol.index') }}" class="menu-link">
-                            <i class="bx bxs-server me-2"></i>
-                            Pengaturan
+                            <i class="bx bxs-calendar-event me-2"></i>
+                            Sale 12.12
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="{{ route('ojol.index') }}" class="menu-link">
+                            <i class="bx bxs-file me-2"></i>
+                            Artikel
                         </a>
                     </li>
 
@@ -211,11 +211,19 @@
                     </li>
 
                     <li class="menu-item">
+                        <a href="{{ route('ojol.index') }}" class="menu-link">
+                            <i class="bx bxs-server me-2"></i>
+                            Pengaturan
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
                         <a href="{{ route('logout') }}" class="menu-link">
                             <i class="bx bxs-log-out me-2"></i>
                             Logout
                         </a>
                     </li>
+
                 </ul>
             </aside>
             <!-- / Menu -->

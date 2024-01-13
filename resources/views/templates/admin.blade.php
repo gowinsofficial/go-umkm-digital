@@ -197,7 +197,7 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="{{ route('ojol.index') }}" class="menu-link">
+                        <a href="{{ route('article.index') }}" class="menu-link">
                             <i class="bx bxs-file me-2"></i>
                             Artikel
                         </a>

@@ -13,7 +13,7 @@ class Eventship extends Model
     protected $fillable = [
         'id_img',
         'title',
-        'tgl_event',
+        'whatsapp_member',
         'direct_wa',
         'destination_url',
     ];

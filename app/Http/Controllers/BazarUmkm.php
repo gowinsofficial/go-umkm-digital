@@ -49,6 +49,7 @@ class BazarUmkm extends Controller
             'title' => $request->title,
             'tgl_acara' => $request->tgl_acara,
             'destination_url' => $request->destination_url,
+            'whatsapp_member' => $request->whatsapp_member,
             //'detail' => $request->detail,
         ]);
 
@@ -103,6 +104,7 @@ class BazarUmkm extends Controller
             'title' => $request->title,
             'tgl_acara' => $request->tgl_acara,
             'destination_url' => $request->destination_url,
+            'whatsapp_member' => $request->whatsapp_member,
         ]);
 
         return redirect()->route('bazar.index')->with('success', 'Berhasil mengubah Bazar');

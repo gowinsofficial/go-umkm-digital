@@ -47,7 +47,7 @@ class Events extends Controller
         Eventship::create([
             'id_img' => $imageGroup->id_img,
             'title' => $request->title,
-            'direct_wa' => $request->direct_wa,
+            'whatsapp_member' => $request->whatsapp_member,
             'destination_url' => $request->destination_url,
             'tgl_event' => $request->tgl_event,
             //'detail' => $request->detail,
@@ -102,9 +102,9 @@ class Events extends Controller
         $eventship->update([
             'id_img' => $imageGroup->id_img,
             'title' => $request->title,
-            'direct_wa' => $request->nama,
             'destination_url' => $request->destination_url,
             'tgl_event' => $request->tgl_event,
+            'whatsapp_member' => $request->whatsapp_member,
         ]);
 
         return redirect()->route('eventship.index')->with('success', 'Berhasil mengubah Event');

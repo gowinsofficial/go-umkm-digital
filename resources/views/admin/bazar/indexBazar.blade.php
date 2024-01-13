@@ -26,6 +26,7 @@
                                     <th>Nama Bazar</th>
                                     <th>Tanggal Acara Bazar</th>
                                     <th>URL</th>
+                                    <th>No. Whatsapp</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -40,6 +41,7 @@
                                         <td>{{$row->title}}</td>
                                         <td>{{$row->tgl_acara}}</td>
                                         <td>{{$row->destination_url}}</td>
+                                        <td>{{$row->whatsapp_member}}</td>
                                         <td>
                                             <a href="{{ route('eventship.edit', $row->id_bazar) }}"><button
                                                     class="btn btn-sm btn-info"><i class='bx bxs-edit'></i></button></a>

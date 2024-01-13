@@ -109,7 +109,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_img');
             $table->string('title', 255);
             $table->date('tgl_event');
-            $table->enum('direct_wa', ['Y', 'N']);
+            $table->string('whatsapp_member', 15);
             $table->string('destination_url', 255);
             $table->timestamps();
             $table->foreign('id_img')->references('id_img')->on('images')

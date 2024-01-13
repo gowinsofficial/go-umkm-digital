@@ -15,6 +15,7 @@ class Bazar extends Model
         'title',
         'tgl_acara',
         'destination_url',
+        'whatsapp_member',
     ];
 
     public function image()

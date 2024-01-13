@@ -38,21 +38,21 @@
                                 </div>
                             </div>
 
-
                             {{-- <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label" for="direct_wa">No. Whatsapp</label>
-                                <div class="col-sm-10">
-                                    <textarea class="form-control w-50" id="direct_wa" rows="3" name="direct_wa" placeholder="No Whatsapp">{{ $eventship->direct_wa }}</textarea>
-                                </div>
-                            </div> --}}
-
-                            <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="direct_wa">Direct Whatsapp</label>
                                 <div class="col-sm-10">
                                     <select class="form-select w-50" id="direct_wa" name="direct_wa">
                                         <option value="website" {{ $eventship->direct_wa=='Y' ? 'selected' : '' }}>Yes</option>
                                         <option value="ecommerce" {{ $eventship->direct_wa=='N' ? 'selected' : '' }} >No</option>
                                     </select>
+                                </div>
+                            </div> --}}
+
+                            <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label" for="whatsapp_member">No. Whatsapp</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control w-50" id="whatsapp_member"
+                                        placeholder="No. Whatsapp" name="whatsapp_member" required value="{{ $eventship->whatsapp_member }}" />
                                 </div>
                             </div>
 

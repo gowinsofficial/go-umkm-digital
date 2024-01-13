@@ -111,12 +111,6 @@ class Menus extends Seeder
                 'group' => 'ojol-madura',
                 'nama_menu' => 'Sumenep',
             ],
-            [
-                'group' => 'eventship',
-            ],
-            [
-                'group' => 'bazar',
-            ],
 
         ];
         DB::table('menus')->insert($users);

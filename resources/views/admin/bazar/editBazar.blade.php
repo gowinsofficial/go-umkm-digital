@@ -46,6 +46,15 @@
                             </div>
 
                             <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label" for="whatsapp_member">No. Whatsapp</label>
+                                <div class="col-sm-10">
+
+                                    <input type="text" class="form-control w-50" id="whatsapp_member"
+                                           placeholder="URL" name="whatsapp_member" required value="{{ $bazar->whatsapp_member }}" />
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="destination_url">URL</label>
                                 <div class="col-sm-10">
 

@@ -54,6 +54,14 @@
                             </div>
 
                             <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label" for="whatsapp_member">No. Whatsapp</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control w-50" id="whatsapp_member"
+                                        placeholder="No. Whatsapp" name="whatsapp_member" required />
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="images">Gambar Bazar</label>
                                 <div class="col-sm-10">
                                     <input type="file" class="form-control w-50" id="images" name="image" accept="image/*" required />

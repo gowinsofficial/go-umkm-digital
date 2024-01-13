@@ -24,7 +24,8 @@
                                     {{-- <th>Platform</th>
                                     <th>Gambar</th> --}}
                                     <th>Nama Eventship</th>
-                                    <th>Direct Whatsapp</th>
+                                    {{-- <th>Direct Whatsapp</th> --}}
+                                    <th>No. Whatsapp</th>
                                     <th>URL</th>
                                     <th>Tanggal Events</th>
                                     <th>Aksi</th>
@@ -39,7 +40,7 @@
                                         {{-- <td>{{$row->menu->nama_menu}}</td> --}}
                                         {{-- <td><img src="{{ \Illuminate\Support\Facades\Storage::url($row->image->imgdetail[0]->directory ) }}" alt=".." style="max-height:80px;"> </td> --}}
                                         <td>{{$row->title}}</td>
-                                        <td>{{$row->direct_wa}}</td>
+                                        <td>{{$row->whatsapp_member}}</td>
                                         <td>{{$row->destination_url}}</td>
                                         <td>{{$row->tgl_event}}</td>
                                         <td>

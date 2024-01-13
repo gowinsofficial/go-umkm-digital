@@ -21,8 +21,8 @@
                             <thead>
                                 <tr class="table-primary">
                                     <th width="20">#</th>
-                                    {{-- <th>Platform</th>
-                                    <th>Gambar</th> --}}
+                                    {{-- <th>Platform</th> --}}
+                                    <th>Gambar</th>
                                     <th>Nama Bazar</th>
                                     <th>Tanggal Acara Bazar</th>
                                     <th>URL</th>
@@ -37,7 +37,7 @@
                                     <tr>
                                         <td>{{++$no}}</td>
                                         {{-- <td>{{$row->menu->nama_menu}}</td> --}}
-                                        {{-- <td><img src="{{ \Illuminate\Support\Facades\Storage::url($row->image->imgdetail[0]->directory ) }}" alt=".." style="max-height:80px;"> </td> --}}
+                                        <td><img src="{{ \Illuminate\Support\Facades\Storage::url($row->image->imgdetail[0]->directory ) }}" alt=".." style="max-height:80px;"> </td>
                                         <td>{{$row->title}}</td>
                                         <td>{{$row->tgl_acara}}</td>
                                         <td>{{$row->destination_url}}</td>

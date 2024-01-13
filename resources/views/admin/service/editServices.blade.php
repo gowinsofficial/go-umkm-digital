@@ -33,7 +33,7 @@
                                 <label class="col-sm-2 col-form-label" for="group">Kategori</label>
                                 <div class="col-sm-10">
                                     <select class="form-select w-50" id="group" name="group">
-                                        <option value="website" {{ $servicess->kategori=='website' ? 'selected' : '' }}>Website</option>
+                                        <option value="website" {{ $services->kategori=='website' ? 'selected' : '' }}>Website</option>
                                         <option value="ecommerce" {{ $services->kategori=='ecommerce' ? 'selected' : '' }} >Ecommerce</option>
                                     </select>
                                 </div>

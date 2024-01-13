@@ -23,6 +23,7 @@ use App\Http\Controllers\{
     WisataPageController,
     OjolMaduraPageController,
     Services,
+    Article,
 };
 
 Route::group(["prefix" => "admin", "middleware" => "mustlogin"], function() {
@@ -37,6 +38,7 @@ Route::group(["prefix" => "admin", "middleware" => "mustlogin"], function() {
     Route::resource("/eventship", Events::class);
     Route::resource("/service", Services::class);
     Route::resource("/bazar", BazarUmkm::class);
+    Route::resource("/article", Article::class);
 
 
 

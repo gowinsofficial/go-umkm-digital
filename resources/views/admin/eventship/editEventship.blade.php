@@ -13,7 +13,9 @@
                     <div class="card-header d-flex align-items-center">
                         <a href="{{route('eventship.index')}}" title="Kembali"><button class="btn btn-sm btn-primary me-2"><i
                                     class='bx bx-caret-left'></i></button></a>
+                        @foreach($eventship as $eventship)
                         <h5 class="mb-0">Edit {{ $eventship->title }}</h5>
+                        @endforeach
                     </div>
                     <div class="card-body">
                         <form action="{{ route('eventship.update', $eventship->id_event) }}" method="POST" enctype="multipart/form-data">

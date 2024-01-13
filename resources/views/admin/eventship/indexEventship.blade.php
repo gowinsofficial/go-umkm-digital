@@ -26,6 +26,7 @@
                                     <th>Nama Eventship</th>
                                     <th>Direct Whatsapp</th>
                                     <th>URL</th>
+                                    <th>Tanggal Events</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -40,6 +41,7 @@
                                         <td>{{$row->title}}</td>
                                         <td>{{$row->direct_wa}}</td>
                                         <td>{{$row->destination_url}}</td>
+                                        <td>{{$row->tgl_event}}</td>
                                         <td>
                                             <a href="{{ route('eventship.edit', $row->id_event) }}"><button
                                                     class="btn btn-sm btn-info"><i class='bx bxs-edit'></i></button></a>

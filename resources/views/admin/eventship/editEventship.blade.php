@@ -39,12 +39,12 @@
                             </div>
 
 
-                            <div class="row mb-3">
+                            {{-- <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="direct_wa">No. Whatsapp</label>
                                 <div class="col-sm-10">
                                     <textarea class="form-control w-50" id="direct_wa" rows="3" name="direct_wa" placeholder="No Whatsapp">{{ $eventship->direct_wa }}</textarea>
                                 </div>
-                            </div>
+                            </div> --}}
 
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="direct_wa">Direct Whatsapp</label>
@@ -66,9 +66,16 @@
                             </div>
 
                             <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label" for="tgl_event">Tanggal Event</label>
+                                <div class="col-sm-10">
+                                    <input type ="date" class="form-control w-50" id="tgl_event" rows="3" name="tgl_event" placeholder="Tanggal Event" required  value="{{ $eventship->tgl_event }}" />
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="images">Gambar Eventship</label>
                                 <div class="col-sm-10">
-                                    <input type="file" class="form-control w-50" id="images" name="images[]" accept="image/*" multiple />
+                                    <input type="file" class="form-control w-50" id="images" name="image" accept="image/*"  />
                                 </div>
                             </div>
 

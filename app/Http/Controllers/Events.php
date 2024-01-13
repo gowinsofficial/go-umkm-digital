@@ -49,6 +49,7 @@ class Events extends Controller
             'title' => $request->title,
             'direct_wa' => $request->direct_wa,
             'destination_url' => $request->destination_url,
+            'tgl_event' => $request->tgl_event,
             //'detail' => $request->detail,
         ]);
 
@@ -103,6 +104,7 @@ class Events extends Controller
             'title' => $request->title,
             'direct_wa' => $request->nama,
             'destination_url' => $request->destination_url,
+            'tgl_event' => $request->tgl_event,
         ]);
 
         return redirect()->route('eventship.index')->with('success', 'Berhasil mengubah Event');

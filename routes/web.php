@@ -24,6 +24,7 @@ use App\Http\Controllers\{
     OjolMaduraPageController,
     Services,
     Article,
+    ArtikelPageController,
 };
 
 Route::group(["prefix" => "admin", "middleware" => "mustlogin"], function() {
@@ -64,6 +65,8 @@ Route::get('/festival', [FestivalPageController::class, 'index']);
 Route::get('/festival-detail/{festival}',[FestivalPageController::class, 'show'])->name('festivalpage.show');
 Route::get('/bazar', [BazarPageController::class, 'index']);
 Route::get('/bazar-detail/{bazar}',[BazarPageController::class, 'show'])->name('bazarpage.show');
+Route::get('/artikel', [ArtikelPageController::class, 'index']);
+Route::get('/artikel-detail/{artikel}',[ArtikelPageController::class, 'show'])->name('artikelpage.show');
 Route::get('/Madura-tv',[MaduraTvPageController::class, 'index']);
 Route::get('/ojol-madura',[OjolMaduraPageController::class, 'index']);
 Route::get('/about', function () {

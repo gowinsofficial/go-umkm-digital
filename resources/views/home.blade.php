@@ -344,14 +344,14 @@
             </div>
             <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
                 <div class="media-1">
-                    <a href="#" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/hero-slider-3.jpg')}}" alt="Image" class="img-fluid"></a>
+                    <a href="/artikel" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/hero-slider-3.jpg')}}" alt="Image" class="img-fluid"></a>
                     <span class="d-flex align-items-center loc mb-2">
                         <span class="icon-room mr-3"></span>
                         <span>Artikel</span>
                     </span>
                     <div class="d-flex align-items-center">
                         <div>
-                            <h3><a href="#">Artikel</a></h3>
+                            <h3><a href="/artikel">Artikel</a></h3>
                             {{--  <div class="price ml-auto">
                                 <span>$750.00</span>
                             </div>  --}}

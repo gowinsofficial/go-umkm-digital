@@ -16,11 +16,11 @@
           {{--  <pre>{{ dd($kuliner->image) }}</pre>  --}}
           <div class="row">
             <div class="col-12">
-              <form class="form">
+              <form class="form" action="/kuliner">
                 <div class="row mb-2">
                   <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
                     <select
-                      name=""
+                      name="category"
                       id=""
                       class="form-control custom-select"
                     >
@@ -41,6 +41,7 @@
                   <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-3">
                     <input
                       type="text"
+                      name="kuliner"
                       class="form-control"
                       placeholder="cari kuliner..."
                     />

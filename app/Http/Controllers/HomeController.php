@@ -29,7 +29,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $sliders = SliderImage::all(); 
-        return view('home', compact('sliders'));
+        return view('home');;
     }
 }

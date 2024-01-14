@@ -21,6 +21,7 @@ use App\Http\Controllers\{
     Services,
     Article,
     ArtikelPageController,
+    HomePageController,
     SalePageController,
     Sales,
     SliderImageController,
@@ -53,7 +54,7 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 //====== END AUTH ROUTES
 
 
-Route::get('/',[HomeController::class, 'index']);
+Route::get('/',[HomePageController::class, 'index']);
 Route::get('/kuliner', [KulinerPageController::class, 'index']);
 Route::get('/kuliner-detail/{kuliner}', [KulinerPageController::class, 'show'])->name('kulinerpage.show');
 Route::get('/wisata',[WisataPageController::class, 'index']);

@@ -71,6 +71,22 @@
                             </div>
 
                             <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label" for="whatsapp">No. Whatsapp</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control w-50" id="whatsapp"
+                                        placeholder="No. Whatsapp" name="whatsapp" required />
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label" for="maps">Lokasi Maps</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control w-50" id="maps"
+                                        placeholder="Lokasi Maps" name="maps" required />
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="images">Gambar Sale</label>
                                 <div class="col-sm-10">
                                     <input type="file" class="form-control w-50" id="images" name="image" accept="image/*" required />

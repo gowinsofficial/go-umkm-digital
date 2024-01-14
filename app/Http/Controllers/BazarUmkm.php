@@ -100,7 +100,7 @@ class BazarUmkm extends Controller
         }
 
         $bazar->update([
-            'id_img' => $imageGroup->id_img,
+            'id_img' => $imageGroup,
             'title' => $request->title,
             'tgl_acara' => $request->tgl_acara,
             'destination_url' => $request->destination_url,

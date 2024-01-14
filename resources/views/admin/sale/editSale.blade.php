@@ -69,7 +69,23 @@
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="detail">Detail</label>
                                 <div class="col-sm-10">
-                                    <textarea class="form-control w-50" id="detail" rows="3" name="detail" placeholder="Detail Content" value="{{ $sale->detail }}" ></textarea>
+                                    <textarea class="form-control w-50" id="detail" rows="3" name="detail" placeholder="Detail Content">{{ $sale->detail }}</textarea>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label" for="whatsapp">No. Whatsapp</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control w-50" id="whatsapp"
+                                        placeholder="No. Whatsapp" name="whatsapp" required value="{{ $sale->whatsapp }}" />
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label" for="maps">Lokasi Maps</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control w-50" id="maps"
+                                        placeholder="Lokasi Maps" name="maps" required value="{{ $sale->maps }}" />
                                 </div>
                             </div>
 

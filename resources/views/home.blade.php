@@ -316,7 +316,7 @@
                     <div class="d-flex align-items-center">
                         <div>
                             <h3><a href="/bazar">Bazar Umkm</a></h3>
-                            
+
                         </div>
 
                     </div>

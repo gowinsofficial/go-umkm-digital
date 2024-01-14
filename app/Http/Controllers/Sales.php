@@ -51,7 +51,8 @@ class Sales extends Controller
             'harga_awal' => $request->harga_awal,
             'diskon' => $request->diskon,
             'detail' => $request->detail,
-            //'detail' => $request->detail,
+            'maps' => $request->maps,
+            'whatsapp' => $request->whatsapp,
         ]);
 
         return redirect()->route('sale.index')->with('success', 'Berhasil menambahkan Sales');
@@ -101,12 +102,14 @@ class Sales extends Controller
         }
 
         $sale->update([
-            'id_img' => $imageGroup->id_img,
+            'id_img' => $imageGroup,
             'kategori' => $request->kategori,
             'nama_produk' => $request->nama_produk,
             'harga_awal' => $request->harga_awal,
             'diskon' => $request->diskon,
             'detail' => $request->detail,
+            'maps' => $request->maps,
+            'whatsapp' => $request->whatsapp,
         ]);
 
         return redirect()->route('sale.index')->with('success', 'Berhasil mengubah Sale');

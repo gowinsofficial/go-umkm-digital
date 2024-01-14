@@ -1,11 +1,8 @@
 <?php
 
-use App\Http\Controllers\batikmaduraController;
-use App\Http\Controllers\adminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
     AuthController,
-    PageController,
     HomeController,
     KulinerMadura,
     BatikMadura,
@@ -16,7 +13,6 @@ use App\Http\Controllers\{
     MaduraTvController,
     PariwisataMadura,
     OjolMadura,
-    BrandingUmkm,
     Events,
     FestivalPageController,
     MaduraTvPageController,
@@ -27,6 +23,7 @@ use App\Http\Controllers\{
     ArtikelPageController,
     SalePageController,
     Sales,
+    SliderImageController,
 };
 
 Route::group(["prefix" => "admin", "middleware" => "mustlogin"], function() {
@@ -37,14 +34,12 @@ Route::group(["prefix" => "admin", "middleware" => "mustlogin"], function() {
     Route::resource("/maduratv", MaduraTvController::class);
     Route::resource("/pariwisata", PariwisataMadura::class);
     Route::resource("/ojol", OjolMadura::class);
-    Route::resource("/branding", BrandingUmkm::class);
     Route::resource("/eventship", Events::class);
     Route::resource("/service", Services::class);
     Route::resource("/bazar", BazarUmkm::class);
     Route::resource("/article", Article::class);
     Route::resource("/sale", Sales::class);
-
-
+    Route::resource("/slider", SliderImageController::class);
 
 });
 

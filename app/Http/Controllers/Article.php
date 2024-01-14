@@ -8,6 +8,7 @@ use App\Models\Images;
 use App\Models\Menu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
 
 class Article extends Controller
 {
@@ -32,12 +33,13 @@ class Article extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request )
     {
         $imageGroup = Images::create(['group' => 'article']);
 
         $image = $request->file('image');
         $path = $image->store('public/uploads');
+        //$currentTime = Carbon::now();
         ImageDetail::create([
             'id_img' => $imageGroup->id_img,
             'directory' => $path,
@@ -48,7 +50,7 @@ class Article extends Controller
             'id_img' => $imageGroup->id_img,
             'header' => $request->header,
             'writer' => $request->writer,
-            'tgl_post' => $request->tgl_post,
+            'tgl_post' => Carbon::now(),
             'content' => $request->content,
             'file_upload' => $request->file_upload,
             //'detail' => $request->detail,
@@ -101,7 +103,7 @@ class Article extends Controller
         }
 
         $article->update([
-            'id_img' => $imageGroup->id_img,
+            'id_img' => $imageGroup,
             'header' => $request->header,
             'writer' => $request->writer,
             'tgl_post' => $request->tgl_post,

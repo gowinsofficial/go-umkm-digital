@@ -101,7 +101,7 @@ class Events extends Controller
         }
 
         $eventship->update([
-            'id_img' => $imageGroup->id_img,
+            'id_img' => $imageGroup,
             'title' => $request->title,
             'destination_url' => $request->destination_url,
             'tgl_event' => $request->tgl_event,

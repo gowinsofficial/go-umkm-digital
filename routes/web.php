@@ -23,6 +23,7 @@ use App\Http\Controllers\{
     ArtikelPageController,
     Sales,
     SliderImageController,
+    Settings,
 };
 
 Route::group(["prefix" => "admin", "middleware" => "mustlogin"], function() {
@@ -39,6 +40,8 @@ Route::group(["prefix" => "admin", "middleware" => "mustlogin"], function() {
     Route::resource("/article", Article::class);
     Route::resource("/sale", Sales::class);
     Route::resource("/slider", SliderImageController::class);
+    Route::get("/setting", [Settings::class, 'pageSetting']);
+    Route::put("/setting", [Settings::class, 'saveSetting'])->name('setting.save');
 
 });
 

@@ -19,4 +19,21 @@ class Settings extends Controller
         return null;
     }
 
+    public function pageSetting() {
+        $settings = Setting::orderBy('id')->get()->toArray();
+        return view('admin.setting', compact('settings'));
+    }
+
+    public function saveSetting(Request $request) {
+
+        foreach(Setting::pluck('value', 'lookup')->all() as $key => $setting) {
+            if ($request->input($key) != null && $request->input($key) != $setting) {
+                Setting::where("lookup", '=', $key)->update([
+                    "value" => $request->input($key)
+                ]);
+            }
+        }
+        return redirect()->back()->with('success', 'Pengaturan berhasil disimpan');
+    }
+
 }

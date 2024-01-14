@@ -17,6 +17,8 @@ class MountSale extends Model
         'harga_awal',
         'diskon',
         'detail',
+        'maps',
+        'whatsapp',
     ];
 
     public function image()

@@ -51,7 +51,7 @@
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="content">Content</label>
                                 <div class="col-sm-10">
-                                    <textarea class="form-control w-50" id="content" rows="3" name="content" placeholder="Deskripsi Isi Content Artikel" value="{{ $article->content }}"></textarea>
+                                    <textarea class="form-control w-50" id="content" rows="3" name="content" placeholder="Deskripsi Isi Content Artikel">{{ $article->content }}</textarea>
                                 </div>
                             </div>
 

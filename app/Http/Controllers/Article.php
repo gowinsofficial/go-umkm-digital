@@ -106,7 +106,6 @@ class Article extends Controller
             'id_img' => $imageGroup,
             'header' => $request->header,
             'writer' => $request->writer,
-            'tgl_post' => $request->tgl_post,
             'content' => $request->content,
             'file_upload' => $request->file_upload,
         ]);

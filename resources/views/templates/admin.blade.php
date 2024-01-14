@@ -211,7 +211,7 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="{{ route('ojol.index') }}" class="menu-link">
+                        <a href="{{ route('setting.index') }}" class="menu-link">
                             <i class="bx bxs-server me-2"></i>
                             Pengaturan
                         </a>

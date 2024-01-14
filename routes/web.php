@@ -41,7 +41,7 @@ Route::group(["prefix" => "admin", "middleware" => "mustlogin"], function() {
     Route::resource("/article", Article::class);
     Route::resource("/sale", Sales::class);
     Route::resource("/slider", SliderImageController::class);
-    Route::get("/setting", [Settings::class, 'pageSetting']);
+    Route::get("/setting", [Settings::class, 'pageSetting'])->name('setting.index');
     Route::put("/setting", [Settings::class, 'saveSetting'])->name('setting.save');
 
 });

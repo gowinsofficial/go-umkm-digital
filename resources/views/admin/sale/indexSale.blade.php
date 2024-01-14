@@ -28,6 +28,8 @@
                                     <th>Harga Awal</th>
                                     <th>Diskon</th>
                                     <th>Detail</th>
+                                    <th>Maps</th>
+                                    <th>No. Whatsapp</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -45,6 +47,8 @@
                                         <td>{{$row->harga_awal}}</td>
                                         <td>{{$row->diskon}}</td>
                                         <td>{{$row->detail}}</td>
+                                        <td>{{$row->maps}}</td>
+                                        <td>{{$row->whatsapp}}</td>
                                         <td>
                                             <a href="{{ route('sale.edit', $row->id_sale) }}"><button
                                                     class="btn btn-sm btn-info"><i class='bx bxs-edit'></i></button></a>

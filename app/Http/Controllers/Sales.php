@@ -51,7 +51,8 @@ class Sales extends Controller
             'harga_awal' => $request->harga_awal,
             'diskon' => $request->diskon,
             'detail' => $request->detail,
-            //'detail' => $request->detail,
+            'maps' => $request->maps,
+            'whatsapp' => $request->whatsapp,
         ]);
 
         return redirect()->route('sale.index')->with('success', 'Berhasil menambahkan Sales');
@@ -107,6 +108,8 @@ class Sales extends Controller
             'harga_awal' => $request->harga_awal,
             'diskon' => $request->diskon,
             'detail' => $request->detail,
+            'maps' => $request->maps,
+            'whatsapp' => $request->whatsapp,
         ]);
 
         return redirect()->route('sale.index')->with('success', 'Berhasil mengubah Sale');

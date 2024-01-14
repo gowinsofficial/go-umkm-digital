@@ -85,7 +85,7 @@
                                 <label class="col-sm-2 col-form-label" for="maps">Lokasi Maps</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control w-50" id="maps"
-                                        placeholder="No. Whatsapp" name="maps" required value="{{ $sale->maps }}" />
+                                        placeholder="Lokasi Maps" name="maps" required value="{{ $sale->maps }}" />
                                 </div>
                             </div>
 

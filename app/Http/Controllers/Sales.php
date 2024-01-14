@@ -101,7 +101,7 @@ class Sales extends Controller
         }
 
         $sale->update([
-            'id_img' => $imageGroup->id_img,
+            'id_img' => $imageGroup,
             'kategori' => $request->kategori,
             'nama_produk' => $request->nama_produk,
             'harga_awal' => $request->harga_awal,

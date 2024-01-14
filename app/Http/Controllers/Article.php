@@ -101,7 +101,7 @@ class Article extends Controller
         }
 
         $article->update([
-            'id_img' => $imageGroup->id_img,
+            'id_img' => $imageGroup,
             'header' => $request->header,
             'writer' => $request->writer,
             'tgl_post' => $request->tgl_post,

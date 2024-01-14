@@ -25,6 +25,7 @@ use App\Http\Controllers\{
     Services,
     Article,
     ArtikelPageController,
+    SalePageController,
     Sales,
 };
 
@@ -69,6 +70,8 @@ Route::get('/bazar', [BazarPageController::class, 'index']);
 Route::get('/bazar-detail/{bazar}',[BazarPageController::class, 'show'])->name('bazarpage.show');
 Route::get('/artikel', [ArtikelPageController::class, 'index']);
 Route::get('/artikel-detail/{artikel}',[ArtikelPageController::class, 'show'])->name('artikelpage.show');
+Route::get('/sale', [SalePageController::class, 'index']);
+Route::get('/sale-detail/{sale}',[SalePageController::class, 'show'])->name('salepage.show');
 Route::get('/Madura-tv',[MaduraTvPageController::class, 'index']);
 Route::get('/ojol-madura',[OjolMaduraPageController::class, 'index']);
 Route::get('/about', function () {

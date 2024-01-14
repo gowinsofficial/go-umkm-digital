@@ -149,6 +149,8 @@ return new class extends Migration
             $table->integer('harga_awal');
             $table->integer('diskon');
             $table->text('detail');
+            $table->string('maps', 255);
+            $table->string('whatsapp', 255);
             $table->timestamps();
             $table->foreign('id_img')->references('id_img')->on('images')
                 ->onDelete('CASCADE')->onUpdate('CASCADE');

@@ -280,7 +280,7 @@
                     </span>
                     <div class="d-flex align-items-center">
                         <div>
-                            <h3><a href="#">Kolaborasi dan sponsor</a></h3>
+                            <h3><a href="https://wa.me/{{ $setting::get("wawebsite") }}">Kolaborasi dan sponsor</a></h3>
                             {{--  <div class="price ml-auto">
                                 <span>$520.00</span>
                             </div>  --}}

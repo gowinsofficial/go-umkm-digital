@@ -13,21 +13,22 @@
             <span class="d-block">Batik Madura</span> 
             <span class="typed-words"></span>
           </h1>
-
+          {{--  <pre>{{ dd($kuliner->image) }}</pre>  --}}
           <div class="row">
             <div class="col-12">
-              <form class="form">
+              <form class="form" action="/batikp">
                 <div class="row mb-2">
                   <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
                     <select
-                      name=""
+                      name="category"
                       id=""
                       class="form-control custom-select"
                     >
                       <option value="">Kategori</option>
-                      <option value="">Makanan</option>
-                      <option value="">Minuman </option>
-                      <option value="">Snack</option>
+                      <option value="bangkalan">Bangkalan</option>
+                      <option value="sampang">Sampang </option>
+                      <option value="pamekasan">pamekasan </option>
+                      <option value="sumenep">Sumenep</option>
                      
                     </select>
                   </div>
@@ -41,6 +42,7 @@
                   <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-3">
                     <input
                       type="text"
+                      name="batik"
                       class="form-control"
                       placeholder="cari batik..."
                     />
@@ -70,23 +72,22 @@
       <div class="col-lg-5">
         <div class="slides">
           <img src="{{ asset('assets/img/logo/logo-umkm.jpg')}}" alt="Image" class="img-fluid active">
-                    <img src="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}" alt="Image" class="img-fluid">
-                    <img src="{{ asset('assets/wisata/images/hero-slider-3.jpg')}}" alt="Image" class="img-fluid">
-                    <img src="{{ asset('assets/wisata/images/hero-slider-4.jpg')}}" alt="Image" class="img-fluid">
-                    <img src="{{ asset('assets/wisata/images/hero-slider-5.jpg')}}" alt="Image" class="img-fluid">
+                   
         </div>
       </div>
     </div>
   </div>
 </div>
+@if ($batik->count())
 <div class="untree_co-section">
   <div class="container">
     <div class="row justify-content-center text-center mb-5">
+      
       <div class="col-lg-6">
         <h2 class="section-title text-center mb-3">
           Special Offers &amp; Discounts
         </h2>
-        
+       
       </div>
     </div>
    
@@ -102,23 +103,26 @@
           /></a>
           <span class="d-flex align-items-center loc mb-2">
             <span class="icon-room mr-3"></span>
-            <span>{{ $row->nama }}</span>
+            <span>{{$row->nama }}</span>
           </span>
           <div class="d-flex align-items-center">
             <div>
-              <h3><a href="{{ route('kulinerpage.show', $row->id_batik) }}">{{ $row->detail }}</a></h3>
+              <h3><a href="{{ route('batikpage.show', $row->id_batik) }}">{{ $row->detail  }}</a></h3>
               <div class="price ml-auto">
-                <span>Rp.{{$row->harga}}</span>
+                <span>Rp. {{ $row->harga }}</span>
               </div>
             </div>
           </div>
         </div>
       </div>
       @endforeach
-     
+   
     </div>
   </div>
 </div>
+@else
+<p class="text-center fs-4">No post found.</p>
+@endif
        
 @endsection   
 

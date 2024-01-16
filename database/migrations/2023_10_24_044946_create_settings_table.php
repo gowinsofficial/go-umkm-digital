@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('lookup', 100);
             $table->string('value', 100);
+            $table->string('name', 100);
             $table->timestamps();
         });
     }

@@ -18,15 +18,15 @@
                             @csrf
                             @method('PUT')
                             <table class="table tab-table">
+                                @foreach($settings as $setting):
                                 <tr>
-                                    <th width="150">No. Whatsapp Utama</th>
+                                    <th width="150">{{ $setting["name"] }}</th>
                                     <td width="10">:</td>
                                     <td>
-                                        <input type="text" name="{{ $settings[0]["lookup"] }}" class="form-control form-control-sm w-50"
-                                               value="{{ $settings[0]["value"] }}">
+                                        <input type="text" name="{{ $setting["lookup"] }}" class="form-control form-control-sm w-50"
+                                               value="{{ $setting["value"] }}">
                                     </td>
-                                </tr>
-
+                                @endforeach
                                 <tr>
                                     <td colspan="2"></td>
                                     <td>

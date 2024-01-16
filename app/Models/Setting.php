@@ -13,6 +13,7 @@ class Setting extends Model
     protected $fillable = [
         'lookup',
         'value',
+        'name'
     ];
 
 }

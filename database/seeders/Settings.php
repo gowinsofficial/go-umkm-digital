@@ -17,21 +17,60 @@ class Settings extends Seeder
         $users = [
             [
                 'lookup' => 'whatsapp-primary-admin',
-                'value' => 'https://wa.me/628334433222',
+                'value' => '6281334451615',
             ],
             [
                 'lookup' => 'whatsapp-admin-1',
-                'value' => 'https://wa.me/628334433111',
+                'value' => '6281334451615',
             ],
             [
                 'lookup' => 'whatsapp-admin-2',
-                'value' => 'https://wa.me/628334433444',
+                'value' => '6281334451615',
             ],
             [
-                'lookup' => 'text-template-wa-kuliner',
-                'value' => 'Halo Admin, bla bla bla',
+                'lookup' => 'whatsapp-admin-website',
+                'value' => '6281334451615',
             ],
-
+            [
+                'lookup' => 'whatsapp-admin-branding',
+                'value' => '6281334451615',
+            ],
+            [
+                'lookup' => 'whatsapp-admin-ecommerce',
+                'value' => '6281334451615',
+            ],
+            [
+                'lookup' => 'whatsapp-admin-pelatihanmarketing',
+                'value' => '6281334451615',
+            ],
+            [
+                'lookup' => 'whatsapp-admin-sponsor',
+                'value' => '6281334451615',
+            ],
+            [
+                'lookup' => 'link-video',
+                'value' => 'https://www.youtube.com/',
+            ],
+            [
+                'lookup' => 'instagram',
+                'value' => 'https://www.instagram.com/',
+            ],
+            [
+                'lookup' => 'email',
+                'value' => 'tikatikatika33@gmail.com',
+            ],
+            [
+                'lookup' => 'contact',
+                'value' => '6281334451615',
+            ],
+            [
+                'lookup' => 'text-slide-landing',
+                'value' => 'UMKM GO Digital Adalah ...',
+            ],
+            [
+                'lookup' => 'syarat-ketentuan',
+                'value' => 'Syarat yang diutamakan bisa Whatsapp',
+            ],
 
         ];
         DB::table('settings')->insert($users);

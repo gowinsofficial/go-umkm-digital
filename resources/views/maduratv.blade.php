@@ -20,15 +20,15 @@
                 <div class="row mb-2">
                   <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
                     <select
-                      name=""
+                      name="category"
                       id=""
                       class="form-control custom-select"
                     >
-                      <option value="">Kategori</option>
-                      <option value="Bangkalan">Bangkalan</option>
-                      <option value="Sampang">Sampang</option>
-                      <option value="Pamekasan">Pamekasan </option>
-                      <option value="Sumenep">Sumenep</option>
+                      <option value="">--Pilih Kategori--</option>
+                      <option value="budaya madura">Budaya Madura</option>
+                      <option value="acara madura">Acara Madura</option>
+                      <option value="podcast">Podcast</option>
+                      <option value="profil video umkm">Profil Video UMKM</option>
                      
                     </select>
                   </div>
@@ -43,7 +43,9 @@
                     <input
                       type="text"
                       class="form-control"
+                      name="tv"
                       placeholder="cari TV..."
+                      value="{{ request('tv') }}"
                     />
                   </div>
                 </div>
@@ -71,6 +73,7 @@
     </div>
   </div>
 </div>
+@if ($maduratv->count())
 <div class="untree_co-section">
   <div class="container">
     <div class="row justify-content-center text-center mb-5">
@@ -130,7 +133,9 @@
     </div>
   </div>
 </div>
-       
+@else
+<p class="text-center fs-4">No post found.</p>
+@endif        
 @endsection   
 
 

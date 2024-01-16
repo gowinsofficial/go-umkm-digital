@@ -95,7 +95,7 @@
                         <span class="fa fa-briefcase fa-3x display-4 text-primary"></span>
                         <h3>Branding Bisnis</h3>
                         <p class="mb-0">Branding Usahamu Agar DiJangkau Halayak Umum.</p>
-                        <a class="btn btn-info" href="#" role="button">view</a>
+                        <a class="btn btn-info" href="https://wa.me/{{ $setting::get("wawebsite") }}" role="button">view</a>
                     </div>
                 </div>
 
@@ -144,7 +144,7 @@
                         </span>
                         <h3>Pembuatan Website</h3>
                         <p class="mb-0">Jasa Pembuatan Website lebih khusus website Umkm.</p>
-                        <a class="btn btn-info" href="#" role="button">view</a>
+                        <a class="btn btn-info" href="https://wa.me/{{ $setting::get("wawebsite") }}" role="button">view</a>
                     </div>
                 </div>
 
@@ -157,7 +157,7 @@
                         </span>
                         <h3>E-commerce</h3>
                         <p class="mb-0">Jasa untuk Pembuatan Toko Online (E-commerce).</p>
-                        <a class="btn btn-info" href="#" role="button">view</a>
+                        <a class="btn btn-info" href="https://wa.me/{{ $setting::get("wawebsite") }}" role="button">view</a>
                     </div>
                 </div>
 
@@ -171,70 +171,18 @@
         <div class="row text-center justify-content-center mb-5">
             <div class="col-lg-7"><h2 class="section-title text-center">Galery UMKM</h2></div>
         </div>
-
+       
         <div class="owl-carousel owl-3-slider">
-
+            @foreach($sliders as $image)
             <div class="item">
-                <a class="media-thumb" href="{{ asset('assets/wisata/images/hero-slider-1.jpg')}}" data-fancybox="gallery">
+                <a class="media-thumb" href="{{ \Illuminate\Support\Facades\Storage::url($image->img_name) }}" data-fancybox="gallery">
                     <div class="media-text">
-                        <h3>Pragser Wildsee</h3>
-                        <span class="location">Italy</span>
+                        <h3>{{ $image->title }}</h3>
                     </div>
-                    <img src="{{ asset('assets/wisata/images/hero-slider-1.jpg')}}" alt="Image" class="img-fluid">
+                    <img src="{{ \Illuminate\Support\Facades\Storage::url($image->img_name) }}" alt="Image" class="img-fluid">
                 </a>
             </div>
-
-            <div class="item">
-                <a class="media-thumb" href="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}" data-fancybox="gallery">
-                    <div class="media-text">
-                        <h3>Oia</h3>
-                        <span class="location">Greece</span>
-                    </div>
-                    <img src="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}" alt="Image" class="img-fluid">
-                </a>
-            </div>
-
-            <div class="item">
-                <a class="media-thumb" href="{{ asset('assets/wisata/images/hero-slider-3.jpg')}}" data-fancybox="gallery">
-                    <div class="media-text">
-                        <h3>Perhentian Islands</h3>
-                        <span class="location">Malaysia</span>
-                    </div>
-                    <img src="{{ asset('assets/wisata/images/hero-slider-3.jpg')}}" alt="Image" class="img-fluid">
-                </a>
-            </div>
-
-
-            <div class="item">
-                <a class="media-thumb" href="{{ asset('assets/wisata/images/hero-slider-4.jpg')}}" data-fancybox="gallery">
-                    <div class="media-text">
-                        <h3>Rialto Bridge</h3>
-                        <span class="location">Italy</span>
-                    </div>
-                    <img src="{{ asset('assets/wisata/images/hero-slider-4.jpg')}}" alt="Image" class="img-fluid">
-                </a>
-            </div>
-
-            <div class="item">
-                <a class="media-thumb" href="{{ asset('assets/wisata/images/hero-slider-5.jpg')}}" data-fancybox="gallery">
-                    <div class="media-text">
-                        <h3>San Francisco, United States</h3>
-                        <span class="location">United States</span>
-                    </div>
-                    <img src="{{ asset('assets/wisata/images/hero-slider-5.jpg')}}" alt="Image" class="img-fluid">
-                </a>
-            </div>
-
-            <div class="item">
-                <a class="media-thumb" href="{{ asset('assets/wisata/images/hero-slider-1.jpg')}}" data-fancybox="gallery">
-                    <div class="media-text">
-                        <h3>Lake Thun</h3>
-                        <span class="location">Switzerland</span>
-                    </div>
-                    <img src="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}" alt="Image" class="img-fluid">
-                </a>
-            </div>
-
+           @endforeach
         </div>
 
     </div>
@@ -277,7 +225,7 @@
                     </span>
                     <div class="d-flex align-items-center">
                         <div>
-                            <h3><a href="#">Pelatihan Marketing dll...</a></h3>
+                            <h3><a href="https://wa.me/{{ $setting::get("wawebsite") }}">Pelatihan Marketing dll...</a></h3>
 
                         </div>
 
@@ -332,7 +280,7 @@
                     </span>
                     <div class="d-flex align-items-center">
                         <div>
-                            <h3><a href="#">Kolaborasi dan sponsor</a></h3>
+                            <h3><a href="https://wa.me/{{ $setting::get("wawebsite") }}">Kolaborasi dan sponsor</a></h3>
                             {{--  <div class="price ml-auto">
                                 <span>$520.00</span>
                             </div>  --}}

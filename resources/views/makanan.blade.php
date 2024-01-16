@@ -16,18 +16,18 @@
           {{--  <pre>{{ dd($kuliner->image) }}</pre>  --}}
           <div class="row">
             <div class="col-12">
-              <form class="form">
+              <form class="form" action="/kuliner">
                 <div class="row mb-2">
                   <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
                     <select
-                      name=""
+                      name="category"
                       id=""
                       class="form-control custom-select"
                     >
                       <option value="">Kategori</option>
-                      <option value="">Makanan</option>
-                      <option value="">Minuman </option>
-                      <option value="">Snack</option>
+                      <option value="Makanan">Makanan</option>
+                      <option value="Minuman">Minuman </option>
+                      <option value="Snack">Snack</option>
                      
                     </select>
                   </div>
@@ -41,6 +41,7 @@
                   <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-3">
                     <input
                       type="text"
+                      name="kuliner"
                       class="form-control"
                       placeholder="cari kuliner..."
                     />
@@ -69,14 +70,15 @@
       </div>
       <div class="col-lg-5">
         <div class="slides">
-          <img src="{{ asset('assets/img/logo/logo-umkm.jpg')}}" alt="Image" class="img-fluid active">
+          <img src="{{ asset('assets/img/logo/logo.jpg')}}" alt="Image" class="img-fluid active">
                    
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="untree_co-section">
+@if ($kuliner->count())
+<div class="untree_co-section mt-5">
   <div class="container">
     <div class="row justify-content-center text-center mb-5">
       
@@ -87,8 +89,9 @@
        
       </div>
     </div>
+   
     <div class="row">
-      @foreach ($batik as $row)
+      @foreach ($kuliner as $row)
       <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
         <div class="media-1">
           <a href="{{ route('kulinerpage.show', $row->id_kuliner) }}" class="d-block mb-3"
@@ -112,77 +115,13 @@
         </div>
       </div>
       @endforeach
-      {{--  <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-        <div class="media-1">
-          <a href="/kuliner-detail" class="d-block mb-3"
-            ><img
-              src="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}"
-              alt="Image"
-              class="img-fluid"
-          /></a>
-          <span class="d-flex align-items-center loc mb-2">
-            <span class="icon-room mr-3"></span>
-            <span>United States</span>
-          </span>
-          <div class="d-flex align-items-center">
-            <div>
-              <h3><a href="/kuliner-detail">San Francisco</a></h3>
-              <div class="price ml-auto">
-                <span>$520.00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-        <div class="media-1">
-          <a href="/kuliner-detail" class="d-block mb-3"
-            ><img
-              src="{{ asset('assets/wisata/images/hero-slider-3.jpg')}}"
-              alt="Image"
-              class="img-fluid"
-          /></a>
-          <span class="d-flex align-items-center loc mb-2">
-            <span class="icon-room mr-3"></span>
-            <span>Malaysia</span>
-          </span>
-          <div class="d-flex align-items-center">
-            <div>
-              <h3><a href="/kuliner-detail">Perhentian Islands</a></h3>
-              <div class="price ml-auto">
-                <span>$750.00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-        <div class="media-1">
-          <a href="/kuliner-detail" class="d-block mb-3"
-            ><img
-              src="{{ asset('assets/wisata/images/hero-slider-4.jpg')}}"
-              alt="Image"
-              class="img-fluid"
-          /></a>
-
-          <span class="d-flex align-items-center loc mb-2">
-            <span class="icon-room mr-3"></span>
-            <span>Switzerland</span>
-          </span>
-
-          <div class="d-flex align-items-center">
-            <div>
-              <h3><a href="/kuliner-detail">Lake Thun</a></h3>
-              <div class="price ml-auto">
-                <span>$520.00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>  --}}
+   
     </div>
   </div>
 </div>
+@else
+<p class="text-center fs-4">No post found.</p>
+@endif
        
 @endsection   
 

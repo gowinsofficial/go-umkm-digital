@@ -17,6 +17,16 @@ class MaduraTvPageController extends Controller
     public function index()
     {
         $maduratv = MaduraTv::with(["menu", "image"])->get();
+        if(request('tv') ||  request('category')){
+           
+            $maduratv = MaduraTv::with(["menu", "image"])
+            ->where(function($query) {
+                $query->where('kategori', 'like', '%' . request('category') . '%')
+                      ->where('nama', 'like', '%' . request('kuliner') . '%');
+            })
+            ->get();
+                
+             }
         return view('maduratv', compact('maduratv'));
     }
 

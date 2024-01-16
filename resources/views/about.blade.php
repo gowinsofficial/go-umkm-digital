@@ -96,26 +96,28 @@
         <div class="col-lg-3 mb-4">
           <div class="team">
             <img
-              src="{{ asset('assets/wisata/images/person_1.jpg')}}"
+              src="{{ asset('assets/wisata/images/tika.jpg')}}"
               alt="Image"
               class="img-fluid mb-4 rounded-20"
             />
             <div class="px-3">
-              <h3 class="mb-0">James Watson</h3>
-              <p>Co-Founder &amp; CEO</p>
+              <h3 class="mb-0">Tika Noviyanti</h3>
+              <p>CEO</p>
             </div>
           </div>
         </div>
         <div class="col-lg-3 mb-4">
           <div class="team">
             <img
-              src="{{ asset('assets/wisata/images/person_2.jpg')}}"
+              src="{{ asset('assets/wisata/images/feri.jpg')}}"
               alt="Image"
               class="img-fluid mb-4 rounded-20"
             />
             <div class="px-3">
-              <h3 class="mb-0">Carl Anderson</h3>
-              <p>Co-Founder &amp; CEO</p>
+              <h3 class="mb-0"> Feri Yulianto
+                Creative 
+                </h3>
+              <p>Creative</p>
             </div>
           </div>
         </div>
@@ -123,29 +125,18 @@
         <div class="col-lg-3 mb-4">
           <div class="team">
             <img
-              src="{{ asset('assets/wisata/images/person_4.jpg')}}"
+              src="{{ asset('assets/wisata/images/naurus.jpg')}}"
               alt="Image"
               class="img-fluid mb-4 rounded-20"
             />
             <div class="px-3">
-              <h3 class="mb-0">Michelle Allison</h3>
-              <p>Co-Founder &amp; CEO</p>
+              <h3 class="mb-0">Nurus Samsiyati
+                </h3>
+              <p>Admin</p>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 mb-4">
-          <div class="team">
-            <img
-              src="{{ asset('assets/wisata/images/person_3.jpg')}}"
-              alt="Image"
-              class="img-fluid mb-4 rounded-20"
-            />
-            <div class="px-3">
-              <h3 class="mb-0">Drew Wood</h3>
-              <p>Co-Founder &amp; CEO</p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   </div>

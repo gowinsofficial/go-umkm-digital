@@ -32,6 +32,7 @@
 </head> 
 
 <body>
+@inject('setting', 'App\Http\Controllers\Settings')
   <div class="site-mobile-menu site-navbar-target">
 		<div class="site-mobile-menu-header">
 			<div class="site-mobile-menu-close">
@@ -44,8 +45,8 @@
 	<nav class="site-nav">
 		<div class="container">
 			<div class="site-navigation">
-				<a href="index.html" class="logo m-0">GO UMKM <span class="text-primary">.</span></a>
-
+				{{--  <a href="index.html" class="logo m-0">GO UMKM <span class="text-primary">.</span></a>  --}}
+				<img src="{{ asset('assets/img/logo/logo.jpg')}}" alt="imam" width="50" class="rounded-circle logo m-0" />
 				<ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
 					<li class="active"><a href="/">Home</a></li>
 					<li class="has-children">
@@ -55,15 +56,13 @@
 							<li><a href="/batik">Batik Madura</a></li>
 							<li><a href="/Madura-tv">Madura Tv</a></li>
 							<li><a href="/ojol-madura">Ojol Madura</a></li>
-							<li><a href="#">Madura Tv</a></li>
 							<li><a href="/wisata">Pariwisata</a></li>
-							<li><a href="#">Branding Bisnis</a></li>
-							<li><a href="#">Pembuatan Website</a></li>
-							<li><a href="#">Pembuatan E-commers</a></li>
+							<li><a href="https://wa.me/{{ $setting::get("wawebsite") }}">Branding Bisnis</a></li>
+							<li><a href="https://wa.me/{{ $setting::get("wawebsite") }}">Pembuatan Website</a></li>
+							<li><a href="https://wa.me/{{ $setting::get("wawebsite") }}">Pembuatan E-commers</a></li>
 						</ul>
 					</li>
 					<li><a href="/about">About</a></li>
-					<li><a href="/contact">Contact Us</a></li>
 					<li><a href="/login">Login</a></li>
 				</ul>
 

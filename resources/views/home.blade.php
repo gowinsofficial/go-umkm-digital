@@ -95,7 +95,7 @@
                         <span class="fa fa-briefcase fa-3x display-4 text-primary"></span>
                         <h3>Branding Bisnis</h3>
                         <p class="mb-0">Branding Usahamu Agar DiJangkau Halayak Umum.</p>
-                        <a class="btn btn-info" href="#" role="button">view</a>
+                        <a class="btn btn-info" href="https://wa.me/{{ $setting::get("wawebsite") }}" role="button">view</a>
                     </div>
                 </div>
 
@@ -144,7 +144,7 @@
                         </span>
                         <h3>Pembuatan Website</h3>
                         <p class="mb-0">Jasa Pembuatan Website lebih khusus website Umkm.</p>
-                        <a class="btn btn-info" href="#" role="button">view</a>
+                        <a class="btn btn-info" href="https://wa.me/{{ $setting::get("wawebsite") }}" role="button">view</a>
                     </div>
                 </div>
 
@@ -157,7 +157,7 @@
                         </span>
                         <h3>E-commerce</h3>
                         <p class="mb-0">Jasa untuk Pembuatan Toko Online (E-commerce).</p>
-                        <a class="btn btn-info" href="#" role="button">view</a>
+                        <a class="btn btn-info" href="https://wa.me/{{ $setting::get("wawebsite") }}" role="button">view</a>
                     </div>
                 </div>
 
@@ -225,7 +225,7 @@
                     </span>
                     <div class="d-flex align-items-center">
                         <div>
-                            <h3><a href="#">Pelatihan Marketing dll...</a></h3>
+                            <h3><a href="https://wa.me/{{ $setting::get("wawebsite") }}">Pelatihan Marketing dll...</a></h3>
 
                         </div>
 

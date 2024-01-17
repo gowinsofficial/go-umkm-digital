@@ -18,4 +18,9 @@ class HomePageController extends Controller
         $sliders = SliderImage::all(); 
         return view('home', compact('sliders'));
     }
+    public function about()
+    {
+        $sliders = SliderImage::all(); 
+        return view('about', compact('sliders'));
+    }
 }

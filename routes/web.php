@@ -71,8 +71,6 @@ Route::get('/sale', [SalePageController::class, 'index']);
 Route::get('/sale-detail/{sale}',[SalePageController::class, 'show'])->name('salepage.show');
 Route::get('/Madura-tv',[MaduraTvPageController::class, 'index']);
 Route::get('/ojol-madura',[OjolMaduraPageController::class, 'index']);
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/about', [HomePageController::class, 'about']);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');

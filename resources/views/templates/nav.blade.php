@@ -14,7 +14,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
-
+	<link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon/logo.ico') }}" />
 	<link rel="stylesheet" href="{{ asset("assets/wisata/css/bootstrap.min.css")}}">
 	<link rel="stylesheet" href="{{ asset("assets/wisata/css/owl.carousel.min.css") }}">
 	<link rel="stylesheet" href="{{ asset('assets/wisata/css/owl.theme.default.min.css') }}">
@@ -57,9 +57,9 @@
 							<li><a href="/Madura-tv">Madura Tv</a></li>
 							<li><a href="/ojol-madura">Ojol Madura</a></li>
 							<li><a href="/wisata">Pariwisata</a></li>
-							<li><a href="https://wa.me/{{ $setting::get("wawebsite") }}">Branding Bisnis</a></li>
-							<li><a href="https://wa.me/{{ $setting::get("wawebsite") }}">Pembuatan Website</a></li>
-							<li><a href="https://wa.me/{{ $setting::get("wawebsite") }}">Pembuatan E-commers</a></li>
+							<li><a href="https://wa.me/{{ $setting::get("whatsapp-admin-sponsor") }}">Branding Bisnis</a></li>
+							<li><a href="https://wa.me/{{ $setting::get("whatsapp-admin-website") }}">Pembuatan Website</a></li>
+							<li><a href="https://wa.me/{{ $setting::get("whatsapp-admin-ecommerce") }}">Pembuatan E-commers</a></li>
 						</ul>
 					</li>
 					<li><a href="/about">About</a></li>
@@ -94,27 +94,22 @@
 				<div class="col-md-6 col-lg-4">
 					<div class="widget">
 						<h3 class="heading">About Tour</h3>
-						<p>umkm go di.gital madura merupakan wadah
-							untuk membantu brand pen jualan umkm go digital,
-							Baik pada Umkm skala keal dan menengah
-							yakni denganPromosi bisnis di berbagai
-							e commerce Yakni shopee,tokopedia, instagram,
-							you tube, tiktok dsb</p>
+						<p>{{ $setting::get("text-slide-landing") }}</p>
 					</div>
 					<div class="widget">
 						<ul class="list-unstyled social">
-							<li><a href="#"><span class="icon-twitter"></span></a></li>
-							<li><a href="#"><span class="icon-instagram"></span></a></li>
-							<li><a href="#"><span class="icon-facebook"></span></a></li>
+							{{--  <li><a href="#"><span class="icon-twitter"></span></a></li>  --}}
+							<li><a href="{{ $setting::get("instagram") }}"><span class="icon-instagram"></span></a></li>
+							{{--  <li><a href="#"><span class="icon-facebook"></span></a></li>
 							<li><a href="#"><span class="icon-linkedin"></span></a></li>
 							<li><a href="#"><span class="icon-dribbble"></span></a></li>
 							<li><a href="#"><span class="icon-pinterest"></span></a></li>
-							<li><a href="#"><span class="icon-apple"></span></a></li>
-							<li><a href="#"><span class="icon-google"></span></a></li>
+							<li><a href="#"><span class="icon-apple"></span></a></li>  --}}
+							<li><a href="{{ $setting::get("email") }}"><span class="icon-google"></span></a></li>
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-6 col-lg-2 pl-lg-5">
+				{{--  <div class="col-md-6 col-lg-2 pl-lg-5">
 					<div class="widget">
 						<h3 class="heading">Pages</h3>
 						<ul class="links list-unstyled">
@@ -133,13 +128,13 @@
 							<li><a href="/contact">Contact</a></li>
 						</ul>
 					</div>
-				</div>
+				</div>  --}}
 				<div class="col-md-6 col-lg-4">
 					<div class="widget">
 						<h3 class="heading">Contact</h3>
 						<ul class="list-unstyled quick-info links">
-							<li class="email"><a href="#">goumkm@gmail.com</a></li>
-							<li class="phone"><a href="#">+1 222 212 3819</a></li>
+							<li class="email"><a href="#">{{ $setting::get("email") }}</a></li>
+							<li class="phone"><a href="#">{{ $setting::get("whatsapp-primary-admin") }}</a></li>
 							<li class="address"><a href="#">Bangkalan Madura</a></li>
 						</ul>
 					</div>

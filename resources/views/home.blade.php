@@ -10,7 +10,7 @@
             <div class="col-lg-7">
                 <div class="intro-wrap">
                     <h1 class="mb-5"><span class="d-block">Go Umkm</h1>
-                    <p class="text-white">{{ $setting::get("text-side-landing") }}</p>
+                    <p class="text-white">{{ $setting::get("text-slide-landing") }}</p>
                 </div>
             </div>
             <div class="col-lg-5">
@@ -29,13 +29,13 @@
                             <a
                               id="play-video"
                               class="video-play-button"
-                              href="https://www.youtube.com/watch?v=nRqOu3EDixw"
+                              href="{{ $setting::get("link-video") }}"
                               data-fancybox
                             >
                               <span></span>
                             </a>
                             <img
-                              src="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}"
+                              src="{{ asset('assets/img/logo/logo-umkm.jpg')}}"
                               alt="Image"
                               class="img-fluid rounded-20"
                             />
@@ -95,7 +95,7 @@
                         <span class="fa fa-briefcase fa-3x display-4 text-primary"></span>
                         <h3>Branding Bisnis</h3>
                         <p class="mb-0">Branding Usahamu Agar DiJangkau Halayak Umum.</p>
-                        <a class="btn btn-info" href="https://wa.me/{{ $setting::get("wawebsite") }}" role="button">view</a>
+                        <a class="btn btn-info" href="https://wa.me/{{ $setting::get("whatsapp-admin-branding") }}" role="button">view</a>
                     </div>
                 </div>
 
@@ -144,7 +144,7 @@
                         </span>
                         <h3>Pembuatan Website</h3>
                         <p class="mb-0">Jasa Pembuatan Website lebih khusus website Umkm.</p>
-                        <a class="btn btn-info" href="https://wa.me/{{ $setting::get("wawebsite") }}" role="button">view</a>
+                        <a class="btn btn-info" href="https://wa.me/{{ $setting::get("whatsapp-admin-website") }}" role="button">view</a>
                     </div>
                 </div>
 
@@ -157,7 +157,7 @@
                         </span>
                         <h3>E-commerce</h3>
                         <p class="mb-0">Jasa untuk Pembuatan Toko Online (E-commerce).</p>
-                        <a class="btn btn-info" href="https://wa.me/{{ $setting::get("wawebsite") }}" role="button">view</a>
+                        <a class="btn btn-info" href="https://wa.me/{{ $setting::get("whatsapp-admin-ecommerce") }}" role="button">view</a>
                     </div>
                 </div>
 
@@ -225,7 +225,7 @@
                     </span>
                     <div class="d-flex align-items-center">
                         <div>
-                            <h3><a href="https://wa.me/{{ $setting::get("wawebsite") }}">Pelatihan Marketing dll...</a></h3>
+                            <h3><a href="https://wa.me/{{ $setting::get("whatsapp-admin-pelatihanmarketing") }}">Pelatihan Marketing dll...</a></h3>
 
                         </div>
 
@@ -280,7 +280,7 @@
                     </span>
                     <div class="d-flex align-items-center">
                         <div>
-                            <h3><a href="https://wa.me/{{ $setting::get("wawebsite") }}">Kolaborasi dan sponsor</a></h3>
+                            <h3><a href="https://wa.me/{{ $setting::get("whatsapp-admin-sponsor") }}">Kolaborasi dan sponsor</a></h3>
                             {{--  <div class="price ml-auto">
                                 <span>$520.00</span>
                             </div>  --}}

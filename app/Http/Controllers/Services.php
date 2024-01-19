@@ -70,7 +70,7 @@ class Services extends Controller
      */
     public function edit(Service $service)
     {
-        // $menu = Menu::where("group", "=", "kuliner-madura")->get();
+        $services = Service::all();
         return view('admin.service.editServices', compact('service'));
     }
 

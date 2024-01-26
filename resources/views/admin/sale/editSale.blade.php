@@ -77,7 +77,7 @@
                                 <label class="col-sm-2 col-form-label" for="whatsapp">No. Whatsapp</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control w-50" id="whatsapp"
-                                        placeholder="No. Whatsapp" name="whatsapp" required value="{{ $sale->whatsapp }}" />
+                                        placeholder="No. Whatsapp, Pakai (62): 62xxxxxxxxxxx" name="whatsapp" required value="{{ $sale->whatsapp }}" />
                                 </div>
                             </div>
 

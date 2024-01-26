@@ -18,42 +18,42 @@ class Settings extends Seeder
             [
                 'lookup' => 'whatsapp-primary-admin',
                 'value' => '6281334451615',
-                'name' => 'Admin Umkm Digital Utama',
+                'name' => 'Admin Umkm Digital Utama ,Pakai (62xxx)',
             ],
             [
                 'lookup' => 'whatsapp-admin-1',
                 'value' => '6281334451615',
-                'name' => 'Admin Umkm Digital-1',
+                'name' => 'Admin Umkm Digital-1 ,Pakai (62xxx)',
             ],
             [
                 'lookup' => 'whatsapp-admin-2',
                 'value' => '6281334451615',
-                'name' => 'Admin Umkm Digital-2',
+                'name' => 'Admin Umkm Digital-2 ,Pakai (62xxx)',
             ],
             [
                 'lookup' => 'whatsapp-admin-website',
                 'value' => '6281334451615',
-                'name' => 'Admin Umkm Digital-Website',
+                'name' => 'Admin Umkm Digital-Website ,Pakai (62xxx)',
             ],
             [
                 'lookup' => 'whatsapp-admin-branding',
                 'value' => '6281334451615',
-                'name' => 'Admin Umkm Digital-Branding',
+                'name' => 'Admin Umkm Digital-Branding ,Pakai (62xxx)',
             ],
             [
                 'lookup' => 'whatsapp-admin-ecommerce',
                 'value' => '6281334451615',
-                'name' => 'Admin Umkm Digital-Ecommerce',
+                'name' => 'Admin Umkm Digital-Ecommerce ,Pakai (62xxx)',
             ],
             [
                 'lookup' => 'whatsapp-admin-pelatihanmarketing',
                 'value' => '6281334451615',
-                'name' => 'Admin Umkm Digital-Pelatihan Marketing',
+                'name' => 'Admin Umkm Digital-Pelatihan Marketing ,Pakai (62xxx)',
             ],
             [
                 'lookup' => 'whatsapp-admin-sponsor',
                 'value' => '6281334451615',
-                'name' => 'Admin Umkm Digital-Sponsor',
+                'name' => 'Admin Umkm Digital-Sponsor ,Pakai (62xxx)',
             ],
             [
                 'lookup' => 'link-video',
@@ -73,7 +73,7 @@ class Settings extends Seeder
             [
                 'lookup' => 'contact',
                 'value' => '6281334451615',
-                'name' => 'Contact Umkm Digital',
+                'name' => 'Contact Umkm Digital ,Pakai (62xxx)',
             ],
             [
                 'lookup' => 'text-slide-landing',

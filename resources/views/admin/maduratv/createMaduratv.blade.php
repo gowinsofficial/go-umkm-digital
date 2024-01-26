@@ -53,7 +53,7 @@
                                 <label class="col-sm-2 col-form-label" for="direct_link">Direct Link</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control w-50" id="direct_link"
-                                           placeholder="Direct Link" name="direct_link" />
+                                           placeholder="Direct Link, Ex: https://www.maduratv.com" name="direct_link" />
                                 </div>
                             </div>
 

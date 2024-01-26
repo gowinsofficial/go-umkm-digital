@@ -45,10 +45,10 @@
                             </div>
 
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label" for="whatsapp">Whatsapp To</label>
+                                <label class="col-sm-2 col-form-label" for="whatsapp">No. Whatsapp </label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control w-50" id="whatsapp"
-                                           placeholder="Whatsapp To" name="whatsapp" />
+                                           placeholder="No. Whatsapp , Pakai (62): 62xxxxxxxxxxx" name="whatsapp" />
                                 </div>
                             </div>
 

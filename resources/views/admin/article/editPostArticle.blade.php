@@ -67,7 +67,7 @@
                                 <label class="col-sm-2 col-form-label" for="file_upload"> Link URL</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control w-50" id="file_upload"
-                                        placeholder="Link URL Artikel" name="file_upload" required value="{{ $article->file_upload }}"  />
+                                        placeholder="Link URL Artikel , Example : https://drive.google.com/drive/home" name="file_upload" required value="{{ $article->file_upload }}"  />
                                 </div>
                             </div>
 

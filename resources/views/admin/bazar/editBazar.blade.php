@@ -52,7 +52,7 @@
                                 <div class="col-sm-10">
 
                                     <input type="text" class="form-control w-50" id="whatsapp_member"
-                                           placeholder="URL" name="whatsapp_member" required value="{{ $bazar->whatsapp_member }}" />
+                                           placeholder="Nomor Whatsapp, Pakai (62): 62xxxxxxxxxxx" name="whatsapp_member" required value="{{ $bazar->whatsapp_member }}" />
                                 </div>
                             </div>
 

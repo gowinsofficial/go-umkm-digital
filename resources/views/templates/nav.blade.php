@@ -48,7 +48,7 @@
 		<div class="container">
 			<div class="site-navigation">
 				{{--  <a href="index.html" class="logo m-0">GO UMKM <span class="text-primary">.</span></a>  --}}
-				<img src="{{ asset('assets/img/logo/logo.jpg')}}" alt="imam" width="50" class="rounded-circle logo m-0" />
+				<img src="{{ asset('assets/img/logo/logo.jpg')}}" alt="imam" width="50" class="rounded-circle logo  ml-1" />
 				<ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
 					<li class="active"><a href="/">Home</a></li>
 					<li class="has-children">

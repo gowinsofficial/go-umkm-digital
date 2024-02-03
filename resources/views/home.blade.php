@@ -197,7 +197,7 @@
         <div class="row justify-content-center">
             <div class="col-4 col-sm-4 col-md-4 col-lg-2 mb-4 mb-lg-0">
                 <div class="media-1">
-                    <a href="#" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/hero-slider-1.jpg')}}" alt="Image" class="img-fluid"></a>
+                    <a href="#" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/festival.png')}}" alt="Image" class="img-fluid"></a>
                     <span class="d-flex align-items-center loc mb-2">
                         <span class="icon-room mr-3"></span>
                         <span>Festival</span>
@@ -216,7 +216,7 @@
             </div>
             <div class="col-4 col-sm-4 col-md-4 col-lg-2 mb-4 mb-lg-0">
                 <div class="media-1">
-                    <a href="#" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}" alt="Image" class="img-fluid"></a>
+                    <a href="#" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/pelatihan.png')}}" alt="Image" class="img-fluid"></a>
                     <span class="d-flex align-items-center loc mb-2">
                         <span class="fa fa-whatsapp mr-3"></span>
                         <span>Pelatihan</span>
@@ -233,7 +233,7 @@
             </div>
             <div class="col-4 col-sm-4 col-md-4 col-lg-2 mb-4 mb-lg-0">
                 <div class="media-1">
-                    <a href="/sale" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/hero-slider-3.jpg')}}" alt="Image" class="img-fluid"></a>
+                    <a href="/sale" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/sale.png')}}" alt="Image" class="img-fluid"></a>
                     <span class="d-flex align-items-center loc mb-2">
                         <span class="fa fa-whatsapp mr-3"></span>
                         <span>Sale 12.12</span>
@@ -254,7 +254,7 @@
         <div class="row justify-content-center">
             <div class="col-4 col-sm-4 col-md-4 col-lg-2 mb-4 mb-lg-0">
                 <div class="media-1">
-                    <a href="/bazar" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/hero-slider-1.jpg')}}" alt="Image" class="img-fluid"></a>
+                    <a href="/bazar" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/bazar.png')}}" alt="Image" class="img-fluid"></a>
                     <span class="d-flex align-items-center loc mb-2">
                         <span class="icon-room mr-3"></span>
                         <span>Bazar Umum UMKM</span>
@@ -271,7 +271,7 @@
             </div>
             <div class="col-4 col-sm-4 col-md-4 col-lg-2 mb-4 mb-lg-0">
                 <div class="media-1">
-                    <a href="#" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}" alt="Image" class="img-fluid"></a>
+                    <a href="#" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/sponsor.png')}}" alt="Image" class="img-fluid"></a>
                     <span class="d-flex align-items-center loc mb-2">
                         <span class="fa fa-whatsapp mr-3"></span>
                         <span>Kolaborasi dan sponsor</span>
@@ -290,7 +290,7 @@
             </div>
             <div class="col-4 col-sm-4 col-md-4 col-lg-2 mb-4 mb-lg-0">
                 <div class="media-1">
-                    <a href="/artikel" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/hero-slider-3.jpg')}}" alt="Image" class="img-fluid"></a>
+                    <a href="/artikel" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/artikel.png')}}" alt="Image" class="img-fluid"></a>
                     <span class="d-flex align-items-center loc mb-2">
                         <span class="icon-room mr-3"></span>
                         <span>Artikel</span>

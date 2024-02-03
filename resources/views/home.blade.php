@@ -9,8 +9,6 @@
         <div class="row align-items-center">
             <div class="col-lg-7">
                 <div class="intro-wrap">
-                    <h1 class="mb-5"><span class="d-block">Go Umkm</h1>
-                    <p class="text-white">{{ $setting::get("text-slide-landing") }}</p>
                 </div>
             </div>
             <div class="col-lg-5">

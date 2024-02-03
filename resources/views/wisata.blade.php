@@ -71,12 +71,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5">
-        <div class="slides">
-          <img src="{{ asset('assets/img/logo/logo-umkm.jpg')}}" alt="Image" class="img-fluid active">
-                   
-        </div>
-      </div>
+      
     </div>
   </div>
 </div>

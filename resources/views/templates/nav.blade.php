@@ -4,7 +4,7 @@
 
 <head runat="server">
   <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1>
 	<meta name="author" content="Untree.co">
 	<link rel="shortcut icon" href="favicon.png">
 
@@ -42,7 +42,7 @@
 		<div class="site-mobile-menu-body"></div>
 	</div>
 
-	<nav class="site-nav">
+	<nav class="site-nav navbar-dark">
 		<div class="container">
 			<div class="site-navigation">
 				{{--  <a href="index.html" class="logo m-0">GO UMKM <span class="text-primary">.</span></a>  --}}

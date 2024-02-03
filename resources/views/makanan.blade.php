@@ -68,12 +68,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5">
-        <div class="slides">
-          <img src="{{ asset('assets/img/logo/logo.jpg')}}" alt="Image" class="img-fluid active">
-                   
-        </div>
-      </div>
+      
     </div>
   </div>
 </div>
@@ -83,9 +78,7 @@
     <div class="row justify-content-center text-center mb-5">
       
       <div class="col-lg-6">
-        <h2 class="section-title text-center mb-3">
-          Special Offers &amp; Discounts
-        </h2>
+        
        
       </div>
     </div>

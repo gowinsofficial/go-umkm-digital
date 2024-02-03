@@ -59,7 +59,7 @@
         <div class="row justify-content-start">
 
 
-            <div class=" col-lg-3 " >
+            <div class=" col-md-3 " >
 
                 <div class="feature-1 ">
                     <div class="align-self-center">
@@ -75,7 +75,7 @@
 
             </div>
 
-            <div class="col-lg-3 " >
+            <div class="col-md-3 " >
 
                 <div class="feature-1 ">
                     <div class="align-self-center">
@@ -87,7 +87,7 @@
                 </div>
 
             </div>
-            <div class="col-lg-3 " >
+            <div class="col-md-3 " >
                 <div class="feature-1 ">
                     <div class="align-self-center">
                         <span class="fa fa-briefcase fa-3x display-4 text-primary"></span>
@@ -98,7 +98,7 @@
                 </div>
 
             </div>
-            <div class="col-lg-3 " >
+            <div class="col-md-3 " >
 
                 <div class="feature-1 ">
                     <div class="align-self-center">
@@ -110,7 +110,7 @@
                 </div>
 
             </div>
-            <div class="col-lg-3" >
+            <div class="col-md-3" >
 
                 <div class="feature-1 ">
                     <div class="align-self-center">
@@ -122,7 +122,7 @@
                 </div>
 
             </div>
-            <div class="col-lg-3 " >
+            <div class="col-md-3 " >
 
                 <div class="feature-1 ">
                     <div class="align-self-center">
@@ -133,7 +133,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 " >
+            <div class="col-md-3 " >
                 <div class="feature-1 ">
                     <div class="align-self-center">
 
@@ -147,7 +147,7 @@
                 </div>
 
             </div>
-            <div class="col-lg-3 " >
+            <div class="col-md-3 " >
                 <div class="feature-1 ">
                     <div class="align-self-center">
                         <span class="fa-3x display-4 text-primary">

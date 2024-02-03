@@ -195,7 +195,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-2 mb-4 mb-lg-0">
                 <div class="media-1">
                     <a href="#" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/hero-slider-1.jpg')}}" alt="Image" class="img-fluid"></a>
                     <span class="d-flex align-items-center loc mb-2">
@@ -214,7 +214,7 @@
 
                 </div>
             </div>
-            <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-2 mb-4 mb-lg-0">
                 <div class="media-1">
                     <a href="#" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}" alt="Image" class="img-fluid"></a>
                     <span class="d-flex align-items-center loc mb-2">
@@ -231,7 +231,7 @@
 
                 </div>
             </div>
-            <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-2 mb-4 mb-lg-0">
                 <div class="media-1">
                     <a href="/sale" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/hero-slider-3.jpg')}}" alt="Image" class="img-fluid"></a>
                     <span class="d-flex align-items-center loc mb-2">
@@ -252,7 +252,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-2 mb-4 mb-lg-0">
                 <div class="media-1">
                     <a href="/bazar" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/hero-slider-1.jpg')}}" alt="Image" class="img-fluid"></a>
                     <span class="d-flex align-items-center loc mb-2">
@@ -269,7 +269,7 @@
 
                 </div>
             </div>
-            <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-2 mb-4 mb-lg-0">
                 <div class="media-1">
                     <a href="#" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}" alt="Image" class="img-fluid"></a>
                     <span class="d-flex align-items-center loc mb-2">
@@ -288,7 +288,7 @@
 
                 </div>
             </div>
-            <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-2 mb-4 mb-lg-0">
                 <div class="media-1">
                     <a href="/artikel" class="d-block mb-3"><img src="{{ asset('assets/wisata/images/hero-slider-3.jpg')}}" alt="Image" class="img-fluid"></a>
                     <span class="d-flex align-items-center loc mb-2">

@@ -7,11 +7,11 @@
 <div class="hero">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-7">
+            <div class="col-md-7">
                 <div class="intro-wrap">
                 </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col-md-5">
                 {{--  <div class="slides">
                     <img src="{{ asset('assets/wisata/images/hero-slider-1.jpg')}}" alt="Image" class="img-fluid active">
                     <img src="{{ asset('assets/wisata/images/hero-slider-2.jpg')}}" alt="Image" class="img-fluid">

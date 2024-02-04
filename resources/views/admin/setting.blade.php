@@ -36,7 +36,7 @@
                                         <td width="10">:</td>
                                         <td>
                                             <input type="text" name="{{ $setting["lookup"] }}" class="form-control form-control-sm w-50"
-                                                   value="{{ $setting["value"] }}">
+                                                   value="{{ $setting["value"] }}" placeholder="{{ $setting["placeholder"] }}">
                                         </td>
                                     </tr>
                                 @endif

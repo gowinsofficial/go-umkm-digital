@@ -18,14 +18,28 @@
                             @csrf
                             @method('PUT')
                             <table class="table tab-table">
-                                @foreach($settings as $setting):
-                                <tr>
-                                    <th width="150">{{ $setting["name"] }}</th>
-                                    <td width="10">:</td>
-                                    <td>
-                                        <input type="text" name="{{ $setting["lookup"] }}" class="form-control form-control-sm w-50"
-                                               value="{{ $setting["value"] }}">
-                                    </td>
+                                @foreach($settings as $setting)
+                                @if($setting["type"] == "file")
+                                    <tr>
+                                        <th width="150">{{ $setting["name"] }}</th>
+                                        <td width="10">:</td>
+                                        <td class="py-2">
+                                            <input type="file" name="{{ $setting["lookup"] }}" class="form-control form-control-sm w-50">
+                                            <a href="{{ \Illuminate\Support\Facades\Storage::url($setting["value"]) }}" target="_blank">
+                                                <img class="mt-2" src="{{ \Illuminate\Support\Facades\Storage::url($setting["value"]) }}" alt="..." width="100">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                @else
+                                    <tr>
+                                        <th width="150">{{ $setting["name"] }}</th>
+                                        <td width="10">:</td>
+                                        <td>
+                                            <input type="text" name="{{ $setting["lookup"] }}" class="form-control form-control-sm w-50"
+                                                   value="{{ $setting["value"] }}" placeholder="{{ $setting["placeholder"] }}">
+                                        </td>
+                                    </tr>
+                                @endif
                                 @endforeach
                                 <tr>
                                     <td colspan="2"></td>

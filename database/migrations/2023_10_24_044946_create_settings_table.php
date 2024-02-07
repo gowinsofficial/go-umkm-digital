@@ -14,8 +14,10 @@ return new class extends Migration
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
             $table->string('lookup', 100);
-            $table->string('value', 100);
+            $table->string('value', 1000);
             $table->string('name', 100);
+            $table->enum('type', ['file','text']);
+            $table->string('placeholder', 100)->nullable();
             $table->timestamps();
         });
     }

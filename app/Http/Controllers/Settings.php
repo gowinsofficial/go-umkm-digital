@@ -27,7 +27,14 @@ class Settings extends Controller
     public function saveSetting(Request $request) {
 
         foreach(Setting::pluck('value', 'lookup')->all() as $key => $setting) {
-            if ($request->input($key) != null && $request->input($key) != $setting) {
+            if ($request->hasFile($key)) {
+                $file = $request->file($key);
+                $path = $file->store('public/settings');
+                Storage::delete($setting);
+                Setting::where("lookup", '=', $key)->update([
+                    "value" => $path,
+                ]);
+            } elseif ($request->input($key) != null && $request->input($key) != $setting) {
                 Setting::where("lookup", '=', $key)->update([
                     "value" => $request->input($key)
                 ]);

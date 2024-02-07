@@ -26,6 +26,7 @@ use App\Http\Controllers\{
     Sales,
     SliderImageController,
     Settings,
+    UserId,
 };
 
 Route::group(["prefix" => "admin", "middleware" => "mustlogin"], function() {
@@ -41,6 +42,7 @@ Route::group(["prefix" => "admin", "middleware" => "mustlogin"], function() {
     Route::resource("/bazar", BazarUmkm::class);
     Route::resource("/article", Article::class);
     Route::resource("/sale", Sales::class);
+    Route::resource("/user", UserId::class);
     Route::resource("/slider", SliderImageController::class);
     Route::get("/setting", [Settings::class, 'pageSetting'])->name('setting.index');
     Route::put("/setting", [Settings::class, 'saveSetting'])->name('setting.save');

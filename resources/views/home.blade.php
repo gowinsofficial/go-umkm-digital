@@ -68,7 +68,7 @@
                         </span>
                         <h3>Kuliner Madura</h3>
                         <p class="mb-0">Makanan Dan Minuman Yang Wajib Dicoba Dimadura.</p>
-                        <a class="btn btn-info" href="/kuliner" role="button">view</a>
+                        <a class="btn btn-warning" href="/kuliner" role="button">view</a>
                     </div>
                 </div>
 
@@ -82,7 +82,7 @@
                         <span class="fa fa-tags fa-3x  display-4 text-primary"></span>
                         <h3>Batik madura</h3>
                         <p class="mb-0">Batik Khas Maduran Dengan Beragam Motif Dan Corak .</p>
-                        <a class="btn btn-info" href="/batik" role="button">view</a>
+                        <a class="btn btn-warning" href="/batik" role="button">view</a>
                     </div>
                 </div>
 
@@ -93,7 +93,7 @@
                         <span class="fa fa-briefcase fa-3x display-4 text-primary"></span>
                         <h3>Branding Bisnis</h3>
                         <p class="mb-0">Branding Usahamu Agar DiJangkau Halayak Umum.</p>
-                        <a class="btn btn-info" href="https://wa.me/{{ $setting::get("whatsapp-admin-branding") }}" role="button">view</a>
+                        <a class="btn btn-warning" href="https://wa.me/{{ $setting::get("whatsapp-admin-branding") }}" role="button">view</a>
                     </div>
                 </div>
 
@@ -105,7 +105,7 @@
                         <span class="fa fa-tv  fa-3x display-4 text-primary"></span>
                         <h3>Madura TV</h3>
                         <p class="mb-0">Chanel Youtube Yang Berisi Semua Tentang Madura.</p>
-                        <a class="btn btn-info" href="/Madura-tv" role="button">view</a>
+                        <a class="btn btn-warning" href="/Madura-tv" role="button">view</a>
                     </div>
                 </div>
 
@@ -117,7 +117,7 @@
                         <span class="fa fa-ship fa-3x  display-4 text-primary"></span>
                         <h3>Pariwisata</h3>
                         <p class="mb-0">Wisata Wisata Populer yang ada Di madura.</p>
-                        <a class="btn btn-info" href="/wisata" role="button">view</a>
+                        <a class="btn btn-warning" href="/wisata" role="button">view</a>
                     </div>
                 </div>
 
@@ -129,7 +129,7 @@
                         <span class="fa fa-car  fa-3x display-4 text-primary"></span>
                         <h3>Ojol Madura</h3>
                         <p class="mb-0">Ojek Online Di Seluruh Kabupaten Madura.</p>
-                        <a class="btn btn-info" href="/ojol-madura" role="button">view</a>
+                        <a class="btn btn-warning" href="/ojol-madura" role="button">view</a>
                     </div>
                 </div>
             </div>
@@ -142,7 +142,7 @@
                         </span>
                         <h3>Pembuatan Website</h3>
                         <p class="mb-0">Jasa Pembuatan Website lebih khusus website Umkm.</p>
-                        <a class="btn btn-info" href="https://wa.me/{{ $setting::get("whatsapp-admin-website") }}" role="button">view</a>
+                        <a class="btn btn-warning" href="https://wa.me/{{ $setting::get("whatsapp-admin-website") }}" role="button">view</a>
                     </div>
                 </div>
 
@@ -155,7 +155,7 @@
                         </span>
                         <h3>E-commerce</h3>
                         <p class="mb-0">Jasa untuk Pembuatan Toko Online (E-commerce).</p>
-                        <a class="btn btn-info" href="https://wa.me/{{ $setting::get("whatsapp-admin-ecommerce") }}" role="button">view</a>
+                        <a class="btn btn-warning" href="https://wa.me/{{ $setting::get("whatsapp-admin-ecommerce") }}" role="button">view</a>
                     </div>
                 </div>
 
